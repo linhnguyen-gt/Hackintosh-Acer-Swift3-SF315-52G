@@ -2,7 +2,7 @@
 <li>CPU : Intel Core i5-8250U (Kabylake-R)</li><br>
 <li>Graphics : Intel UHD 620</li><br>
 <li>RAM : 8 GB DDR4 2133 MHz (non-replaceable)</li><br>
-<li>SSD : 256 GB Intel 600p series (SSDPEKKW256G7) (M.2 2280 NVMe, replaceable. PCIe x2 speeds (1500MBs\540MBs) )</li><br>
+<li>SSD : Hynix 256GB M.2 SOLID STATE DRIVE 80MM L (HFS256G39TND-N210A) Read : Up to 530MB/s(128/256/512GB)\ Write : Up to 190MB/s(128GB)</li><br>
 <li>Screen : 15-inch 1920 x 1080 glossy IPS</li><br>
 <li>Ports : 1xUSB 3.1 Gen-1 Type-C, 2xUSB 3.0, 1xUSB 2.0, 1xHDMI (full-size), 1xAudio jack</li><br>
 <li>Wifi/Bluetooth : Intel AC-7265, (M.2 NGFF)</li><br>
