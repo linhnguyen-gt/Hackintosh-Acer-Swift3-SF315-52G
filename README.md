@@ -6,7 +6,10 @@
 <li>Screen : 15-inch 1920 x 1080 glossy IPS</li><br>
 <li>Ports : 1xUSB 3.1 Gen-1 Type-C, 2xUSB 3.0, 1xUSB 2.0, 1xHDMI (full-size), 1xAudio jack</li><br>
 <li>Wifi/Bluetooth : Intel AC-7265, (M.2 NGFF)</li><br>
-<li>Audio : ALC255 (ven id:10ec, dev id:0255)</li><br>
+<li>Audio : ALC256 </li><br>
 <li>SD Card Reader : Realtek USB2.0-CRW (ven id:0bda, dev id:0129)</li><br>
 <li>Back-lit keyboard</li><br>
 <li>I2C Trackpad + PS2 keyboard</li><br>
+
+<h1>What is working</h1><br>
+<li>Graphics: Intel UHD Graphics 620 1536 МB</li><br>
