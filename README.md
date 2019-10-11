@@ -13,3 +13,11 @@
 
 <h1>What is working</h1><br>
 <li>Graphics: Intel UHD Graphics 620 1536 МB</li><br>
+<li>Audio: Speakers, headphones (Mic don't work)</li><br>
+<li>Keyboard: Backlight is ACPI-managed so it works just fine too</li><br>
+<li>Trackpad: VoodooI2Elan makes it buttery-smooth, supports all the macOS gestures</li><br>
+<li>USB</li><br>
+<li>Webcam: PhotoBooth works fine</li><br>
+<li>Sleep/Wake: works very good</li><br>
+
+<h1>What is not working</h1><br>
