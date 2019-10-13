@@ -1,7 +1,7 @@
 <h1>Hackintosh Mojave Acer-Swift3-SF315-52G</h1>
 <li>CPU : Intel Core i5-8250U (Kabylake-R)</li><br>
 <li>Graphics : Intel UHD 620</li><br>
-<li>RAM : 8 GB DDR4 2133 MHz (non-replaceable)</li><br>
+<li>RAM : 8 GB DDR4 2666 MHz (On board + One slot)</li><br>
 <li>SSD : Hynix 256GB M.2 SOLID STATE DRIVE 80MM L (HFS256G39TND-N210A) Read : Up to 530MB/s(128/256/512GB)\ Write : Up to 190MB/s(128GB)</li><br>
 <li>Screen : 15-inch 1920 x 1080 glossy IPS</li><br>
 <li>Ports : 1xUSB 3.1 Gen-1 Type-C, 2xUSB 3.0, 1xUSB 2.0, 1xHDMI (full-size), 1xAudio jack</li><br>
