@@ -21,3 +21,6 @@
 <li>Sleep/Wake: works very good</li><br>
 
 <h1>What is not working</h1><br>
+<li>Built-in Wifi: Replace Broadcom BCM94352Z</li><br>
+<li>Mic: I tried many ways but it not works</li><br>
+<li>HDMI: Just works after Sleep/Wake, LOL</li><br>
