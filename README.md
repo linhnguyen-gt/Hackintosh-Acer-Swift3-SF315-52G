@@ -9,7 +9,7 @@
 <li>Audio : ALC256 </li><br>
 <li>SD Card Reader : Realtek USB2.0-CRW (ven id:0bda, dev id:0129)</li><br>
 <li>Back-lit keyboard</li><br>
-<li>I2CHID TouchPad + PS2Controller</li><br>
+<li>Controller (synaptic): VoodooI2CHID, VoodooI2C + PS2Controller</li><br>
 
 <h1>What is working</h1><br>
 <li>Graphics: Intel UHD Graphics 620 1536 МB</li><br>
