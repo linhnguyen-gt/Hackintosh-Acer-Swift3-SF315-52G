@@ -12,7 +12,7 @@
 <li>Controller (synaptic): VoodooI2CHID, VoodooI2C + PS2Controller</li><br>
 
 <h1>What is working</h1><br>
-<li>Graphics: Intel UHD Graphics 620 MacOS Editions 2048 МB</li><br>
+<li>Graphics: Intel UHD Graphics 620 macOS Edition 2048 МB</li><br>
 <li>Audio: Speakers, headphones (Mic don't work)</li><br>
 <li>Keyboard: Backlight is ACPI-managed so it works just fine too</li><br>
 <li>Trackpad: VoodooI2CHID,VoodooI2C,VoodooI2CSynaptics makes it buttery-smooth, supports all the macOS gestures</li><br>
