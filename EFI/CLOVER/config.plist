@@ -107,26 +107,6 @@
 					<key>Replace</key>
 					<data>WENSUwCgDg==</data>
 				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(_WAK,1,S) to ZWAK</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1dBSwk=</data>
-					<key>Replace</key>
-					<data>WldBSwk=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change LGPA to XGPA</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>TEdQQQk=</data>
-					<key>Replace</key>
-					<data>WEdQQQk=</data>
-				</dict>
 			</array>
 		</dict>
 		<key>DropTables</key>
@@ -355,7 +335,7 @@
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 				<key>model</key>
-				<string>Intel UHD Graphics 620 MacOS Editions</string>
+				<string>Intel UHD Graphics 620 macOS Edition</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x8,0x0)</key>
 			<dict>
@@ -393,7 +373,7 @@
 			<string>Recovery</string>
 		</array>
 		<key>KbdPrevLang</key>
-		<true/>
+		<false/>
 		<key>Language</key>
 		<string>en-US:0</string>
 		<key>Mouse</key>
@@ -402,7 +382,7 @@
 			<false/>
 		</dict>
 		<key>PlayAsync</key>
-		<true/>
+		<false/>
 		<key>Scan</key>
 		<dict>
 			<key>Entries</key>
@@ -417,7 +397,7 @@
 		<key>ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>ShowOptimus</key>
-		<true/>
+		<false/>
 		<key>Theme</key>
 		<string>acer</string>
 	</dict>
@@ -425,8 +405,10 @@
 	<dict>
 		<key>EDID</key>
 		<dict>
+			<key>Custom</key>
+			<data>AP///////wAGr+0hAAAAAAAaAQSlIhN4Am6Fk1hYkigeUFQAAAABAQEBAQEBAQEBAQEBAQEBFDeApnA4LkBsMKoAWMEQAAAYAAAADwAAAAAAAAAAAAAAAAAgAAAA/gBBVU8KICAgICAgICAgAAAA/gBCMTU2SEFOMDIuMSAKACY=</data>
 			<key>Inject</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>Inject</key>
 		<dict>
@@ -443,7 +425,7 @@
 	<key>KernelAndKextPatches</key>
 	<dict>
 		<key>AppleIntelCPUPM</key>
-		<false/>
+		<true/>
 		<key>AppleRTC</key>
 		<true/>
 		<key>DellSMBIOSPatch</key>
@@ -567,8 +549,10 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
+		<key>MLB</key>
+		<string>FVFCQMY1L40YAT5SG</string>
 		<key>ROM</key>
-		<string>UseMacAddr0</string>
+		<data>rNG45YoT</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
