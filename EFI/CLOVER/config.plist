@@ -97,16 +97,6 @@
 					<key>Replace</key>
 					<data>WkRTTQ==</data>
 				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change I2C devices _CRS to XCRS</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X0NSUwCgDg==</data>
-					<key>Replace</key>
-					<data>WENSUwCgDg==</data>
-				</dict>
 			</array>
 		</dict>
 		<key>DropTables</key>
@@ -148,7 +138,7 @@
 		<key>Arguments</key>
 		<string>dart=0 kext-dev-mode=1 -cdfon nv_disable=1 -disablegfxfirmware gfxrst=1 -ngfxbeta -lilubetaall -wegnoegpu</string>
 		<key>CustomLogo</key>
-		<string>Apple</string>
+		<true/>
 		<key>DefaultLoader</key>
 		<string>boot.efi</string>
 		<key>DefaultVolume</key>
@@ -165,13 +155,6 @@
 		<false/>
 		<key>XMPDetection</key>
 		<string>Yes</string>
-	</dict>
-	<key>BootGraphics</key>
-	<dict>
-		<key>EFILoginHiDPI</key>
-		<integer>1</integer>
-		<key>UIScale</key>
-		<integer>1</integer>
 	</dict>
 	<key>CPU</key>
 	<dict>
@@ -305,37 +288,69 @@
 				<key>AAPL,ig-platform-id</key>
 				<data>AADAhw==</data>
 				<key>AAPL,slot-name</key>
-				<string>Internal</string>
+				<string>Internal@0,2,0</string>
 				<key>device-id</key>
-				<data>wIcAAA==</data>
+				<data>FlkAAA==</data>
+				<key>device_type</key>
+				<string>VGA compatible controller</string>
 				<key>disable-external-gpu</key>
+				<data>AQAAAA==</data>
+				<key>enable-hdmi-dividers-fix</key>
 				<data>AQAAAA==</data>
 				<key>enable-hdmi20</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-con0-alldata</key>
-				<data>AAAIAAIAAACYAAAA</data>
+				<key>framebuffer-con0-busid</key>
+				<data>AAAAAA==</data>
 				<key>framebuffer-con0-enable</key>
-				<integer>1</integer>
-				<key>framebuffer-con1-alldata</key>
-				<data>AQEJAAAIAADHAQAA</data>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con0-flags</key>
+				<data>mAAAAA==</data>
+				<key>framebuffer-con0-index</key>
+				<data>AAAAAA==</data>
+				<key>framebuffer-con0-pipe</key>
+				<data>EgAAAA==</data>
+				<key>framebuffer-con0-type</key>
+				<data>AgAAAA==</data>
+				<key>framebuffer-con1-busid</key>
+				<data>BQAAAA==</data>
 				<key>framebuffer-con1-enable</key>
-				<integer>1</integer>
-				<key>framebuffer-con2-alldata</key>
-				<data>AgYKAAAEAADHAQAA</data>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con1-flags</key>
+				<data>hwEAAA==</data>
+				<key>framebuffer-con1-index</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con1-pipe</key>
+				<data>EgAAAA==</data>
+				<key>framebuffer-con1-type</key>
+				<data>AAgAAA==</data>
+				<key>framebuffer-con2-busid</key>
+				<data>BAAAAA==</data>
 				<key>framebuffer-con2-enable</key>
-				<integer>1</integer>
-				<key>framebuffer-fbmem</key>
-				<data>AACQAA==</data>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con2-flags</key>
+				<data>hwEAAA==</data>
+				<key>framebuffer-con2-index</key>
+				<data>AgAAAA==</data>
+				<key>framebuffer-con2-pipe</key>
+				<data>EgAAAA==</data>
+				<key>framebuffer-con2-type</key>
+				<data>AAgAAA==</data>
+				<key>framebuffer-con3-busid</key>
+				<data>AAAAAA==</data>
+				<key>framebuffer-con3-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con3-flags</key>
+				<data>IAAAAA==</data>
+				<key>framebuffer-con3-index</key>
+				<data>/////w==</data>
+				<key>framebuffer-con3-pipe</key>
+				<data>AAAAAA==</data>
+				<key>framebuffer-con3-type</key>
+				<data>AQAAAA==</data>
 				<key>framebuffer-patch-enable</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-stolenmem</key>
-				<data>AAAwAQ==</data>
-				<key>framebuffer-unifiedmem</key>
-				<data>AAAAgA==</data>
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
-				<key>model</key>
-				<string>Intel UHD Graphics 620 macOS Edition</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x8,0x0)</key>
 			<dict>
