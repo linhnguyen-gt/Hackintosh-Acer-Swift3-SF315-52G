@@ -1,3 +1,6 @@
+<h1>Overview</h1>
+<li>Run macOS Mojave (10.14) or Catalina (10.15) on a Acer Swift3 SF315 52G.</li><br>
+<li>Most pieces are fully supported, and this setup can be used as your main machine. A few pieces are missing (and some will probably never be supported). Caveats in the Hardware section.</li><br>
 <h1>Hackintosh Mojave + Catalina Acer-Swift3-SF315-52G</h1>
 <li>CPU : Intel Core i5-8250U (Kabylake-R)</li><br>
 <li>Graphics : Intel UHD 620</li><br>
