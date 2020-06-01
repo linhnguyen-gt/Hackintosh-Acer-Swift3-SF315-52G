@@ -1,6 +1,7 @@
 <h1>Overview</h1>
 <li>Run macOS Mojave (10.14) or Catalina (10.15) on a Acer Swift3 SF315 52G.</li><br>
 <li>Most pieces are fully supported, and this setup can be used as your main machine. A few pieces are missing (and some will probably never be supported). Caveats in the Hardware section.</li><br>
+<li>You can use the EFI folder to be to boot into a USB installer, or for regular booting.</li><br>
 <h1>Hackintosh Mojave + Catalina Acer-Swift3-SF315-52G</h1>
 <li>CPU : Intel Core i5-8250U (Kabylake-R)</li><br>
 <li>Graphics : Intel UHD 620</li><br>
@@ -27,3 +28,8 @@
 <h1>What is not working</h1><br>
 <li>Mic: I tried many ways but it not works</li><br>
 <li>HDMI: Just works after Sleep/Wake, LOL</li><br>
+* Hardware
+** Graphics
+Integrated Intel UHD Graphics 620 support is handled by [[https://github.com/acidanthera/WhateverGreen][WhateverGreen]], and configured in the
+=PciRoot(0x0)/Pci(0x2,0x0)= section of config.plist. The Nvidia GPU is not supported due to hardware
+differences and lack of driver support in macOS. It is disabled to save power.
