@@ -1,4 +1,4 @@
-<h1>Hackintosh Mojave Acer-Swift3-SF315-52G</h1>
+<h1>Hackintosh Mojave + Catalina Acer-Swift3-SF315-52G</h1>
 <li>CPU : Intel Core i5-8250U (Kabylake-R)</li><br>
 <li>Graphics : Intel UHD 620</li><br>
 <li>RAM : SK Hynix HMA81GS6CJR8N-VK 8 GB DDR4 2666 MHz (On board + One slot)</li><br>
