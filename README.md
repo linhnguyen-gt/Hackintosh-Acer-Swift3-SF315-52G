@@ -28,8 +28,8 @@
 <h1>What is not working</h1><br>
 <li>Mic: I tried many ways but it not works</li><br>
 <li>HDMI: Just works after Sleep/Wake, LOL</li><br>
-* Hardware
-** Graphics
-Integrated Intel UHD Graphics 620 support is handled by [[https://github.com/acidanthera/WhateverGreen][WhateverGreen]], and configured in the
-=PciRoot(0x0)/Pci(0x2,0x0)= section of config.plist. The Nvidia GPU is not supported due to hardware
-differences and lack of driver support in macOS. It is disabled to save power.
+<h1>Hardware</h1><br>
+<h3>Graphics</h3><br>
+<li>Integrated Intel UHD Graphics 620 support is handled by https://github.com/acidanthera/WhateverGreen, and configured in the
+=PciRoot(0x0)/Pci(0x2,0x0)= section of config.plist. The Nvidia GPU MX150 is not supported due to hardware
+differences and lack of driver support in macOS. It is disabled to save power.</li><br>
