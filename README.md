@@ -23,4 +23,4 @@
 
 <h1>What is not working</h1><br>
 <li>Mic: I tried many ways but it not works</li><br>
-<li>HDMI: Not works, maybe I patch wrong</li><br>
+<li>HDMI: Just works after Sleep/Wake, LOL</li><br>
