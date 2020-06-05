@@ -4,7 +4,7 @@
 <li>You can use the EFI folder to be to boot into a USB installer, or for regular booting.</li><br>
 <h1>Hackintosh Mojave + Catalina Acer-Swift3-SF315-52G</h1>
 <li>CPU : Intel Core i5-8250U (Kabylake-R)</li><br>
-<li>Graphics : Intel UHD 620</li><br>
+<li>Graphics : Intel UHD 620 (+ MX150)</li><br>
 <li>RAM : SK Hynix HMA81GS6CJR8N-VK 8 GB DDR4 2666 MHz (On board + One slot)</li><br>
 <li>SSD : Hynix 256GB M.2 SOLID STATE DRIVE 80MM L (HFS256G39TND-N210A) Read : Up to 530MB/s(128/256/512GB)\ Write : Up to 190MB/s(128GB)</li><br>
 <li>Screen : 15.5-inch 1920 x 1080 glossy IPS</li><br>
@@ -16,7 +16,7 @@
 <li>Controller (synaptic): VoodooI2CHID, VoodooI2C + PS2Controller</li><br>
 
 <h1>What is working</h1><br>
-<li>Graphics: Intel UHD Graphics 620 macOS Edition 2048 МB</li><br>
+<li>Graphics: Intel UHD Graphics 620 (Disable MX150)</li><br>
 <li>Audio: Speakers, headphones (Mic don't work)</li><br>
 <li>Keyboard: Backlight is ACPI-managed so it works just fine too</li><br>
 <li>Trackpad: VoodooI2CHID,VoodooI2C,VoodooI2CSynaptics makes it buttery-smooth, supports all the macOS gestures</li><br>
