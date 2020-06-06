@@ -90,3 +90,5 @@ Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. T
     - =hda-idle-support: 1=
     - =layout-id: 17=
     - =model: Intel Sunrise Point-LP HD Audio=
+** USB
+Has a few incorrect USB properties, but we can inject the correct properties via USBInjectAll with [[https://github.com/RehabMan/OS-X-USB-Inject-All/blob/master/SSDT-UIAC-ALL.dsl][SSDT-UIAC-ALL.]]
