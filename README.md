@@ -33,3 +33,6 @@
 <li>Integrated Intel UHD Graphics 620 support is handled by https://github.com/acidanthera/WhateverGreen, and configured in the <strong>PciRoot(0x0)/Pci(0x2,0x0)</strong> section of config.plist. The Nvidia GPU MX150 is not supported due to hardware differences and lack of driver support in macOS. It is disabled to save power.</li><br>
 <li>To determine if Intel GPU (IGPU) acceleration is working, check: About This Mac -> Intel UHD Graphics 620
 1536 MB. A value less than 1536MB indicates a problem (e.g. 7MB or 31MB are common).</li>
+<h3>Wi-Fi/Bluetooth</h3><br>
+<li><h4>Installation</h4></li><br>
+<li>Include AirportBrcmFixup AirportBrcmFixup.kext for Wi-Fi</li><br>
