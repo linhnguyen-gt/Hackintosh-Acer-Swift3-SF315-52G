@@ -31,7 +31,43 @@ You can use the EFI folder to be to boot into a USB installer, or for regular bo
 ** Graphics
 Integrated Intel UHD Graphics 620 support is handled by [[https://github.com/acidanthera/WhateverGreen][WhateverGreen]], and configured in the
 =PciRoot(0x0)/Pci(0x2,0x0)= section of config.plist. The Nvidia GPU MX150 is not supported due to hardware differences and lack of driver support in macOS. It is disabled to save power.
-
+*** Installtion 
+- config.plist
+  - =Devices/Properties/PciRoot(0x0)/Pci(0x2,0x0)=
+    - =AAPL,GfxYTile: 01000000=
+    - =AAPL,ig-platform-id: 00001659=
+    - =AAPL,slot-name: Internal@0,2,0=
+    - =device-id: 16590000=
+    - =device_type: VGA compatible controller=
+    - =disable-external-gpu: 01000000= (Disable GPU or -wegnoegpu with Boot Flags)
+    - =enable-hdmi-dividers-fix: 01000000=
+    - =enable-hdmi20: 01000000=
+    - =framebuffer-con0-busid: 00000000=
+    - =framebuffer-con0-enable: 01000000=
+    - =dframebuffer-con0-flags: 98000000=
+    - =framebuffer-con0-index: 00000000=
+    - =framebuffer-con0-pipe: 12000000=
+    - =framebuffer-con0-type: 02000000=
+    - =framebuffer-con1-busid: 05000000=
+    - =framebuffer-con1-enable: 01000000=
+    - =framebuffer-con1-flags: 87010000=
+    - =framebuffer-con1-index: 01000000=
+    - =framebuffer-con1-pipe: 12000000=
+    - =framebuffer-con1-type: 00080000=
+    - =framebuffer-con2-busid: 04000000=
+    - =framebuffer-con2-enable: 01000000=
+    - =framebuffer-con2-flags: 87010000=
+    - =framebuffer-con2-index: 02000000=
+    - =framebuffer-con2-pipe: 12000000=
+    - =framebuffer-con2-type: 00080000=
+    - =framebuffer-con3-busid: 00000000=
+    - =framebuffer-con3-enable: 01000000=
+    - =framebuffer-con3-flags: 20000000=
+    - =framebuffer-con3-index: FFFFFFFF=
+    - =framebuffer-con3-pipe: 00000000=
+    - =framebuffer-con3-type: 01000000=
+    - =framebuffer-patch-enable: 01000000=
+    - =hda-gfx: onboard-1=
 To determine if Intel GPU (IGPU) acceleration is working, check: About This Mac -> Intel UHD Graphics 620
 1536 MB. A value less than 1536MB indicates a problem (e.g. 7MB or 31MB are common).
 
@@ -39,3 +75,17 @@ To determine if Intel GPU (IGPU) acceleration is working, check: About This Mac 
 *** Installation
 - Include [[https://github.com/acidanthera/AirportBrcmFixup][AirportBrcmFixup]] for Wi-Fi
 - Include [[https://github.com/acidanthera/BrcmPatchRAM/releases][BrcmPatchRAM]] for Bluetooth (for installation to CLOVER/kexts/Other)
+** Messages and FaceTime
+You can try this tips https://hackintosher.com/guides/quick-fixes-facetime-icloud-imessage-hackintosh-not-working/ or https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/
+** Battery status
+Install =SMCBatteryManager.kext= that comes with [[https://github.com/acidanthera/virtualsmc/releases][VirtualSMC]] to get battery status. Ensure that you have removed ACPIBatteryManager if you’ve installed it previously.
+** Audio 
+Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. The ALC256 is not supported on macOS by default, so we use AppleALC to enable it. Audio pipelines on laptops appear to have unique amplifier and gain setups, so we need to pass a layout-id to AppleALC compatible with the Acer Swift3 SF315 52G. The only ID that works well is layout-id=17.
+*** Installtion 
+- config.plist
+  - =Devices/Properties/PciRoot(0x0)/Pci(0x1f,0x3)=
+    - =AAPL,slot-name: Internal=
+    - =hda-gfx: onboard-1=
+    - =hda-idle-support: 1=
+    - =layout-id: 17=
+    - =model: Intel Sunrise Point-LP HD Audio=
