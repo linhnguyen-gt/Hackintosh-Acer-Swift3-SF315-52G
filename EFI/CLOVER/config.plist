@@ -136,7 +136,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 kext-dev-mode=1 -cdfon nv_disable=1 -disablegfxfirmware gfxrst=1 -ngfxbeta -lilubetaall -wegnoegpu</string>
+		<string>dart=0 kext-dev-mode=1 -cdfon nv_disable=1 -disablegfxfirmware gfxrst=1 -ngfxbeta -lilubetaall -wegnoegpu agdpmod=vit9696</string>
 		<key>CustomLogo</key>
 		<true/>
 		<key>DefaultLoader</key>

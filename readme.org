@@ -1,0 +1,41 @@
+#+STARTUP: indent
+* Overview
+Run macOS Mojave (10.14) or Catalina (10.15) on a Acer Swift3 SF315 52G.
+Most pieces are fully supported, and this setup can be used as your main machine. A few pieces are missing (and some will probably never be supported). Caveats in the Hardware section.
+You can use the EFI folder to be to boot into a USB installer, or for regular booting.
+** Hackintosh Mojave + Catalina Acer-Swift3-SF315-52G
+  - CPU : Intel Core i5-8250U (Kabylake-R)
+  - Graphics : Intel UHD 620 (+ MX150)
+  - RAM : SK Hynix HMA81GS6CJR8N-VK 8 GB DDR4 2666 MHz (On board + One slot)
+  - SSD : Hynix 256GB M.2 SOLID STATE DRIVE 80MM L (HFS256G39TND-N210A) Read : Up to 530MB/s(128/256/512GB)\ Write : Up to 190MB/s(128GB)
+  - Screen : 15.5-inch 1920 x 1080 glossy IPS
+  - Ports : 1xUSB 3.1 Gen-1 Type-C, 2xUSB 3.0, 1xUSB 2.0, 1xHDMI (full-size), 1xAudio jack
+  - Wifi/Bluetooth : Intel AC-7265, (M.2 NGFF)
+  - Audio : ALC256
+  - SD Card Reader : Realtek USB2.0-CRW (ven id:0bda, dev id:0129)
+  - Back-lit keyboard
+  - Controller (Synaptic): VoodooI2CHID, VoodooI2C + PS2Controller
+** What is working
+  - Graphics: Intel UHD Graphics 620 (Disable MX150)
+  - Audio: Speakers, headphones (Mic don't work)
+  - Keyboard: Backlight is ACPI-managed so it works just fine too
+  - Trackpad: VoodooI2CHID,VoodooI2C,VoodooI2CSynaptics makes it buttery-smooth, supports all the macOS gestures
+  - USB: Full support
+  - Webcam: PhotoBooth works fine
+  - Sleep/Wake: works very well
+  - Wifi/Bluetooth: You need replace Broadcom BCM94352Z
+** What is not working
+  - Mic: I tried many ways but it not works
+  - HDMI: Just works after Sleep/Wake, LOL
+* Hardware
+** Graphics
+Integrated Intel UHD Graphics 620 support is handled by [[https://github.com/acidanthera/WhateverGreen][WhateverGreen]], and configured in the
+=PciRoot(0x0)/Pci(0x2,0x0)= section of config.plist. The Nvidia GPU MX150 is not supported due to hardware differences and lack of driver support in macOS. It is disabled to save power.
+
+To determine if Intel GPU (IGPU) acceleration is working, check: About This Mac -> Intel UHD Graphics 620
+1536 MB. A value less than 1536MB indicates a problem (e.g. 7MB or 31MB are common).
+
+** Wi-Fi/Bluetooth
+*** Installation
+- Include [[https://github.com/acidanthera/AirportBrcmFixup][AirportBrcmFixup]] for Wi-Fi
+- Include [[https://github.com/acidanthera/BrcmPatchRAM/releases][BrcmPatchRAM]] for Bluetooth (for installation to CLOVER/kexts/Other)
