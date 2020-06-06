@@ -34,5 +34,5 @@
 <li>To determine if Intel GPU (IGPU) acceleration is working, check: About This Mac -> Intel UHD Graphics 620
 1536 MB. A value less than 1536MB indicates a problem (e.g. 7MB or 31MB are common).</li>
 <h3>Wi-Fi/Bluetooth</h3><br>
-<li><h4>Installation</h4></li><br>
+<h4>Installation</h4><br>
 <li>Include AirportBrcmFixup AirportBrcmFixup.kext for Wi-Fi</li><br>
