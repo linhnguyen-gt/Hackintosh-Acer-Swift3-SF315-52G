@@ -43,3 +43,12 @@ To determine if Intel GPU (IGPU) acceleration is working, check: About This Mac 
 You can try this tips https://hackintosher.com/guides/quick-fixes-facetime-icloud-imessage-hackintosh-not-working/ or https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/
 ** Battery status
 Install =SMCBatteryManager.kext= that comes with [[https://github.com/acidanthera/virtualsmc/releases][VirtualSMC]] to get battery status. Ensure that you have removed ACPIBatteryManager if you’ve installed it previously.
+** Audio 
+*** Installtion 
+- config.plist
+  - =Devices/Properties/PciRoot(0x0)/Pci(0x1f,0x3)=
+    - =AAPL,slot-name: Internal=
+    - =hda-gfx: onboard-1=
+    - =hda-idle-support: 1=
+    - =layout-id: 17=
+    - =model: Intel Sunrise Point-LP HD Audio=
