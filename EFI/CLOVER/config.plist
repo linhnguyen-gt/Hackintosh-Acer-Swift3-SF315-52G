@@ -136,9 +136,9 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 kext-dev-mode=1 -cdfon nv_disable=1 -disablegfxfirmware gfxrst=1 -ngfxbeta -lilubetaall -wegnoegpu agdpmod=vit9696</string>
+		<string>dart=0 kext-dev-mode=1 -cdfon nv_disable=1 -disablegfxfirmware gfxrst=1 -ngfxbeta -lilubetaall -wegnoegpu</string>
 		<key>CustomLogo</key>
-		<true/>
+		<string>Alternate</string>
 		<key>DefaultLoader</key>
 		<string>boot.efi</string>
 		<key>DefaultVolume</key>
