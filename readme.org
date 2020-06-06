@@ -40,10 +40,4 @@ To determine if Intel GPU (IGPU) acceleration is working, check: About This Mac 
 - Include [[https://github.com/acidanthera/AirportBrcmFixup][AirportBrcmFixup]] for Wi-Fi
 - Include [[https://github.com/acidanthera/BrcmPatchRAM/releases][BrcmPatchRAM]] for Bluetooth (for installation to CLOVER/kexts/Other)
 ** Messages and FaceTime
-** 1 BSD Device Names
-If the BSD Device Names of your Active Services such as Ethernet, Wi-Fi are set incorrectly this can prevent iMessage/iCloud/FaceTime from working.
-** Set correct BSD name:
-1. Open Terminal
-2. Paste sudo rm -rf /Library/Preferences/SystemConfiguration/NetworkInterfaces.plist into Terminal and enter password on prompt
-3. Paste sudo rm -rf /Library/Preferences/SystemConfiguration/preferences.plist into Terminal
-Reboot Hackintosh and check iMessage/iCloud/Facetime
+You can try this tips https://hackintosher.com/guides/quick-fixes-facetime-icloud-imessage-hackintosh-not-working/
