@@ -35,4 +35,13 @@
 1536 MB. A value less than 1536MB indicates a problem (e.g. 7MB or 31MB are common).</li>
 <h3>Wi-Fi/Bluetooth</h3><br>
 <h4>Installation</h4><br>
-<li>Include AirportBrcmFixup AirportBrcmFixup.kext for Wi-Fi</li><br>
+<li>Include https://github.com/acidanthera/AirportBrcmFixup for Wi-Fi</li><br>
+<li>Include https://github.com/acidanthera/BrcmPatchRAM/releases for Bluetooth (for installation to CLOVER/kexts/Other)</li><br>
+<h4>Messages and FaceTime</h4><br>
+<li>BSD Device Names:</li><br>
+<li>Set correct BSD name:<br>
+Open Terminal<br>
+Paste sudo rm -rf /Library/Preferences/SystemConfiguration/NetworkInterfaces.plist into Terminal and enter password on prompt<br>
+Paste sudo rm -rf /Library/Preferences/SystemConfiguration/preferences.plist into Terminal<br>
+Reboot Hackintosh and check iMessage/iCloud/Facetime<br>
+</li><br>
