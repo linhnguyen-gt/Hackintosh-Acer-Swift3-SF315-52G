@@ -1,6 +1,6 @@
 #+STARTUP: indent
 * Overview
-Run macOS Mojave (10.14) or Catalina (10.15) on a Acer Swift3 SF315 52G.
+Run macOS Mojave (10.14) or Catalina (10.15) on an Acer Swift3 SF315 52G.
 Most pieces are fully supported, and this setup can be used as your main machine. A few pieces are missing (and some will probably never be supported). Caveats in the Hardware section.
 You can use the EFI folder to be to boot into a USB installer, or for regular booting.
 ** Hackintosh Mojave + Catalina Acer-Swift3-SF315-52G
