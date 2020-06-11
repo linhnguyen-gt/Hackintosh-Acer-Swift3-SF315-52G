@@ -92,3 +92,9 @@ Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. T
     - =model: Intel Sunrise Point-LP HD Audio=
 ** USB
 Has a few incorrect USB properties, but we can inject the correct properties via USBInjectAll with [[https://github.com/RehabMan/OS-X-USB-Inject-All/blob/master/SSDT-UIAC.dsl][SSDT-UIAC.]]
+** Enable HiDPI
+[[https://github.com/xzhih/one-key-hidpi][One key HIDPI]]
+-  The purpose of this script is to enable HiDPI options for low and medium-resolution screens and has native HiDPI settings, which can be set in the system display settings without the need for RDM software
+- The DPI mechanism of macOS is different from that of windows. For example, the 1080p screen has 125% and 150% zoom options under win, while the same screen under macOS, the zoom option is simply to adjust the resolution, which makes The font and UI look small at the default resolution, and the resolution becomes blurred again.
+- At the same time, this script can also repair the splash screen by injecting the patched EDID, or the splash screen problem after sleep wake up, of course, this repair varies from person to person
+- In the second stage of booting, the logo will always be slightly enlarged because the resolution is counterfeit
