@@ -1,1 +1,10 @@
 * Fix headphone output
+-Refactor
+-Add listener when sleep/wake
+-Fix on sleep wake
+-Let you choose hda-verb so it don't need be in $PATH
+-Enable launching as LauchDaemon
+-Bug fix
+-Install.sh script with update support
+-Uninstall.sh to uninstall ALCPlugFix
+-macOS Catalina support
