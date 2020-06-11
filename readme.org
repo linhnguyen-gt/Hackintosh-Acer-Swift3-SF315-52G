@@ -82,6 +82,12 @@ You can try this tips https://hackintosher.com/guides/quick-fixes-facetime-iclou
 Install =SMCBatteryManager.kext= that comes with [[https://github.com/acidanthera/virtualsmc/releases][VirtualSMC]] to get battery status. Ensure that you have removed ACPIBatteryManager if you’ve installed it previously.
 ** Audio 
 Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. The ALC256 is not supported on macOS by default, so we use AppleALC to enable it. Audio pipelines on laptops appear to have unique amplifier and gain setups, so we need to pass a layout-id to AppleALC compatible with the Acer Swift3 SF315 52G. The only ID that works well is layout-id=17.
+** Problem Audio after sleep/wake
+- Need install [[https://bitbucket.org/RehabMan/os-x-eapd-codec-commander/downloads/][CodecCommander.kext]]
+- Next, we will modify the CodecCommander.kext before installing it, to make it work with our ALC256
+- Right-click on CodecCommander -> Show Package Contents -> Contents -> Info.plist and open with Xcode
+- Find IOKitPersonalities -> CodecCommander -> Codec Profile -> add 10ec_0256, Dictionary: String, Realtek ALC256
+- 
 *** Installtion 
 - config.plist
   - =Devices/Properties/PciRoot(0x0)/Pci(0x1f,0x3)=
