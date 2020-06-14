@@ -76,7 +76,7 @@ Acer-Swift3-SF315-52G using Touchpad Synaptic. If only using VoodooI2C and Voodo
 *** Installation
 - Include [[https://github.com/acidanthera/AirportBrcmFixup][AirportBrcmFixup]] for Wi-Fi
 - Include [[https://github.com/acidanthera/BrcmPatchRAM/releases][BrcmPatchRAM]] for Bluetooth (for installation to CLOVER/kexts/Other)
-** Messages and FaceTime
+** iMessages and FaceTime
 You can try this tips https://hackintosher.com/guides/quick-fixes-facetime-icloud-imessage-hackintosh-not-working/ or https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/
 ** Battery status
 Install =SMCBatteryManager.kext= that comes with [[https://github.com/acidanthera/virtualsmc/releases][VirtualSMC]] to get battery status. Ensure that you have removed ACPIBatteryManager if you’ve installed it previously.
@@ -90,6 +90,16 @@ Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. T
     - =hda-idle-support: 1=
     - =layout-id: 17=
     - =model: Intel Sunrise Point-LP HD Audio=
+** Problem Audio after sleep/wake
+- Need install [[https://bitbucket.org/RehabMan/os-x-eapd-codec-commander/downloads/][CodecCommander.kext]]
+- Next, we will modify the CodecCommander.kext before installing it, to make it work with our ALC256
+- Right-click on CodecCommander -> Show Package Contents -> Contents -> Info.plist and open with Xcode
+- Find IOKitPersonalities -> CodecCommander -> Codec Profile 
+- [[https://user-images.githubusercontent.com/43808684/84402641-e5143000-ac2e-11ea-976f-88c87e5736e7.png]]
+- Go to IOKitPersonalities -> CodecCommander -> Codec Profile Alter the Comment from 0x19 SET_PIN_WIDGET_CONTROL 0x25 or 0x24 to 0x19 SET_PIN_WIDGET_CONTROL 0x20 (see screenshot)
+- [[https://user-images.githubusercontent.com/43808684/84402656-ec3b3e00-ac2e-11ea-98d3-bfc17ae53887.png]]
+- Save!!!
+- Copy CodecCommander.kext under ‘EFI -> Clover -> Kexts -> Other‘ folder and then restart the system
 ** USB
 Has a few incorrect USB properties, but we can inject the correct properties via USBInjectAll with [[https://github.com/RehabMan/OS-X-USB-Inject-All/blob/master/SSDT-UIAC.dsl][SSDT-UIAC.]]
 ** Enable HiDPI
