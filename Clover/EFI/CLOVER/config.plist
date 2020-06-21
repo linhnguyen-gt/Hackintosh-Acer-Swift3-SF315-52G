@@ -7,7 +7,7 @@
 	<key>ACPI</key>
 	<dict>
 		<key>AutoMerge</key>
-		<true/>
+		<false/>
 		<key>DSDT</key>
 		<dict>
 			<key>Fixes</key>
@@ -97,6 +97,68 @@
 					<key>Replace</key>
 					<data>WkRTTQ==</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _DSM to XDSM</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X0RTTQ==</data>
+					<key>Replace</key>
+					<data>WERTTQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change SAT0 to SATA</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>U0FUMA==</data>
+					<key>Replace</key>
+					<data>U0FUQQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>GPI0:_STA to XSTA</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1NUQQ==</data>
+					<key>Replace</key>
+					<data>WFNUQQ==</data>
+					<key>TgtBridge</key>
+					<data>R1BJMA==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _OSI to XOSI</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X09TSQ==</data>
+					<key>Replace</key>
+					<data>WE9TSQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>R1BSVwI=</data>
+					<key>Replace</key>
+					<data>WFBSVwI=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change EHC2 to EH02</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>RUhDMg==</data>
+					<key>Replace</key>
+					<data>RUgwMg==</data>
+				</dict>
 			</array>
 		</dict>
 		<key>DropTables</key>
@@ -111,11 +173,11 @@
 			</dict>
 		</array>
 		<key>FixHeaders</key>
-		<true/>
+		<false/>
 		<key>FixMCFG</key>
-		<true/>
+		<false/>
 		<key>HaltEnabler</key>
-		<true/>
+		<false/>
 		<key>SSDT</key>
 		<dict>
 			<key>EnableC6</key>
@@ -129,16 +191,12 @@
 				<key>PluginType</key>
 				<true/>
 			</dict>
-			<key>PluginType</key>
-			<true/>
 		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 kext-dev-mode=1 -cdfon nv_disable=1 -disablegfxfirmware gfxrst=1 -ngfxbeta -lilubetaall -wegnoegpu</string>
-		<key>CustomLogo</key>
-		<string>Alternate</string>
+		<string>nv_disable=1 gfxrst=1 -wegnoegpu darkwake=0</string>
 		<key>DefaultLoader</key>
 		<string>boot.efi</string>
 		<key>DefaultVolume</key>
@@ -147,6 +205,8 @@
 		<true/>
 		<key>HibernationFixup</key>
 		<true/>
+		<key>Legacy</key>
+		<string>PBR</string>
 		<key>NoEarlyProgress</key>
 		<true/>
 		<key>Secure</key>
@@ -270,7 +330,7 @@
 				<key>hda-idle-support</key>
 				<string>1</string>
 				<key>layout-id</key>
-				<integer>17</integer>
+				<integer>97</integer>
 				<key>model</key>
 				<string>Intel Sunrise Point-LP HD Audio</string>
 			</dict>
@@ -289,66 +349,50 @@
 				<data>AAAWWQ==</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,2,0</string>
+				<key>complete-modeset-framebuffers</key>
+				<data>AAAAAAAAAAE=</data>
 				<key>device-id</key>
 				<data>FlkAAA==</data>
 				<key>device_type</key>
-				<string>VGA compatible controller</string>
+				<string>Display</string>
 				<key>disable-external-gpu</key>
 				<data>AQAAAA==</data>
 				<key>enable-hdmi-dividers-fix</key>
 				<data>AQAAAA==</data>
 				<key>enable-hdmi20</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-con0-busid</key>
-				<data>AAAAAA==</data>
+				<key>force-online</key>
+				<data>AQAAAA==</data>
+				<key>force-online-framebuffers</key>
+				<data>AAAAAAAAAAE=</data>
 				<key>framebuffer-con0-enable</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-con0-flags</key>
-				<data>mAAAAA==</data>
-				<key>framebuffer-con0-index</key>
-				<data>AAAAAA==</data>
 				<key>framebuffer-con0-pipe</key>
 				<data>EgAAAA==</data>
-				<key>framebuffer-con0-type</key>
-				<data>AgAAAA==</data>
-				<key>framebuffer-con1-busid</key>
-				<data>BQAAAA==</data>
 				<key>framebuffer-con1-enable</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-con1-flags</key>
-				<data>hwEAAA==</data>
-				<key>framebuffer-con1-index</key>
-				<data>AQAAAA==</data>
+				<data>xwMAAA==</data>
 				<key>framebuffer-con1-pipe</key>
 				<data>EgAAAA==</data>
 				<key>framebuffer-con1-type</key>
 				<data>AAgAAA==</data>
-				<key>framebuffer-con2-busid</key>
-				<data>BAAAAA==</data>
 				<key>framebuffer-con2-enable</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-con2-flags</key>
-				<data>hwEAAA==</data>
+				<data>xwMAAA==</data>
 				<key>framebuffer-con2-index</key>
-				<data>AgAAAA==</data>
-				<key>framebuffer-con2-pipe</key>
-				<data>EgAAAA==</data>
-				<key>framebuffer-con2-type</key>
-				<data>AAgAAA==</data>
-				<key>framebuffer-con3-busid</key>
-				<data>AAAAAA==</data>
-				<key>framebuffer-con3-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con3-flags</key>
-				<data>IAAAAA==</data>
-				<key>framebuffer-con3-index</key>
 				<data>/////w==</data>
-				<key>framebuffer-con3-pipe</key>
-				<data>AAAAAA==</data>
-				<key>framebuffer-con3-type</key>
-				<data>AQAAAA==</data>
+				<key>framebuffer-fbmem</key>
+				<data>AACQAA==</data>
+				<key>framebuffer-flags</key>
+				<data>CwfjAA==</data>
 				<key>framebuffer-patch-enable</key>
 				<data>AQAAAA==</data>
+				<key>framebuffer-portcount</key>
+				<data>AgAAAA==</data>
+				<key>framebuffer-stolenmem</key>
+				<data>AAAwAQ==</data>
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 			</dict>
@@ -373,7 +417,7 @@
 			<key>FixOwnership</key>
 			<true/>
 			<key>HighCurrent</key>
-			<true/>
+			<false/>
 			<key>Inject</key>
 			<true/>
 		</dict>
@@ -384,11 +428,11 @@
 	<dict>
 		<key>Hide</key>
 		<array>
-			<string>	  </string>
+			<string>Preboot</string>
 			<string>Recovery</string>
 		</array>
 		<key>KbdPrevLang</key>
-		<false/>
+		<true/>
 		<key>Language</key>
 		<string>en-US:0</string>
 		<key>Mouse</key>
@@ -397,7 +441,7 @@
 			<false/>
 		</dict>
 		<key>PlayAsync</key>
-		<false/>
+		<true/>
 		<key>Scan</key>
 		<dict>
 			<key>Entries</key>
@@ -440,7 +484,7 @@
 	<key>KernelAndKextPatches</key>
 	<dict>
 		<key>AppleIntelCPUPM</key>
-		<true/>
+		<false/>
 		<key>AppleRTC</key>
 		<true/>
 		<key>DellSMBIOSPatch</key>
@@ -452,7 +496,7 @@
 		<key>KernelLapic</key>
 		<true/>
 		<key>KernelPm</key>
-		<true/>
+		<false/>
 		<key>KernelToPatch</key>
 		<array>
 			<dict>
@@ -502,6 +546,8 @@
 				<data>igKEwOtC</data>
 			</dict>
 		</array>
+		<key>KernelXCPM</key>
+		<true/>
 		<key>KextsToPatch</key>
 		<array>
 			<dict>
@@ -556,7 +602,47 @@
 				<key>Replace</key>
 				<data>g+M/0+NBCd8=</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>0x591b0000, 0105 instead of 0306, HDMI</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>AgQKAAAIAACHAQAAAwYK</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>AQUKAAAIAACHAQAAAgQK</data>
+			</dict>
+			<dict>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>SU9LaXQ=</data>
+				<key>InfoPlistPatch</key>
+				<true/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelLpssI2C</string>
+				<key>Replace</key>
+				<data>SU9LaXM=</data>
+			</dict>
+			<dict>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>SU9LaXQ=</data>
+				<key>InfoPlistPatch</key>
+				<true/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelLpssI2CController</string>
+				<key>Replace</key>
+				<data>SU9LaXM=</data>
+			</dict>
 		</array>
+		<key>PanicNoKextDump</key>
+		<true/>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
@@ -564,25 +650,35 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
+		<key>MLB</key>
+		<string>FVF925609CD0000CB</string>
+		<key>ROM</key>
+		<data>rNG45YoT</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>BiosReleaseDate</key>
-		<string>03/17/2020</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
+		<key>Board-ID</key>
+		<string>-</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
+		<key>BoardType</key>
+		<integer>10</integer>
 		<key>BoardVersion</key>
 		<string>1.0</string>
+		<key>ChassisAssetTag</key>
+		<string>MacBook-Aluminum</string>
+		<key>ChassisManufacturer</key>
+		<string>Apple Inc.</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
+		<key>LocationInChassis</key>
+		<string>Part Component</string>
 		<key>Manufacturer</key>
 		<string>Apple Inc.</string>
 		<key>Mobile</key>
 		<true/>
-		<key>PlatformFeature</key>
-		<string>0x02</string>
 		<key>ProductName</key>
 		<string>MacBookPro15,4</string>
 		<key>ProductName-Comment</key>
