@@ -7,7 +7,7 @@
 	<key>ACPI</key>
 	<dict>
 		<key>AutoMerge</key>
-		<false/>
+		<true/>
 		<key>DSDT</key>
 		<dict>
 			<key>Fixes</key>
@@ -119,18 +119,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>GPI0:_STA to XSTA</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1NUQQ==</data>
-					<key>Replace</key>
-					<data>WFNUQQ==</data>
-					<key>TgtBridge</key>
-					<data>R1BJMA==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>change _OSI to XOSI</string>
 					<key>Disabled</key>
 					<false/>
@@ -149,18 +137,10 @@
 					<key>Replace</key>
 					<data>WFBSVwI=</data>
 				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change EHC2 to EH02</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>RUhDMg==</data>
-					<key>Replace</key>
-					<data>RUgwMg==</data>
-				</dict>
 			</array>
 		</dict>
+		<key>DisableASPM</key>
+		<false/>
 		<key>DropTables</key>
 		<array>
 			<dict>
@@ -173,11 +153,11 @@
 			</dict>
 		</array>
 		<key>FixHeaders</key>
-		<false/>
+		<true/>
 		<key>FixMCFG</key>
-		<false/>
+		<true/>
 		<key>HaltEnabler</key>
-		<false/>
+		<true/>
 		<key>SSDT</key>
 		<dict>
 			<key>EnableC6</key>
@@ -191,18 +171,16 @@
 				<key>PluginType</key>
 				<true/>
 			</dict>
+			<key>PluginType</key>
+			<string>1</string>
 		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>nv_disable=1 gfxrst=1 -wegnoegpu darkwake=0</string>
-		<key>DefaultLoader</key>
-		<string>boot.efi</string>
+		<string>nv_disable=1 gfxrst=1 -wegnoegpu darkwake=0 dart=0 -disablegfxfirmware</string>
 		<key>DefaultVolume</key>
-		<string>MacOS</string>
-		<key>Fast</key>
-		<true/>
+		<string>LastBootedVolume</string>
 		<key>HibernationFixup</key>
 		<true/>
 		<key>Legacy</key>
@@ -213,6 +191,8 @@
 		<false/>
 		<key>StrictHibernate</key>
 		<false/>
+		<key>Timeout</key>
+		<integer>5</integer>
 		<key>XMPDetection</key>
 		<string>Yes</string>
 	</dict>
@@ -349,8 +329,6 @@
 				<data>AAAWWQ==</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,2,0</string>
-				<key>complete-modeset-framebuffers</key>
-				<data>AAAAAAAAAAE=</data>
 				<key>device-id</key>
 				<data>FlkAAA==</data>
 				<key>device_type</key>
@@ -363,8 +341,6 @@
 				<data>AQAAAA==</data>
 				<key>force-online</key>
 				<data>AQAAAA==</data>
-				<key>force-online-framebuffers</key>
-				<data>AAAAAAAAAAE=</data>
 				<key>framebuffer-con0-enable</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-con0-pipe</key>
@@ -464,8 +440,6 @@
 	<dict>
 		<key>EDID</key>
 		<dict>
-			<key>Custom</key>
-			<data>AP///////wAGr+0hAAAAAAAaAQSlIhN4Am6Fk1hYkigeUFQAAAABAQEBAQEBAQEBAQEBAQEBFDeApnA4LkBsMKoAWMEQAAAYAAAADwAAAAAAAAAAAAAAAAAgAAAA/gBBVU8KICAgICAgICAgAAAA/gBCMTU2SEFOMDIuMSAKACY=</data>
 			<key>Inject</key>
 			<true/>
 		</dict>
@@ -496,7 +470,7 @@
 		<key>KernelLapic</key>
 		<true/>
 		<key>KernelPm</key>
-		<false/>
+		<true/>
 		<key>KernelToPatch</key>
 		<array>
 			<dict>
@@ -616,30 +590,6 @@
 				<key>Replace</key>
 				<data>AQUKAAAIAACHAQAAAgQK</data>
 			</dict>
-			<dict>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>SU9LaXQ=</data>
-				<key>InfoPlistPatch</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelLpssI2C</string>
-				<key>Replace</key>
-				<data>SU9LaXM=</data>
-			</dict>
-			<dict>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>SU9LaXQ=</data>
-				<key>InfoPlistPatch</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelLpssI2CController</string>
-				<key>Replace</key>
-				<data>SU9LaXM=</data>
-			</dict>
 		</array>
 		<key>PanicNoKextDump</key>
 		<true/>
@@ -650,17 +600,13 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
-		<key>MLB</key>
-		<string>FVF925609CD0000CB</string>
 		<key>ROM</key>
-		<data>rNG45YoT</data>
+		<string>UseMacAddr0</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
-		<key>Board-ID</key>
-		<string>-</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardType</key>
@@ -671,6 +617,10 @@
 		<string>MacBook-Aluminum</string>
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
+		<key>ChassisType</key>
+		<string>0x09</string>
+		<key>EfiVersion</key>
+		<string>1037.120.87.0.0</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>LocationInChassis</key>
@@ -679,6 +629,8 @@
 		<string>Apple Inc.</string>
 		<key>Mobile</key>
 		<true/>
+		<key>PlatformFeature</key>
+		<string>0x32</string>
 		<key>ProductName</key>
 		<string>MacBookPro15,4</string>
 		<key>ProductName-Comment</key>
