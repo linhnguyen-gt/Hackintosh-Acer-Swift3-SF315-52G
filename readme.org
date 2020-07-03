@@ -38,34 +38,26 @@ Integrated Intel UHD Graphics 620 support is handled by [[https://github.com/aci
     - =AAPL,ig-platform-id: 00001659=
     - =AAPL,slot-name: Internal@0,2,0=
     - =device-id: 16590000=
-    - =device_type: VGA compatible controller=
+    - =device_type: Display Controller=
     - =disable-external-gpu: 01000000= (Disable GPU or -wegnoegpu with Boot Flags)
     - =enable-hdmi-dividers-fix: 01000000=
     - =enable-hdmi20: 01000000=
-    - =framebuffer-con0-busid: 00000000=
+    - =force-online: 01000000= 
     - =framebuffer-con0-enable: 01000000=
-    - =dframebuffer-con0-flags: 98000000=
-    - =framebuffer-con0-index: 00000000=
     - =framebuffer-con0-pipe: 12000000=
     - =framebuffer-con0-type: 02000000=
-    - =framebuffer-con1-busid: 05000000=
     - =framebuffer-con1-enable: 01000000=
     - =framebuffer-con1-flags: 87010000=
-    - =framebuffer-con1-index: 01000000=
     - =framebuffer-con1-pipe: 12000000=
     - =framebuffer-con1-type: 00080000=
     - =framebuffer-con2-busid: 04000000=
     - =framebuffer-con2-enable: 01000000=
     - =framebuffer-con2-flags: 87010000=
-    - =framebuffer-con2-index: 02000000=
-    - =framebuffer-con2-pipe: 12000000=
+    - =framebuffer-con2-index: FFFFFFFF=
     - =framebuffer-con2-type: 00080000=
-    - =framebuffer-con3-busid: 00000000=
-    - =framebuffer-con3-enable: 01000000=
-    - =framebuffer-con3-flags: 20000000=
-    - =framebuffer-con3-index: FFFFFFFF=
-    - =framebuffer-con3-pipe: 00000000=
-    - =framebuffer-con3-type: 01000000=
+    - =framebuffer-flags: 0B07E300=
+    - =framebuffer-portcount: 02000000=
+    - =framebuffer-stolenmem: 00003001=
     - =framebuffer-patch-enable: 01000000=
     - =hda-gfx: onboard-1=
 To determine if Intel GPU (IGPU) acceleration is working, check: About This Mac -> Intel UHD Graphics 620
@@ -88,7 +80,7 @@ Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. T
     - =AAPL,slot-name: Internal=
     - =hda-gfx: onboard-1=
     - =hda-idle-support: 1=
-    - =layout-id: 17=
+    - =layout-id: 97=
     - =model: Intel Sunrise Point-LP HD Audio=
 ** Problem Audio after sleep/wake
 - Need install [[https://bitbucket.org/RehabMan/os-x-eapd-codec-commander/downloads/][CodecCommander.kext]]
