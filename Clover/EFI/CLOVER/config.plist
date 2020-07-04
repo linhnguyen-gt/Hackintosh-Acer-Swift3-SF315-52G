@@ -137,16 +137,6 @@
 					<key>Replace</key>
 					<data>WEdQQQk=</data>
 				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Rename MATH._STA and LDR2._STA to XSTA</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1NUQQCgDZNQ</data>
-					<key>Replace</key>
-					<data>WFNUQQCgDZNQ</data>
-				</dict>
 			</array>
 		</dict>
 		<key>DisableASPM</key>
@@ -586,59 +576,33 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
-		<key>MLB</key>
-		<string>FVF921902GU00008C</string>
 		<key>ROM</key>
-		<data>rNG45YoT</data>
+		<string>UseMacAddr0</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>BiosReleaseDate</key>
-		<string>05/13/2020</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
-		<key>BiosVersion</key>
-		<string>MBP154.88Z.F000.B00.2005132135</string>
-		<key>Board-ID</key>
-		<string>Mac-53FDB3D8DB8CA971</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
-		<key>BoardSerialNumber</key>
-		<string>FVF921902GU00008C</string>
-		<key>BoardType</key>
-		<integer>10</integer>
 		<key>BoardVersion</key>
 		<string>1.0</string>
-		<key>ChassisAssetTag</key>
-		<string>MacBook-Aluminum</string>
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
 		<string>0x09</string>
-		<key>EfiVersion</key>
-		<string>1037.120.87.0.0</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
-		<key>FirmwareFeatures</key>
-		<string>0xFC0FE137</string>
-		<key>FirmwareFeaturesMask</key>
-		<string>0xFF1FFF3F</string>
 		<key>LocationInChassis</key>
 		<string>Part Component</string>
 		<key>Manufacturer</key>
 		<string>Apple Inc.</string>
 		<key>Mobile</key>
 		<true/>
-		<key>PlatformFeature</key>
-		<string>0x32</string>
 		<key>ProductName</key>
 		<string>MacBookPro15,4</string>
 		<key>ProductName-Comment</key>
 		<string>Using Haswell MacBookAir6,2 until Clover has support for KabyLake identifiers</string>
-		<key>SerialNumber</key>
-		<string>FVFYRMY5L40Y</string>
-		<key>SmUUID</key>
-		<string>66C10A8A-B088-4504-8431-D484EA8963EF</string>
 		<key>Trust</key>
 		<true/>
 		<key>Version</key>
