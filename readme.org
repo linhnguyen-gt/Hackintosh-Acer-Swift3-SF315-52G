@@ -19,7 +19,7 @@ You can use the EFI folder to be to boot into a USB installer, or for regular bo
   - Graphics: Intel UHD Graphics 620 (Disable MX150)
   - Audio: Speakers, headphones (Mic don't work)
   - Keyboard: Backlight is ACPI-managed so it works just fine too
-  - Trackpad: VoodooI2CHID,VoodooI2C,VoodooI2CSynaptics makes it buttery-smooth, supports all the macOS gestures
+  - Trackpad: VoodooI2CHID,VoodooI2C makes it buttery-smooth, supports all the macOS gestures
   - USB: Full support
   - Webcam: PhotoBooth works fine
   - Sleep/Wake: works very well
