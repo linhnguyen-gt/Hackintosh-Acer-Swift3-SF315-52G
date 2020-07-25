@@ -79,7 +79,7 @@ Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. T
     - =model: Intel Sunrise Point-LP HD Audio=
 ** Fix the AirPods choppy/unreliable when connected to macOS play music
 *** Open =System Preferences > Sound > Input=
-- Change Sound Input from Airpods to Internal Microphone
+- Change Sound Input from Airpods to =Internal Microphone=
 - Possible explanation:
 - Since =Broadcom BCM94352Z= are running with Bluetooth 4.0, which has too low bandwidth to handle both input/output at a high quality.
 - Therefore, changing =Sound= =Input= to =Internal Microphone= to ensure audio output is working as normal.
