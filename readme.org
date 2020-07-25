@@ -53,7 +53,7 @@ Integrated Intel UHD Graphics 620 support is handled by [[https://github.com/aci
 To determine if Intel GPU (IGPU) acceleration is working, check: About This Mac -> Intel UHD Graphics 620
 1536 MB. A value less than 1536MB indicates a problem (e.g. 7MB or 31MB are common).
 ** Touchpad
-Acer-Swift3-SF315-52G using Touchpad Synaptic. If only using VoodooI2C and VoodooPS2Controller it will not work smoothly, you need to patch [[https://github.com/linhnguyengas/Hackintosh-Acer-Swift3-SF315-52G/blob/master/Patch%20I2C/SSDT-I2C.dsl][SSDT-I2C]] to be able to use as a real Trackpad of Macbook 
+Acer-Swift3-SF315-52G using Touchpad Synaptic. If only using VoodooI2C and VoodooI2CHID it will not work smoothly, you need to patch [[https://github.com/linhnguyengas/Hackintosh-Acer-Swift3-SF315-52G/blob/master/Patch%20I2C/SSDT-I2C.dsl][SSDT-I2C]] to be able to use as a real Trackpad of Macbook 
 *** Custom setting the delay between Touchpad and keyboard
 - To do that you need to edit Info.plist in VoodooI2CHID.kext: Open the =Info.plist= in the VoodooI2CHID.kext with any Text Editor(I use Visual Code)
 - Finding the =QuietTimeAfterTyping=
