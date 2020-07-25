@@ -98,6 +98,14 @@ Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. T
 - Copy CodecCommander.kext under ‘EFI -> Clover -> Kexts -> Other‘ folder and then restart the system
 ** USB
 Has a few incorrect USB properties, but we can inject the correct properties via USBInjectAll with [[https://github.com/RehabMan/OS-X-USB-Inject-All/blob/master/SSDT-UIAC.dsl][SSDT-UIAC.]]
+* Change Key Brightness
+** Very Basic
+- You just need to connect USB Keyboard or USB Mouse
+- Go to System Preferences > Keyboard > Shortcuts > Display (if don't connect USB Keyboard or USB Mouse , Display won't appear)
+[[https://user-images.githubusercontent.com/43808684/88456714-2c3a4580-ceaa-11ea-954c-ddc3f21970ce.png]]
+- Change key F3, F4
+[[https://user-images.githubusercontent.com/43808684/88456719-36f4da80-ceaa-11ea-8ff6-bc1fd4f55af3.png]]
+- Use FN + F3 to decrease brightness, FN + F4 increase brightness
 ** Enable HiDPI
 [[https://github.com/xzhih/one-key-hidpi][One key HIDPI]]
 - Support 1424x802 HiDPI resolution
