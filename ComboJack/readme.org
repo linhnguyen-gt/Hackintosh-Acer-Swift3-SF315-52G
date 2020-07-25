@@ -6,5 +6,5 @@
 - Enable launching as LauchDaemon
 - Bug fix
 - Install.sh script with update support
-- Uninstall.sh to uninstall ALCPlugFix
+- Uninstall.sh to uninstall 
 - macOS Catalina support
