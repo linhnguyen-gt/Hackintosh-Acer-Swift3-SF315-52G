@@ -34,14 +34,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT-dGPU-Off.aml</string>
-				<key>Path</key>
-				<string>SSDT-dGPU-Off.aml</string>
-				<key>Enabled</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>SSDT-DMAC.aml</string>
 				<key>Path</key>
 				<string>SSDT-DMAC.aml</string>
@@ -53,14 +45,6 @@
 				<string>SSDT-EC.aml</string>
 				<key>Path</key>
 				<string>SSDT-EC.aml</string>
-				<key>Enabled</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-GPI0.aml</string>
-				<key>Path</key>
-				<string>SSDT-GPI0.aml</string>
 				<key>Enabled</key>
 				<true/>
 			</dict>
@@ -85,6 +69,14 @@
 				<string>SSDT-I2C.aml</string>
 				<key>Path</key>
 				<string>SSDT-I2C.aml</string>
+				<key>Enabled</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-LGPA.aml</string>
+				<key>Path</key>
+				<string>SSDT-LGPA.aml</string>
 				<key>Enabled</key>
 				<true/>
 			</dict>
@@ -130,6 +122,22 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>SSDT-PRW.aml</string>
+				<key>Path</key>
+				<string>SSDT-PRW.aml</string>
+				<key>Enabled</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-PTSWAK.aml</string>
+				<key>Path</key>
+				<string>SSDT-PTSWAK.aml</string>
+				<key>Enabled</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>SSDT-UIAC.aml</string>
 				<key>Path</key>
 				<string>SSDT-UIAC.aml</string>
@@ -138,9 +146,17 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT-XCPM.aml</string>
+				<string>SSDT-USBX.aml</string>
 				<key>Path</key>
-				<string>SSDT-XCPM.aml</string>
+				<string>SSDT-USBX.aml</string>
+				<key>Enabled</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-XOSI.aml</string>
+				<key>Path</key>
+				<string>SSDT-XOSI.aml</string>
 				<key>Enabled</key>
 				<true/>
 			</dict>
@@ -435,54 +451,30 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
-				<key>AAPL,GfxYTile</key>
-				<data>AQAAAA==</data>
-				<key>AAPL,ig-platform-id</key>
-				<data>AAAWWQ==</data>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,2,0</string>
-				<key>device-id</key>
-				<data>FlkAAA==</data>
-				<key>device_type</key>
-				<string>Display</string>
-				<key>disable-external-gpu</key>
-				<data>AQAAAA==</data>
-				<key>enable-hdmi-dividers-fix</key>
-				<data>AQAAAA==</data>
-				<key>enable-hdmi20</key>
-				<data>AQAAAA==</data>
-				<key>force-online</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con0-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con0-pipe</key>
-				<data>EgAAAA==</data>
-				<key>framebuffer-con1-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con1-flags</key>
-				<data>xwMAAA==</data>
-				<key>framebuffer-con1-pipe</key>
-				<data>EgAAAA==</data>
-				<key>framebuffer-con1-type</key>
-				<data>AAgAAA==</data>
-				<key>framebuffer-con2-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con2-flags</key>
-				<data>xwMAAA==</data>
-				<key>framebuffer-con2-index</key>
-				<data>/////w==</data>
-				<key>framebuffer-fbmem</key>
-				<data>AACQAA==</data>
 				<key>framebuffer-flags</key>
 				<data>CwfjAA==</data>
-				<key>framebuffer-patch-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-portcount</key>
-				<data>AgAAAA==</data>
 				<key>framebuffer-stolenmem</key>
 				<data>AAAwAQ==</data>
+				<key>disable-external-gpu</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con1-pipe</key>
+				<data>CgAAAA==</data>
+				<key>device-id</key>
+				<data>FlkAAA==</data>
+				<key>framebuffer-fbmem</key>
+				<data>AACQAA==</data>
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
+				<key>framebuffer-patch-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con1-type</key>
+				<data>AAgAAA==</data>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>AAPL,ig-platform-id</key>
+				<data>AADAhw==</data>
+				<key>framebuffer-con1-enable</key>
+				<data>AQAAAA==</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -648,6 +640,22 @@
 				<key>MinKernel</key>
 				<string></string>
 				<key>ExecutablePath</key>
+				<string>Contents/MacOS/NVMeFix</string>
+				<key>BundlePath</key>
+				<string>NVMeFix.kext</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+				<key>Enabled</key>
+				<true/>
+				<key>MinKernel</key>
+				<string></string>
+				<key>ExecutablePath</key>
 				<string>Contents/MacOS/NoTouchID</string>
 				<key>BundlePath</key>
 				<string>NoTouchID.kext</string>
@@ -731,6 +739,22 @@
 				<string>Contents/MacOS/USBInjectAll</string>
 				<key>BundlePath</key>
 				<string>USBInjectAll.kext</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+				<key>Enabled</key>
+				<true/>
+				<key>MinKernel</key>
+				<string></string>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/VerbStub</string>
+				<key>BundlePath</key>
+				<string>VerbStub.kext</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -1088,7 +1112,7 @@
 			<key>HibernateMode</key>
 			<string>Auto</string>
 			<key>HideAuxiliary</key>
-			<true/>
+			<false/>
 			<key>PickerAttributes</key>
 			<integer>1</integer>
 			<key>PickerAudioAssist</key>
@@ -1098,11 +1122,11 @@
 			<key>PollAppleHotKeys</key>
 			<true/>
 			<key>ShowPicker</key>
-			<false/>
+			<true/>
 			<key>TakeoffDelay</key>
 			<integer>0</integer>
 			<key>Timeout</key>
-			<integer>0</integer>
+			<integer>5</integer>
 		</dict>
 		<key>Debug</key>
 		<dict>
@@ -1198,7 +1222,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>alcid=97 nv_disable=1 -wegnoegpu gfxrst=1 darkwake=0</string>
+				<string>alcid=97 nv_disable=1 -wegnoegpu gfxrst=1 darkwake=4</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -1263,17 +1287,17 @@
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string></string>
+			<string>FVF921902GU00008C</string>
 			<key>ROM</key>
-			<data></data>
+			<data>rNG45YoT</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
 			<string>MacBookPro15,4</string>
 			<key>SystemSerialNumber</key>
-			<string></string>
+			<string>FVFYRMY5L40Y</string>
 			<key>SystemUUID</key>
-			<string></string>
+			<string>66C10A8A-B088-4504-8431-D484EA8963EF</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -1321,7 +1345,6 @@
 		<key>Drivers</key>
 		<array>
 			<string>HfsPlus.efi</string>
-			<string>OpenCanopy.efi</string>
 			<string>OpenRuntime.efi</string>
 		</array>
 		<key>Input</key>
