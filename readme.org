@@ -19,7 +19,7 @@ You can use the EFI folder to be to boot into a USB installer, or for regular bo
   - Graphics: Intel UHD Graphics 620 (Disable MX150)
   - Audio: Speakers, headphones (Mic don't work)
   - Keyboard: Backlight is ACPI-managed so it works just fine too
-  - Trackpad: VoodooI2CHID,VoodooI2C,VoodooI2CSynaptics makes it buttery-smooth, supports all the macOS gestures
+  - Trackpad: VoodooI2CHID,VoodooI2C makes it buttery-smooth, supports all the macOS gestures
   - USB: Full support
   - Webcam: PhotoBooth works fine
   - Sleep/Wake: works very well
@@ -35,26 +35,18 @@ Integrated Intel UHD Graphics 620 support is handled by [[https://github.com/aci
 - config.plist
   - =Devices/Properties/PciRoot(0x0)/Pci(0x2,0x0)=
     - =AAPL,GfxYTile: 01000000=
-    - =AAPL,ig-platform-id: 00001659=
+    - =AAPL,ig-platform-id: 0000C087=
     - =AAPL,slot-name: Internal@0,2,0=
     - =device-id: 16590000=
     - =device_type: Display Controller=
     - =disable-external-gpu: 01000000= (Disable GPU or -wegnoegpu with Boot Flags)
     - =enable-hdmi-dividers-fix: 01000000=
     - =enable-hdmi20: 01000000=
-    - =force-online: 01000000= 
-    - =framebuffer-con0-enable: 01000000=
-    - =framebuffer-con0-pipe: 12000000=
-    - =framebuffer-con0-type: 02000000=
     - =framebuffer-con1-enable: 01000000=
     - =framebuffer-con1-flags: 87010000=
     - =framebuffer-con1-pipe: 12000000=
     - =framebuffer-con1-type: 00080000=
-    - =framebuffer-con2-busid: 04000000=
-    - =framebuffer-con2-enable: 01000000=
-    - =framebuffer-con2-flags: 87010000=
-    - =framebuffer-con2-index: FFFFFFFF=
-    - =framebuffer-con2-type: 00080000=
+    - =framebuffer-fbmem: 00009000=
     - =framebuffer-flags: 0B07E300=
     - =framebuffer-portcount: 02000000=
     - =framebuffer-stolenmem: 00003001=
@@ -73,7 +65,7 @@ You can try this tips https://hackintosher.com/guides/quick-fixes-facetime-iclou
 ** Battery status
 Install =SMCBatteryManager.kext= that comes with [[https://github.com/acidanthera/virtualsmc/releases][VirtualSMC]] to get battery status. Ensure that you have removed ACPIBatteryManager if you’ve installed it previously.
 ** Audio 
-Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. The ALC256 is not supported on macOS by default, so we use AppleALC to enable it. Audio pipelines on laptops appear to have unique amplifier and gain setups, so we need to pass a layout-id to AppleALC compatible with the Acer Swift3 SF315 52G. The only ID that works well is layout-id=17.
+Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. The ALC256 is not supported on macOS by default, so we use AppleALC to enable it. Audio pipelines on laptops appear to have unique amplifier and gain setups, so we need to pass a layout-id to AppleALC compatible with the Acer Swift3 SF315 52G. The only ID that works well is layout-id=97.
 *** Installtion 
 - config.plist
   - =Devices/Properties/PciRoot(0x0)/Pci(0x1f,0x3)=
