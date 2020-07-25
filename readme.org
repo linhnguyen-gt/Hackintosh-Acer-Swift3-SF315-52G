@@ -6,10 +6,10 @@ You can use the EFI folder to be to boot into a USB installer, or for regular bo
 ** Hackintosh Mojave + Catalina Acer-Swift3-SF315-52G
   - CPU : Intel Core i5-8250U (Kabylake-R)
   - Graphics : Intel UHD 620 (+ MX150)
-  - RAM : SK Hynix HMA81GS6CJR8N-VK 8 GB DDR4 2666 MHz (On board + One slot)
+  - RAM : SK Hynix HMA81GS6CJR8N-VK 8 GB DDR4 2666 MHz (2 slot, maximum upgrade 32GB)
   - SSD : Hynix 256GB M.2 SOLID STATE DRIVE 80MM L (HFS256G39TND-N210A) Read : Up to 530MB/s(128/256/512GB)\ Write : Up to 190MB/s(128GB)
   - Screen : 15.5-inch 1920 x 1080 glossy IPS
-  - Ports : 1xUSB 3.1 Gen-1 Type-C, 2xUSB 3.0, 1xUSB 2.0, 1xHDMI (full-size), 1xAudio jack
+  - Ports : 1xUSB 2.0 Gen-1 Type-C, 2xUSB 3.0, 1xHDMI (full-size), 1xAudio jack
   - Wifi/Bluetooth : Intel AC-7265, (M.2 NGFF)
   - Audio : ALC256
   - SD Card Reader : Realtek USB2.0-CRW (ven id:0bda, dev id:0129)
@@ -19,7 +19,7 @@ You can use the EFI folder to be to boot into a USB installer, or for regular bo
   - Graphics: Intel UHD Graphics 620 (Disable MX150)
   - Audio: Speakers, headphones (Mic don't work)
   - Keyboard: Backlight is ACPI-managed so it works just fine too
-  - Trackpad: VoodooI2CHID,VoodooI2C makes it buttery-smooth, supports all the macOS gestures
+  - Trackpad: Patch I2C + VoodooI2CHID,VoodooI2C makes it buttery-smooth, supports all the macOS gestures
   - USB: Full support
   - Webcam: PhotoBooth works fine
   - Sleep/Wake: works very well
@@ -31,6 +31,7 @@ You can use the EFI folder to be to boot into a USB installer, or for regular bo
 ** Graphics
 Integrated Intel UHD Graphics 620 support is handled by [[https://github.com/acidanthera/WhateverGreen][WhateverGreen]], and configured in the
 =PciRoot(0x0)/Pci(0x2,0x0)= section of config.plist. The Nvidia GPU MX150 is not supported due to hardware differences and lack of driver support in macOS. It is disabled to save power.
+- Recommend to use =AAPL,ig-platform-id: 0000C087= for UHD620 Kabylake-R
 *** Installtion 
 - config.plist
   - =Devices/Properties/PciRoot(0x0)/Pci(0x2,0x0)=
