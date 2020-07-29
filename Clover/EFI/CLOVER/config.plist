@@ -608,14 +608,12 @@
 	</dict>
 	<key>RtVariables</key>
 	<dict>
-		<key>CsrActiveConfig</key>
-		<string>0x67</string>
-		<key>MLB</key>
-		<string>FVF921902GU00008C</string>
 		<key>ROM</key>
-		<data>rNG45YoT</data>
+		<string>UseMacAddr0</string>
 		<key>BooterConfig</key>
 		<string>0x28</string>
+		<key>CsrActiveConfig</key>
+		<string>0x67</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
@@ -643,24 +641,18 @@
 		<string>0x32</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
+		<key>Mobile</key>
+		<true/>
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
-		<key>BoardSerialNumber</key>
-		<string>FVF921902GU00008C</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>ProductName</key>
 		<string>MacBookPro15,4</string>
-		<key>SmUUID</key>
-		<string>66C10A8A-B088-4504-8431-D484EA8963EF</string>
-		<key>Mobile</key>
-		<true/>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>EfiVersion</key>
 		<string>1037.120.87.0.0</string>
-		<key>SerialNumber</key>
-		<string>FVFYRMY5L40Y</string>
 		<key>ProductName-Comment</key>
 		<string>Using Haswell MacBookAir6,2 until Clover has support for KabyLake identifiers</string>
 		<key>LocationInChassis</key>
