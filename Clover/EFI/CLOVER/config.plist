@@ -105,13 +105,13 @@
 				</dict>
 				<dict>
 					<key>Find</key>
-					<data>TEdQQQk=</data>
+					<data>R1BSVwI=</data>
 					<key>Replace</key>
-					<data>WEdQQQk=</data>
+					<data>WFBSVwI=</data>
 					<key>Disabled</key>
 					<false/>
 					<key>Comment</key>
-					<string>Rename LGPA to XGPA, pair with SSDT-LGPA.aml (Brightness Key)</string>
+					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml</string>
 				</dict>
 				<dict>
 					<key>Find</key>
@@ -135,13 +135,13 @@
 				</dict>
 				<dict>
 					<key>Find</key>
-					<data>R1BSVwI=</data>
+					<data>TEdQQQk=</data>
 					<key>Replace</key>
-					<data>WFBSVwI=</data>
+					<data>WEdQQQk=</data>
 					<key>Disabled</key>
 					<false/>
 					<key>Comment</key>
-					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml</string>
+					<string>Rename LGPA to XGPA, pair with SSDT-LGPA.aml (Brightness Key)</string>
 				</dict>
 			</array>
 			<key>Fixes</key>
@@ -206,7 +206,7 @@
 		<key>Secure</key>
 		<false/>
 		<key>Arguments</key>
-		<string>nv_disable=1 gfxrst=1 -wegnoegpu dart=0 -disablegfxfirmware kext-dev-mode=1 darkwake=0</string>
+		<string>gfxrst=1 -wegnoegpu dart=0 darkwake=0 brcmfx-country=#a agdpmod=vit9696</string>
 		<key>XMPDetection</key>
 		<string>Yes</string>
 		<key>StrictHibernate</key>
@@ -350,29 +350,47 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
+				<key>framebuffer-con1-pipe</key>
+				<data>EgAAAA==</data>
 				<key>framebuffer-flags</key>
 				<data>CwfjAA==</data>
-				<key>framebuffer-stolenmem</key>
-				<data>AAAwAQ==</data>
-				<key>disable-external-gpu</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con1-pipe</key>
-				<data>CgAAAA==</data>
-				<key>device-id</key>
-				<data>FlkAAA==</data>
-				<key>framebuffer-fbmem</key>
-				<data>AACQAA==</data>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-				<key>framebuffer-patch-enable</key>
-				<data>AQAAAA==</data>
 				<key>framebuffer-con1-type</key>
 				<data>AAgAAA==</data>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
+				<key>framebuffer-stolenmem</key>
+				<data>AAAwAQ==</data>
+				<key>enable-hdmi20</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con0-enable</key>
+				<data>AQAAAA==</data>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+				<key>framebuffer-con1-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con2-pipe</key>
+				<data>EgAAAA==</data>
+				<key>device-id</key>
+				<data>FlkAAA==</data>
+				<key>enable-hdmi-dividers-fix</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con2-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con0-pipe</key>
+				<data>EgAAAA==</data>
+				<key>framebuffer-con2-type</key>
+				<data>AAgAAA==</data>
+				<key>framebuffer-fbmem</key>
+				<data>AACQAA==</data>
+				<key>framebuffer-con0-type</key>
+				<data>AAgAAA==</data>
 				<key>AAPL,ig-platform-id</key>
 				<data>AADAhw==</data>
-				<key>framebuffer-con1-enable</key>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>Display Controller</string>
+				<key>framebuffer-patch-enable</key>
+				<data>AQAAAA==</data>
+				<key>disable-external-gpu</key>
 				<data>AQAAAA==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1c,0x7)</key>
@@ -460,7 +478,7 @@
 			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
 		</array>
 		<key>PanicNoKextDump</key>
-		<false/>
+		<true/>
 		<key>KernelXCPM</key>
 		<false/>
 		<key>KextsToPatch</key>
@@ -586,16 +604,18 @@
 		<key>AppleIntelCPUPM</key>
 		<false/>
 		<key>KernelLapic</key>
-		<true/>
+		<false/>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
-		<key>ROM</key>
-		<string>UseMacAddr0</string>
-		<key>BooterConfig</key>
-		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
+		<key>MLB</key>
+		<string>FVF921902GU00008C</string>
+		<key>ROM</key>
+		<data>rNG45YoT</data>
+		<key>BooterConfig</key>
+		<string>0x28</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
@@ -623,18 +643,24 @@
 		<string>0x32</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
-		<key>Mobile</key>
-		<true/>
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
+		<key>BoardSerialNumber</key>
+		<string>FVF921902GU00008C</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>ProductName</key>
 		<string>MacBookPro15,4</string>
+		<key>SmUUID</key>
+		<string>66C10A8A-B088-4504-8431-D484EA8963EF</string>
+		<key>Mobile</key>
+		<true/>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>EfiVersion</key>
 		<string>1037.120.87.0.0</string>
+		<key>SerialNumber</key>
+		<string>FVFYRMY5L40Y</string>
 		<key>ProductName-Comment</key>
 		<string>Using Haswell MacBookAir6,2 until Clover has support for KabyLake identifiers</string>
 		<key>LocationInChassis</key>
@@ -646,8 +672,6 @@
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
-		<key>NoCaches</key>
-		<true/>
 		<key>#BacklightLevel</key>
 		<integer>0</integer>
 		<key>InjectSystemID</key>
