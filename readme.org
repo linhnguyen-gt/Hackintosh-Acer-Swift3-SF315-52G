@@ -114,4 +114,4 @@ Has a few incorrect USB properties, but we can inject the correct properties via
 - At the same time, this script can also repair the splash screen by injecting the patched EDID, or the splash screen problem after sleep wake up, of course, this repair varies from person to person
 - In the second stage of booting, the logo will always be slightly enlarged because the resolution is counterfeit
 * Guide Patch SSDT
-*** =[[https://ocbook.tlhub.cn/]]=
+- [[https://ocbook.tlhub.cn/]]
