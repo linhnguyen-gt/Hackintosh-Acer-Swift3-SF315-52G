@@ -45,16 +45,6 @@
 			<array>
 				<dict>
 					<key>Find</key>
-					<data>R0ZYMA==</data>
-					<key>Replace</key>
-					<data>SUdQVQ==</data>
-					<key>Disabled</key>
-					<false/>
-					<key>Comment</key>
-					<string>change GFX0 to IGPU</string>
-				</dict>
-				<dict>
-					<key>Find</key>
 					<data>SERBUw==</data>
 					<key>Replace</key>
 					<data>SERFRg==</data>
@@ -62,16 +52,6 @@
 					<false/>
 					<key>Comment</key>
 					<string>change HDAS to HDEF</string>
-				</dict>
-				<dict>
-					<key>Find</key>
-					<data>SEVDSQ==</data>
-					<key>Replace</key>
-					<data>SU1FSQ==</data>
-					<key>Disabled</key>
-					<false/>
-					<key>Comment</key>
-					<string>change HECI to IMEI</string>
 				</dict>
 				<dict>
 					<key>Find</key>
@@ -112,26 +92,6 @@
 					<false/>
 					<key>Comment</key>
 					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml</string>
-				</dict>
-				<dict>
-					<key>Find</key>
-					<data>X1BUUwE=</data>
-					<key>Replace</key>
-					<data>WlBUUwE=</data>
-					<key>Disabled</key>
-					<false/>
-					<key>Comment</key>
-					<string>change Method(_PTS,1,N) to ZPTS, pair with SSDT-PTSWAK.aml</string>
-				</dict>
-				<dict>
-					<key>Find</key>
-					<data>X1dBSwE=</data>
-					<key>Replace</key>
-					<data>WldBSwE=</data>
-					<key>Disabled</key>
-					<false/>
-					<key>Comment</key>
-					<string>change Method(_WAK,1,N) to ZWAK, pair with SSDT-PTSWAK.aml</string>
 				</dict>
 				<dict>
 					<key>Find</key>
@@ -195,18 +155,20 @@
 	</dict>
 	<key>Boot</key>
 	<dict>
-		<key>NoEarlyProgress</key>
-		<true/>
 		<key>Legacy</key>
 		<string>PBR</string>
-		<key>HibernationFixup</key>
+		<key>NeverHibernate</key>
+		<false/>
+		<key>NoEarlyProgress</key>
 		<true/>
 		<key>Fast</key>
 		<true/>
+		<key>HibernationFixup</key>
+		<true/>
+		<key>Arguments</key>
+		<string>gfxrst=1 -wegnoegpu dart=0 darkwake=0 brcmfx-country=#a</string>
 		<key>Secure</key>
 		<false/>
-		<key>Arguments</key>
-		<string>gfxrst=1 -wegnoegpu dart=0 darkwake=0 brcmfx-country=#a agdpmod=vit9696</string>
 		<key>XMPDetection</key>
 		<string>Yes</string>
 		<key>StrictHibernate</key>
