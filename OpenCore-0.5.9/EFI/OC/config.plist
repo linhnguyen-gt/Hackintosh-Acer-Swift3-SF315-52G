@@ -138,17 +138,9 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT-PRW.aml</string>
+				<string>SSDT-PS2-KEY.aml</string>
 				<key>Path</key>
-				<string>SSDT-PRW.aml</string>
-				<key>Enabled</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-PTSWAK.aml</string>
-				<key>Path</key>
-				<string>SSDT-PTSWAK.aml</string>
+				<string>SSDT-PS2-KEY.aml</string>
 				<key>Enabled</key>
 				<true/>
 			</dict>
@@ -351,7 +343,7 @@
 			<key>ProvideCustomSlide</key>
 			<true/>
 			<key>RebuildAppleMemoryMap</key>
-			<true/>
+			<false/>
 			<key>SetupVirtualMap</key>
 			<true/>
 			<key>SignalAppleOS</key>
@@ -1303,17 +1295,17 @@
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string></string>
+			<string>FVF921902GU00008C</string>
 			<key>ROM</key>
-			<data></data>
+			<data>rNG45YoT</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
 			<string>MacBookPro15,4</string>
 			<key>SystemSerialNumber</key>
-			<string></string>
+			<string>FVFYRMY5L40Y</string>
 			<key>SystemUUID</key>
-			<string></string>
+			<string>66C10A8A-B088-4504-8431-D484EA8963EF</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
