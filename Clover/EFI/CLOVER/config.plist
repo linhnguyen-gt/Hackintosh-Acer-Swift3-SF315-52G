@@ -6,8 +6,6 @@
 	<dict>
 		<key>SSDT</key>
 		<dict>
-			<key>PluginType</key>
-			<string>1</string>
 			<key>EnableC6</key>
 			<false/>
 			<key>Generate</key>
@@ -17,7 +15,7 @@
 				<key>PStates</key>
 				<false/>
 				<key>PluginType</key>
-				<true/>
+				<false/>
 			</dict>
 		</dict>
 		<key>DropTables</key>
@@ -103,6 +101,26 @@
 					<key>Comment</key>
 					<string>Rename LGPA to XGPA, pair with SSDT-LGPA.aml (Brightness Key)</string>
 				</dict>
+				<dict>
+					<key>Find</key>
+					<data>X1BUUwE=</data>
+					<key>Replace</key>
+					<data>WlBUUwE=</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>change Method(_PTS,1,N) to ZPTS, pair with SSDT-PTSWAK.aml</string>
+				</dict>
+				<dict>
+					<key>Find</key>
+					<data>X1dBSwE=</data>
+					<key>Replace</key>
+					<data>WldBSwE=</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>change Method(_WAK,1,N) to ZWAK, pair with SSDT-PTSWAK.aml</string>
+				</dict>
 			</array>
 			<key>Fixes</key>
 			<dict>
@@ -166,7 +184,7 @@
 		<key>HibernationFixup</key>
 		<true/>
 		<key>Arguments</key>
-		<string>gfxrst=1 -wegnoegpu dart=0 darkwake=0 brcmfx-country=#a</string>
+		<string>gfxrst=1 -wegnoegpu dart=0 darkwake=0</string>
 		<key>Secure</key>
 		<false/>
 		<key>XMPDetection</key>
@@ -214,8 +232,6 @@
 	</dict>
 	<key>CPU</key>
 	<dict>
-		<key>FrequencyMHz</key>
-		<integer>1600</integer>
 		<key>HWPEnable</key>
 		<true/>
 	</dict>
@@ -291,7 +307,7 @@
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
 				<key>layout-id</key>
-				<integer>97</integer>
+				<integer>17</integer>
 				<key>model</key>
 				<string>Intel Sunrise Point-LP HD Audio</string>
 				<key>hda-gfx</key>
