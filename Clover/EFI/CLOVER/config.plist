@@ -34,23 +34,13 @@
 		<key>FixHeaders</key>
 		<true/>
 		<key>FixMCFG</key>
-		<true/>
+		<false/>
 		<key>AutoMerge</key>
 		<true/>
 		<key>DSDT</key>
 		<dict>
 			<key>Patches</key>
 			<array>
-				<dict>
-					<key>Find</key>
-					<data>SERBUw==</data>
-					<key>Replace</key>
-					<data>SERFRg==</data>
-					<key>Disabled</key>
-					<false/>
-					<key>Comment</key>
-					<string>change HDAS to HDEF</string>
-				</dict>
 				<dict>
 					<key>Find</key>
 					<data>X0RTTQ==</data>
@@ -73,16 +63,6 @@
 				</dict>
 				<dict>
 					<key>Find</key>
-					<data>U0FUMA==</data>
-					<key>Replace</key>
-					<data>U0FUQQ==</data>
-					<key>Disabled</key>
-					<false/>
-					<key>Comment</key>
-					<string>change SAT0 to SATA</string>
-				</dict>
-				<dict>
-					<key>Find</key>
 					<data>R1BSVwI=</data>
 					<key>Replace</key>
 					<data>WFBSVwI=</data>
@@ -100,26 +80,6 @@
 					<false/>
 					<key>Comment</key>
 					<string>Rename LGPA to XGPA, pair with SSDT-LGPA.aml (Brightness Key)</string>
-				</dict>
-				<dict>
-					<key>Find</key>
-					<data>X1BUUwE=</data>
-					<key>Replace</key>
-					<data>WlBUUwE=</data>
-					<key>Disabled</key>
-					<false/>
-					<key>Comment</key>
-					<string>change Method(_PTS,1,N) to ZPTS, pair with SSDT-PTSWAK.aml</string>
-				</dict>
-				<dict>
-					<key>Find</key>
-					<data>X1dBSwE=</data>
-					<key>Replace</key>
-					<data>WldBSwE=</data>
-					<key>Disabled</key>
-					<false/>
-					<key>Comment</key>
-					<string>change Method(_WAK,1,N) to ZWAK, pair with SSDT-PTSWAK.aml</string>
 				</dict>
 			</array>
 			<key>Fixes</key>
@@ -169,7 +129,7 @@
 			</dict>
 		</dict>
 		<key>HaltEnabler</key>
-		<true/>
+		<false/>
 	</dict>
 	<key>Boot</key>
 	<dict>
@@ -596,13 +556,13 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>FirmwareFeatures</key>
-		<string>0xFC0FE137</string>
+		<string>0xFC0FE176</string>
 		<key>Board-ID</key>
-		<string>Mac-53FDB3D8DB8CA971</string>
+		<string>Mac-B4831CEBD52A0C4C</string>
 		<key>Trust</key>
 		<true/>
 		<key>FirmwareFeaturesMask</key>
-		<string>0xFF1FFF3F</string>
+		<string>0xFF1FFF7F</string>
 		<key>BoardVersion</key>
 		<string>1.0</string>
 		<key>Manufacturer</key>
@@ -610,13 +570,13 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>BiosVersion</key>
-		<string>MBP154.88Z.F000.B00.2005132135</string>
+		<string>MBP141.88Z.F000.B00.2006161817</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisAssetTag</key>
 		<string>MacBook-Aluminum</string>
 		<key>PlatformFeature</key>
-		<string>0x32</string>
+		<string>0x1A</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>Mobile</key>
@@ -626,17 +586,17 @@
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>ProductName</key>
-		<string>MacBookPro15,4</string>
+		<string>MacBookPro14,1</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>EfiVersion</key>
-		<string>1037.120.87.0.0</string>
+		<string>428.0.0.0.0</string>
 		<key>ProductName-Comment</key>
 		<string>Using Haswell MacBookAir6,2 until Clover has support for KabyLake identifiers</string>
 		<key>LocationInChassis</key>
 		<string>Part Component</string>
 		<key>BiosReleaseDate</key>
-		<string>05/13/2020</string>
+		<string>06/16/2020</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
