@@ -150,8 +150,8 @@ struct stat consoleinfo;
 long codecID = 0;
 uint32_t subVendor = 0;
 uint32_t subDevice = 0;
-long codecIDArr[3] = {0x10ec0256, 0x10ec0255, 0x10ec0298};
-int xps13SubDev[3] = {0x0704, 0x075b, 0x082a};
+long codecIDArr[4] = {0x10ec0256, 0x10ec0255, 0x10ec0298, 0x10ec0295};
+int xps13SubDev[4] = {0x0704, 0x075b, 0x082a, 0x0923};
 
 //dialog text
 NSDictionary *l10nDict = nil;
@@ -317,6 +317,17 @@ static uint32_t UPDATE_COEFEX(uint32_t nid, uint32_t index, uint32_t mask, uint3
     return GetProcCoef.res;
 }
 
+static uint32_t alc225_pre_hsmode(){
+    UPDATE_COEF(0x4a, 1<<8, 0);
+    UPDATE_COEFEX(0x57, 0x05, 1<<14, 0);
+    UPDATE_COEF(0x63, 3<<14, 3<<14);
+    UPDATE_COEF(0x4a, 3<<4, 2<<4);
+    UPDATE_COEF(0x4a, 3<<10, 3<<10);
+    UPDATE_COEF(0x45, 0x3f<<10, 0x34<<10);
+    UPDATE_COEF(0x4a, 3<<10, 0);
+    return 0;
+}
+
 //
 // Unplugged Settings
 //
@@ -338,6 +349,10 @@ static uint32_t unplugged()
             WRITE_COEF(0x06, 0x6104); /* Set MIC2 Vref gate with HP */
             WRITE_COEFEX(0x57, 0x03, 0x8aa6); /* Direct Drive HP Amp control */
             //WRITE_COEF(0x46, 0xd089);
+            break;
+        case 0x10ec0295:
+            alc225_pre_hsmode();
+            UPDATE_COEF(0x63, 3<<14, 0);
             break;
         case 0x10ec0298:
             UPDATE_COEF(0x4f, 0xfcc0, 0xc400);
@@ -372,6 +387,16 @@ static uint32_t headphones()
             WRITE_COEFEX(0x57, 0x03, 0x8ea6);
             WRITE_COEF(0x49, 0x0049);
             break;
+        case 0x10ec0295:
+            alc225_pre_hsmode();
+            VerbCommand(HDA_VERB(0x19, AC_VERB_SET_PIN_WIDGET_CONTROL, 0x20));
+            UPDATE_COEF(0x45, 0x3f<<10, 0x30<<10);
+            UPDATE_COEF(0x45, 0x3f<<10, 0x31<<10);
+            UPDATE_COEF(0x49, 3<<8, 0<<8);
+            UPDATE_COEF(0x4a, 3<<4, 3<<4);
+            UPDATE_COEF(0x63, 3<<14, 0);
+            UPDATE_COEF(0x67, 0xf000, 0x3000);
+            break;
         case 0x10ec0298:
             UPDATE_COEF(0x4f, 0xfcc0, 0xc400); // Set to TRS type 
             VerbCommand(HDA_VERB(0x18, AC_VERB_SET_PIN_WIDGET_CONTROL, 0x20)); // 0x20 corresponds to IN (0x20) + HiZ (0x00) -- Note: HiZ means "High Impedance"
@@ -403,6 +428,13 @@ static uint32_t linein()
             //VerbCommand(HDA_VERB(0x21, AC_VERB_SET_PIN_WIDGET_CONTROL, 0)); // Disable headphone output
             //WRITE_COEFEX(0x57, 0x03, 0x8aa6);
             //WRITE_COEF(0x06, 0x6100);
+            break;
+        case 0x10ec0295:
+            alc225_pre_hsmode();
+            UPDATE_COEF(0x45, 0x3f<<10, 0x31<<10);
+            VerbCommand(HDA_VERB(0x21, AC_VERB_SET_PIN_WIDGET_CONTROL, 0));
+            WRITE_COEFEX(0x57, 0x03, 0x8aa6);
+            WRITE_COEF(0x06, 0x6100); /* Set MIC2 Vref gate to normal */
             break;
         case 0x10ec0298:
             UPDATE_COEF(0x4f, 0x000c, 0x0);
@@ -455,6 +487,10 @@ static uint32_t headsetCTIA()
             WRITE_COEF(0x1b, 0x0c6b);
             WRITE_COEFEX(0x57, 0x03, 0x8ea6);
             break;
+        case 0x10ec0295:
+            UPDATE_COEF(0x45, 0x3f<<10, 0x35<<10);
+            UPDATE_COEF(0x63, 3<<14, 1<<14);
+            break;
         case 0x10ec0298:
             UPDATE_COEF(0x8e, 0x0070, 0x0020); // Headset output enable 
             UPDATE_COEF(0x4f, 0xfcc0, 0xd400);
@@ -502,6 +538,11 @@ static uint32_t headsetOMTP()
             WRITE_COEF(0x1b, 0x0c6b);
             WRITE_COEFEX(0x57, 0x03, 0x8ea6);
             break;
+        case 0x10ec0295:
+            WRITE_COEF(0x45, 0xe489); /* Set to OMTP Type */
+            WRITE_COEF(0x1b, 0x0c2b);
+            WRITE_COEFEX(0x57, 0x03, 0x8ea6);
+            break;
         case 0x10ec0298:
             UPDATE_COEF(0x4f, 0xfcc0, 0xe400);
             usleep(300000);
@@ -547,6 +588,20 @@ static uint32_t headsetcheck()
             SetCoefIndex.res = VerbCommand(SetCoefIndex.verb); 
             GetProcCoef.verb = HDA_VERB(nid, AC_VERB_GET_PROC_COEF, 0x46);
             GetProcCoef.res = VerbCommand(GetProcCoef.verb);
+            break;
+        case 0x10ec0295:
+            alc225_pre_hsmode();
+            UPDATE_COEF(0x67, 0xf000, 0x1000); //Headset output enable
+            UPDATE_COEF(0x45, 0x3f<<10, 0x34<<10); //Headset output enable
+            VerbCommand(HDA_VERB(0x19, AC_VERB_SET_PIN_WIDGET_CONTROL, 0x24)); // 0x24 corresponds to IN (0x20) + VREF 80 (0x04)
+            UPDATE_COEF(0x45, 0x3f<<10, 0x34<<10); //Check Type
+            UPDATE_COEF(0x49, 3<<8, 2<<8); //Check Type
+            usleep(350000);
+            // Read register 0x50
+            SetCoefIndex.verb = HDA_VERB(nid, AC_VERB_SET_COEF_INDEX, 0x46); // Verb to set the coefficient index desired
+            SetCoefIndex.res = VerbCommand(SetCoefIndex.verb); // Go to index desired
+            GetProcCoef.verb = HDA_VERB(nid, AC_VERB_GET_PROC_COEF, 0x00); // Get Processing Coefficient payload is always 0
+            GetProcCoef.res = VerbCommand(GetProcCoef.verb); // Get data
             break;
         case 0x10ec0298:
             UPDATE_COEF(0x8e, 0x0070, 0x0020); //Headset output enable 
@@ -643,7 +698,7 @@ uint32_t CFPopUpMenu()
                 GET_CFSTR_FROM_DICT(Merged, @"dialogTitle"), //CFStringRef alertHeader
                 GET_CFSTR_FROM_DICT(Merged, @"dialogMsg"), //CFStringRef alertMessage
                 GET_CFSTR_FROM_DICT(Merged, @"btnHeadphone"), //CFStringRef defaultButtonTitle
-                GET_CFSTR_FROM_DICT(Merged, @"btnLinein"), //CFStringRef alternateButtonTitle
+                NULL, // GET_CFSTR_FROM_DICT(Merged, @"btnLinein"), //CFStringRef alternateButtonTitle
                 //GET_CFSTR_FROM_DICT(Merged, @"btnCancel"), //CFStringRef alternateButtonTitle
                 GET_CFSTR_FROM_DICT(Merged, @"btnHeadset"), //CFStringRef otherButtonTitle
                 &responsecode // CFOptionFlags *responseFlags
@@ -718,7 +773,7 @@ void alcInit()
     switch (codecID)
     {
         case 0x10ec0256:
-            if (indexOf(xps13SubDev, 3, subDevice) == -1 || subVendor != 0x1028)
+            if (indexOf(xps13SubDev, 4, subDevice) == -1 || subVendor != 0x1028)
                 goto ALC255_COMMON;
             fprintf(stderr, "Fix XPS 13.\n");
             VerbCommand(HDA_VERB(0x19, AC_VERB_SET_PIN_WIDGET_CONTROL, 0x25));
@@ -733,6 +788,10 @@ void alcInit()
             WRITE_COEF(0x46, 0x0004);
             WRITE_COEF(0x1b, 0x0c4b);
             break;
+        case 0x10ec0295:
+            WRITE_COEFEX(0x4a, 0x8000, 1 << 15);
+            WRITE_COEFEX(0x4a, 0x8000, 0 << 15);
+            goto ALC255_COMMON;
         case 0x10ec0255:
         ALC255_COMMON:
             VerbCommand(HDA_VERB(0x19, AC_VERB_SET_PIN_WIDGET_CONTROL, 0x24));
@@ -879,7 +938,7 @@ int main()
     // Get audio device info, exit if no compatible device found
     getAudioID();
     //long codecIDArr[3] = {0x10ec0256, 0x10ec0255, 0x10ec0298};
-    if (indexOf_L(codecIDArr, 3, codecID) == -1 || ! subVendor || !subDevice)
+    if (indexOf_L(codecIDArr, 4, codecID) == -1 || ! subVendor || !subDevice)
     {
         fprintf(stderr, "No compatible audio device found! Exit now.\n");
         return 1;

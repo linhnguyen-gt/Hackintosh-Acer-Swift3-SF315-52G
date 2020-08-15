@@ -7,13 +7,20 @@
         "btnHeadset" : "耳麦",
         "btnCancel" : "取消"
     },
-
-        "en_US": {
-                "dialogTitle" : "Combo Jack Notification",
-                "dialogMsg" : "What did you just plug in? (Press ESC to cancel)",
-                "btnHeadphone" : "Headphones",
-                "btnLinein" : "Line-In",
-                "btnHeadset" : "Headset",
-                "btnCancel" : "Cancel"
-        }
+    "en_US": {
+            "dialogTitle" : "Combo Jack Selection",
+            "dialogMsg" : "Select your device type (Press ESC to cancel)",
+            "btnHeadphone" : "Headphones",
+            "btnLinein" : "Line-In",
+            "btnHeadset" : "Headset",
+            "btnCancel" : "Cancel"
+    },
+    "vi_VN": {
+        "dialogTitle" : "Thông báo cắm tai nghe",
+        "dialogMsg" : "Lựa chọn loại thiết bị được cắm vào? (Bấm ESC để huỷ)",
+        "btnHeadphone" : "Tai nghe thường",
+        "btnLinein" : "Microphone",
+        "btnHeadset" : "Tai nghe có mic",
+        "btnCancel" : "Huỷ"
+    }
 }

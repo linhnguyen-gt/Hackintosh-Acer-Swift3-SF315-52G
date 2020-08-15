@@ -1,8 +1,0 @@
-* Fix headphone output
-- Refactor
-- Add listener when sleep/wake
-- Fix on sleep wake
-- Bug fix
-- Install.sh script with update support
-- Uninstall.sh to uninstall 
-- macOS Catalina support
