@@ -69,7 +69,7 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Comment</key>
-					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml</string>
+					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</string>
 				</dict>
 				<dict>
 					<key>Find</key>
@@ -144,7 +144,7 @@
 		<key>HibernationFixup</key>
 		<true/>
 		<key>Arguments</key>
-		<string>gfxrst=1 -wegnoegpu dart=0 darkwake=0</string>
+		<string>gfxrst=1 dart=0 darkwake=0 -wegnoegpu</string>
 		<key>Secure</key>
 		<false/>
 		<key>XMPDetection</key>
@@ -239,6 +239,15 @@
 				<key>model</key>
 				<string>Intel Sunrise Point-LP Serial IO I2C Controller #0</string>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x14,0x2)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>Signal processing controller</string>
+				<key>model</key>
+				<string>Intel Sunrise Point-LP Thermal subsystem</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x8,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -285,6 +294,20 @@
 				<string>Memory Controller</string>
 				<key>model</key>
 				<string>Intel Sunrise Point-LP PMC</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1f,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>model</key>
+				<string>Intel Sunrise Point LPC Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1c,0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>model</key>
+				<string>Intel Sunrise Point-LP PCI Express Root Port #1</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
@@ -343,10 +366,14 @@
 				<key>model</key>
 				<string>Intel Sunrise Point-LP PCI Express Root Port #5</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1c,0x4)</key>
+			<key>PciRoot(0x0)/Pci(0x1d,0x0)/Pci(0x0,0x0)</key>
 			<dict>
-				<key>reg-ltrovr</key>
-				<data>AAQAAAAAAAA=</data>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>model</key>
+				<string>Intel Sunrise Point-LP PCI Express Root Port #9</string>
+				<key>use-msi</key>
+				<string>1</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x16,0x0)</key>
 			<dict>
@@ -357,19 +384,15 @@
 				<key>model</key>
 				<string>Intel Sunrise Point-LP CSME HECI #1</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1d,0x0)</key>
+			<key>PciRoot(0x0)/Pci(0x1c,0x4)</key>
 			<dict>
 				<key>reg-ltrovr</key>
 				<data>AAQAAAAAAAA=</data>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1d,0x0)/Pci(0x0,0x0)</key>
+			<key>PciRoot(0x0)/Pci(0x1d,0x0)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP PCI Express Root Port #9</string>
-				<key>use-msi</key>
-				<string>1</string>
+				<key>reg-ltrovr</key>
+				<data>AAQAAAAAAAA=</data>
 			</dict>
 		</dict>
 		<key>HDMIInjection</key>
@@ -379,9 +402,9 @@
 			<key>FixOwnership</key>
 			<true/>
 			<key>AddClockID</key>
-			<true/>
+			<false/>
 			<key>Inject</key>
-			<true/>
+			<false/>
 			<key>HighCurrent</key>
 			<false/>
 		</dict>
@@ -423,67 +446,15 @@
 		<array>
 			<dict>
 				<key>Find</key>
-				<data>dkZI/wU=</data>
-				<key>Comment</key>
-				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.14 (credit Austere.J)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>InfoPlistPatch</key>
-				<false/>
+				<data>AEFQUExFIFNTRAA=</data>
 				<key>Name</key>
-				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
+				<string>com.apple.iokit.IOAHCIBlockStorage</string>
 				<key>Replace</key>
-				<data>60ZI/wU=</data>
-				<key>MatchOS</key>
-				<string>10.14,10.14.x</string>
-			</dict>
-			<dict>
-				<key>Find</key>
-				<data>g/sPD4cLBAAA</data>
-				<key>Name</key>
-				<string>com.apple.iokit.IOUSBHostFamily</string>
-				<key>Replace</key>
-				<data>g/s/D4cLBAAA</data>
-				<key>Disabled</key>
-				<false/>
-				<key>InfoPlistPatch</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>Find</key>
-				<data>QYP/Dw+DlAQAAA==</data>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCI</string>
-				<key>Replace</key>
-				<data>QYP/Pw+DlAQAAA==</data>
-				<key>Disabled</key>
-				<false/>
-				<key>InfoPlistPatch</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>Find</key>
-				<data>g+MP0+NBCd8=</data>
-				<key>Name</key>
-				<string>com.apple.iokit.IOUSBHostFamily</string>
-				<key>Replace</key>
-				<data>g+M/0+NBCd8=</data>
-				<key>Disabled</key>
-				<false/>
-				<key>InfoPlistPatch</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>Find</key>
-				<data>AgQKAAAIAACHAQAAAwYK</data>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
-				<key>Replace</key>
-				<data>AQUKAAAIAACHAQAAAgQK</data>
+				<data>AAAAAAAAAAAAAAA=</data>
 				<key>Disabled</key>
 				<false/>
 				<key>Comment</key>
-				<string>0x591b0000, 0105 instead of 0306, HDMI</string>
+				<string>Enable TRIM for SSD</string>
 				<key>InfoPlistPatch</key>
 				<false/>
 			</dict>
@@ -546,8 +517,6 @@
 	</dict>
 	<key>RtVariables</key>
 	<dict>
-		<key>ROM</key>
-		<string>UseMacAddr0</string>
 		<key>BooterConfig</key>
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
@@ -556,13 +525,13 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>FirmwareFeatures</key>
-		<string>0xFC0FE176</string>
+		<string>0xFC0FE137</string>
 		<key>Board-ID</key>
-		<string>Mac-B4831CEBD52A0C4C</string>
+		<string>Mac-827FB448E656EC26</string>
 		<key>Trust</key>
 		<true/>
 		<key>FirmwareFeaturesMask</key>
-		<string>0xFF1FFF7F</string>
+		<string>0xFF1FFF3F</string>
 		<key>BoardVersion</key>
 		<string>1.0</string>
 		<key>Manufacturer</key>
@@ -570,13 +539,13 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>BiosVersion</key>
-		<string>MBP141.88Z.F000.B00.2006161817</string>
+		<string>MBP152.88Z.F000.B00.2007121439</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisAssetTag</key>
 		<string>MacBook-Aluminum</string>
 		<key>PlatformFeature</key>
-		<string>0x1A</string>
+		<string>0x32</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>Mobile</key>
@@ -586,17 +555,17 @@
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>ProductName</key>
-		<string>MacBookPro14,1</string>
+		<string>MacBookPro15,2</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>EfiVersion</key>
-		<string>428.0.0.0.0</string>
+		<string>1539.0.0.0.1</string>
 		<key>ProductName-Comment</key>
 		<string>Using Haswell MacBookAir6,2 until Clover has support for KabyLake identifiers</string>
 		<key>LocationInChassis</key>
 		<string>Part Component</string>
 		<key>BiosReleaseDate</key>
-		<string>06/16/2020</string>
+		<string>07/12/2020</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
