@@ -1,4 +1,4 @@
-# ComboJack for Dell series
+# ComboJack 
 An Pop up to select type of jack that you plug in
 
 <p align="center">
@@ -8,7 +8,7 @@ An Pop up to select type of jack that you plug in
 # Support
 + ALC255
 + ALC256
-+ ALC295 (Dell Inspiron 7590/7591)
++ ALC295 
 + ALC298
 
 # Status
