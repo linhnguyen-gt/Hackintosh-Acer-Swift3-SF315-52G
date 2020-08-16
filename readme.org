@@ -99,7 +99,7 @@ Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. T
 ** USB
 Has a few incorrect USB properties, but we can inject the correct properties via USBInjectAll with [[https://github.com/RehabMan/OS-X-USB-Inject-All/blob/master/SSDT-UIAC.dsl][SSDT-UIAC.]]
 * Change Key Brightness
-** Very Basic
+** Very basic or patch [[https://github.com/linhnguyengas/Hackintosh-Acer-Swift3-SF315-52G/blob/master/Key%20Map%20PS2/SSDT-PS2-KEY.dsl][SSDT-PS2-KEY]]
 - You just need to connect USB Keyboard or USB Mouse
 - Go to System Preferences > Keyboard > Shortcuts > Display (if don't connect USB Keyboard or USB Mouse , Display won't appear)
 [[https://user-images.githubusercontent.com/43808684/88456714-2c3a4580-ceaa-11ea-954c-ddc3f21970ce.png]]
