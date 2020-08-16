@@ -144,7 +144,7 @@
 		<key>HibernationFixup</key>
 		<true/>
 		<key>Arguments</key>
-		<string>gfxrst=1 dart=0 darkwake=0 -wegnoegpu</string>
+		<string>gfxrst=1 dart=0 darkwake=0 -wegnoegpu igfxonln=1</string>
 		<key>Secure</key>
 		<false/>
 		<key>XMPDetection</key>
@@ -527,7 +527,7 @@
 		<key>FirmwareFeatures</key>
 		<string>0xFC0FE137</string>
 		<key>Board-ID</key>
-		<string>Mac-827FB448E656EC26</string>
+		<string>Mac-53FDB3D8DB8CA971</string>
 		<key>Trust</key>
 		<true/>
 		<key>FirmwareFeaturesMask</key>
@@ -539,7 +539,7 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>BiosVersion</key>
-		<string>MBP152.88Z.F000.B00.2007121439</string>
+		<string>MBP154.88Z.F000.B00.2007121455</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisAssetTag</key>
@@ -555,7 +555,7 @@
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>ProductName</key>
-		<string>MacBookPro15,2</string>
+		<string>MacBookPro15,4</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>EfiVersion</key>
