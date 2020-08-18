@@ -136,15 +136,15 @@
 		<key>Legacy</key>
 		<string>PBR</string>
 		<key>NeverHibernate</key>
-		<false/>
+		<true/>
 		<key>NoEarlyProgress</key>
 		<true/>
 		<key>Fast</key>
 		<true/>
 		<key>HibernationFixup</key>
-		<true/>
+		<false/>
 		<key>Arguments</key>
-		<string>gfxrst=1 dart=0 darkwake=0 -wegnoegpu igfxonln=1</string>
+		<string>gfxrst=1 dart=0 -wegnoegpu igfxonln=1</string>
 		<key>Secure</key>
 		<false/>
 		<key>XMPDetection</key>
@@ -216,63 +216,6 @@
 		<false/>
 		<key>Properties</key>
 		<dict>
-			<key>PciRoot(0x0)/Pci(0x1c,0x0)</key>
-			<dict>
-				<key>reg-ltrovr</key>
-				<data>AAQAAAAAAAA=</data>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x15,0x1)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>Signal Processing Controller</string>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP Serial IO I2C Controller #1</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x15,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>Signal Processing Controller</string>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP Serial IO I2C Controller #0</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x14,0x2)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>Signal processing controller</string>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP Thermal subsystem</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x8,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>System Peripheral</string>
-				<key>model</key>
-				<string>Intel Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th Gen Core Processor Gaussian Mixture Model</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP USB 3.0 xHCI Controller</string>
-				<key>name</key>
-				<string>pci8086,9d2f</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1f,0x4)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP SMBus</string>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
 				<key>layout-id</key>
@@ -286,113 +229,36 @@
 				<key>hda-idle-support</key>
 				<string>1</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1f,0x2)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>Memory Controller</string>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP PMC</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1f,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>model</key>
-				<string>Intel Sunrise Point LPC Controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1c,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP PCI Express Root Port #1</string>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
-				<key>framebuffer-con1-pipe</key>
-				<data>EgAAAA==</data>
-				<key>framebuffer-flags</key>
-				<data>CwfjAA==</data>
-				<key>framebuffer-con1-type</key>
-				<data>AAgAAA==</data>
+				<key>model</key>
+				<string>Intel UHD Graphics 620</string>
 				<key>framebuffer-stolenmem</key>
 				<data>AAAwAQ==</data>
-				<key>enable-hdmi20</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con0-enable</key>
-				<data>AQAAAA==</data>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-				<key>framebuffer-con1-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con2-pipe</key>
-				<data>EgAAAA==</data>
 				<key>device-id</key>
 				<data>FlkAAA==</data>
-				<key>enable-hdmi-dividers-fix</key>
+				<key>disable-external-gpu</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-con2-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con0-pipe</key>
-				<data>EgAAAA==</data>
 				<key>framebuffer-con2-type</key>
-				<data>AAgAAA==</data>
+				<data>AAQAAA==</data>
 				<key>framebuffer-fbmem</key>
 				<data>AACQAA==</data>
-				<key>framebuffer-con0-type</key>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+				<key>framebuffer-patch-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con1-type</key>
 				<data>AAgAAA==</data>
 				<key>AAPL,ig-platform-id</key>
 				<data>AADAhw==</data>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>Display Controller</string>
-				<key>framebuffer-patch-enable</key>
+				<key>force-online</key>
 				<data>AQAAAA==</data>
-				<key>disable-external-gpu</key>
+				<key>framebuffer-con2-enable</key>
 				<data>AQAAAA==</data>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1c,0x7)</key>
-			<dict>
-				<key>reg-ltrovr</key>
-				<data>AAQAAAAAAAA=</data>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1c,0x4)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP PCI Express Root Port #5</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1d,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP PCI Express Root Port #9</string>
-				<key>use-msi</key>
-				<string>1</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x16,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>Communication Controller</string>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP CSME HECI #1</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1c,0x4)</key>
-			<dict>
-				<key>reg-ltrovr</key>
-				<data>AAQAAAAAAAA=</data>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1d,0x0)</key>
-			<dict>
-				<key>reg-ltrovr</key>
-				<data>AAQAAAAAAAA=</data>
+				<key>framebuffer-con1-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-unifiedmem</key>
+				<data>AAAAwA==</data>
 			</dict>
 		</dict>
 		<key>HDMIInjection</key>
@@ -525,13 +391,13 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>FirmwareFeatures</key>
-		<string>0xFC0FE137</string>
+		<string>0xFC0FE176</string>
 		<key>Board-ID</key>
-		<string>Mac-53FDB3D8DB8CA971</string>
+		<string>Mac-B4831CEBD52A0C4C</string>
 		<key>Trust</key>
 		<true/>
 		<key>FirmwareFeaturesMask</key>
-		<string>0xFF1FFF3F</string>
+		<string>0xFF1FFF7F</string>
 		<key>BoardVersion</key>
 		<string>1.0</string>
 		<key>Manufacturer</key>
@@ -539,13 +405,13 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>BiosVersion</key>
-		<string>MBP154.88Z.F000.B00.2007121455</string>
+		<string>MBP141.88Z.F000.B00.2006161817</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisAssetTag</key>
 		<string>MacBook-Aluminum</string>
 		<key>PlatformFeature</key>
-		<string>0x32</string>
+		<string>0x1A</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>Mobile</key>
@@ -555,17 +421,17 @@
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>ProductName</key>
-		<string>MacBookPro15,4</string>
+		<string>MacBookPro14,1</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>EfiVersion</key>
-		<string>1539.0.0.0.1</string>
+		<string>428.0.0.0.0</string>
 		<key>ProductName-Comment</key>
 		<string>Using Haswell MacBookAir6,2 until Clover has support for KabyLake identifiers</string>
 		<key>LocationInChassis</key>
 		<string>Part Component</string>
 		<key>BiosReleaseDate</key>
-		<string>07/12/2020</string>
+		<string>06/16/2020</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
