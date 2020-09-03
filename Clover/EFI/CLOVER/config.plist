@@ -139,18 +139,18 @@
 		<true/>
 		<key>NoEarlyProgress</key>
 		<true/>
-		<key>Fast</key>
-		<true/>
 		<key>HibernationFixup</key>
+		<false/>
+		<key>Secure</key>
 		<false/>
 		<key>Arguments</key>
 		<string>gfxrst=1 dart=0 -wegnoegpu igfxonln=1</string>
-		<key>Secure</key>
-		<false/>
 		<key>XMPDetection</key>
 		<string>Yes</string>
 		<key>StrictHibernate</key>
 		<false/>
+		<key>Timeout</key>
+		<integer>5</integer>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 	</dict>
@@ -219,7 +219,7 @@
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
 				<key>layout-id</key>
-				<integer>17</integer>
+				<integer>21</integer>
 				<key>model</key>
 				<string>Intel Sunrise Point-LP HD Audio</string>
 				<key>hda-gfx</key>
@@ -231,34 +231,42 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
+				<key>framebuffer-con2-pipe</key>
+				<data>EgAAAA==</data>
+				<key>framebuffer-unifiedmem</key>
+				<data>AAAAgA==</data>
 				<key>model</key>
 				<string>Intel UHD Graphics 620</string>
 				<key>framebuffer-stolenmem</key>
 				<data>AAAwAQ==</data>
 				<key>device-id</key>
 				<data>FlkAAA==</data>
-				<key>disable-external-gpu</key>
-				<data>AQAAAA==</data>
+				<key>framebuffer-con1-pipe</key>
+				<data>EgAAAA==</data>
 				<key>framebuffer-con2-type</key>
-				<data>AAQAAA==</data>
+				<data>AAgAAA==</data>
 				<key>framebuffer-fbmem</key>
 				<data>AACQAA==</data>
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
+				<key>enable-hdmi-dividers-fix</key>
+				<data>AQAAAA==</data>
 				<key>framebuffer-patch-enable</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-con1-type</key>
-				<data>AAgAAA==</data>
+				<key>enable-hdmi20</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con0-pipe</key>
+				<data>EgAAAA==</data>
 				<key>AAPL,ig-platform-id</key>
 				<data>AADAhw==</data>
-				<key>force-online</key>
-				<data>AQAAAA==</data>
+				<key>framebuffer-con1-type</key>
+				<data>AAgAAA==</data>
 				<key>framebuffer-con2-enable</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-con1-enable</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-unifiedmem</key>
-				<data>AAAAwA==</data>
+				<key>framebuffer-con0-enable</key>
+				<data>AQAAAA==</data>
 			</dict>
 		</dict>
 		<key>HDMIInjection</key>
