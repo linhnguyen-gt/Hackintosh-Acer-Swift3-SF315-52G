@@ -139,18 +139,18 @@
 		<false/>
 		<key>NoEarlyProgress</key>
 		<true/>
-		<key>Fast</key>
-		<true/>
 		<key>HibernationFixup</key>
 		<true/>
-		<key>Arguments</key>
-		<string>gfxrst=1 dart=0 -wegnoegpu igfxonln=1 -igfxmlr gfxrst=4</string>
 		<key>Secure</key>
 		<false/>
+		<key>Arguments</key>
+		<string>gfxrst=1 dart=0 -wegnoegpu igfxonln=1 -igfxmlr gfxrst=4</string>
 		<key>XMPDetection</key>
 		<string>Yes</string>
 		<key>StrictHibernate</key>
 		<false/>
+		<key>Timeout</key>
+		<integer>5</integer>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 	</dict>
