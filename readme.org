@@ -38,21 +38,25 @@ Integrated Intel UHD Graphics 620 support is handled by [[https://github.com/aci
 *** Installtion 
 - config.plist
   - =Devices/Properties/PciRoot(0x0)/Pci(0x2,0x0)=
-    - =AAPL,GfxYTile: 01000000=
     - =AAPL,ig-platform-id: 0000C087=
-    - =AAPL,slot-name: Internal@0,2,0=
     - =device-id: 16590000=
     - =disable-external-gpu: 01000000= (Disable GPU, -wegnoegpu Boot Flags or [[https://github.com/linhnguyengas/Hackintosh-Acer-Swift3-SF315-52G/blob/master/SSDT-dGPU-Off/SSDT-dGPU-Off.dsl][SSDT-dGPU-Off.dsl]] )
     - =enable-hdmi-dividers-fix: 01000000=
     - =enable-hdmi20: 01000000=
+    - =framebuffer-con0-enable: 01000000=
+    - =framebuffer-con0-pipe: 12000000=
     - =framebuffer-con1-enable: 01000000=
     - =framebuffer-con1-pipe: 12000000=
     - =framebuffer-con1-type: 00080000=
+    - =framebuffer-con2-enable: 01000000=
+    - =framebuffer-con2-pipe: 12000000=
+    - =framebuffer-con2-type: 00080000=
     - =framebuffer-fbmem: 00009000=
-    - =framebuffer-flags: 0B07E300=
     - =framebuffer-stolenmem: 00003001=
     - =framebuffer-patch-enable: 01000000=
+    - =framebuffer-unifiedmem: 00000080=
     - =hda-gfx: onboard-1=
+    - =model: Intel UHD Graphics 620=
 To determine if Intel GPU (IGPU) acceleration is working, check: About This Mac -> Intel UHD Graphics 620
 1536 MB. A value less than 1536MB indicates a problem (e.g. 7MB or 31MB are common).
 ** Touchpad
