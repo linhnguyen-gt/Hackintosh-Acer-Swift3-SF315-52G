@@ -10,7 +10,7 @@
 		<dict>
 			<key>#EnableC4</key>
 			<false/>
-			<key>#EnableC7</key>
+			<key>#UseSystemIO</key>
 			<false/>
 			<key>#PluginType</key>
 			<integer>0</integer>
@@ -36,7 +36,7 @@
 			<false/>
 			<key>#NoDynamicExtract</key>
 			<false/>
-			<key>#UseSystemIO</key>
+			<key>#EnableC7</key>
 			<false/>
 			<key>Generate</key>
 			<dict>
@@ -213,7 +213,7 @@
 		<key>NeverHibernate</key>
 		<false/>
 		<key>Arguments</key>
-		<string>gfxrst=1 dart=0 -wegnoegpu igfxonln=1 -igfxmlr gfxrst=4</string>
+		<string>gfxrst=1 dart=0 -wegnoegpu igfxonln=1 -igfxmlr</string>
 		<key>Timeout</key>
 		<integer>5</integer>
 		<key>DisableCloverHotkeys</key>
@@ -264,10 +264,10 @@
 		<false/>
 		<key>#Scan</key>
 		<dict>
-			<key>Legacy</key>
-			<false/>
 			<key>Entries</key>
 			<true/>
+			<key>Legacy</key>
+			<false/>
 			<key>Tool</key>
 			<true/>
 		</dict>
@@ -279,12 +279,12 @@
 		<string>1920x1080</string>
 		<key>#Mouse</key>
 		<dict>
-			<key>Mirror</key>
-			<false/>
 			<key>Speed</key>
 			<integer>2</integer>
 			<key>Enabled</key>
 			<true/>
+			<key>Mirror</key>
+			<false/>
 		</dict>
 		<key>Language</key>
 		<string>en-US:0</string>
@@ -297,38 +297,21 @@
 		</array>
 		<key>#Custom</key>
 		<dict>
-			<key>Legacy</key>
-			<array>
-				<dict>
-					<key>Hidden</key>
-					<false/>
-					<key>Hotkey</key>
-					<string>L</string>
-					<key>Volume</key>
-					<string>89433CD3-21F2-4D3C-95FC-722C48066D3A</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Type</key>
-					<string>Windows</string>
-					<key>Title</key>
-					<string>MyLegacyEntry</string>
-				</dict>
-			</array>
 			<key>Entries</key>
 			<array>
 				<dict>
+					<key>Image</key>
+					<string>os_mageia</string>
+					<key>Type</key>
+					<string>Linux</string>
 					<key>Hidden</key>
 					<false/>
 					<key>Disabled</key>
 					<false/>
 					<key>Path</key>
 					<string>\EFI\MAGEIA\GRUBX64.efi</string>
-					<key>Type</key>
-					<string>Linux</string>
 					<key>Title</key>
 					<string>Mageia Linux</string>
-					<key>Image</key>
-					<string>os_mageia</string>
 				</dict>
 				<dict>
 					<key>Hidden</key>
@@ -337,10 +320,10 @@
 					<string>M</string>
 					<key>Volume</key>
 					<string>D68F1885-571C-4441-8DD5-F14803EFEF54</string>
-					<key>Arguments</key>
-					<string>Kernel=mach_kernel</string>
 					<key>Disabled</key>
 					<true/>
+					<key>Arguments</key>
+					<string>Kernel=mach_kernel</string>
 					<key>AddArguments</key>
 					<string>-v</string>
 					<key>Path</key>
@@ -359,6 +342,8 @@
 					<false/>
 					<key>Volume</key>
 					<string>454794AC-760D-46E8-8F77-D6EB23D2FD32</string>
+					<key>Type</key>
+					<string>OSX</string>
 					<key>SubEntries</key>
 					<array>
 						<dict>
@@ -368,14 +353,29 @@
 							<string>Boot OS X 10.8.5 (12F36) Mountain Lion in Verbose Mode</string>
 						</dict>
 					</array>
-					<key>Type</key>
-					<string>OSX</string>
 					<key>Title</key>
 					<string>OS X 10.8.5 (12F36) Mountain Lion</string>
 					<key>NoCaches</key>
 					<false/>
 					<key>InjectKexts</key>
 					<false/>
+				</dict>
+			</array>
+			<key>Legacy</key>
+			<array>
+				<dict>
+					<key>Title</key>
+					<string>MyLegacyEntry</string>
+					<key>Type</key>
+					<string>Windows</string>
+					<key>Hidden</key>
+					<false/>
+					<key>Hotkey</key>
+					<string>L</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Volume</key>
+					<string>89433CD3-21F2-4D3C-95FC-722C48066D3A</string>
 				</dict>
 			</array>
 			<key>Tool</key>
@@ -387,10 +387,10 @@
 					<string>S</string>
 					<key>Volume</key>
 					<string>D68F1885-571C-4441-8DD5-F14803EFEF54</string>
-					<key>Arguments</key>
-					<string>-b</string>
 					<key>Disabled</key>
 					<false/>
+					<key>Arguments</key>
+					<string>-b</string>
 					<key>Path</key>
 					<string>\EFI\CLOVER\TOOLS\Shell64-v1.efi</string>
 					<key>Title</key>
@@ -416,13 +416,13 @@
 	<dict>
 		<key>#BusSpeedkHz</key>
 		<integer>133330</integer>
-		<key>#TurboDisable</key>
+		<key>#HWPEnable</key>
 		<true/>
 		<key>#TDP</key>
 		<integer>95</integer>
 		<key>#SavingMode</key>
 		<integer>7</integer>
-		<key>#HWPEnable</key>
+		<key>#TurboDisable</key>
 		<true/>
 		<key>#HWPValue</key>
 		<string>0x30002a01</string>
@@ -452,14 +452,29 @@
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x1c,0x1)/Pci(0x0,0x0)</key>
 			<dict>
-				<key>model</key>
-				<string>Apple WiFi card</string>
 				<key>subsystem-vendor-id</key>
 				<data>axAAAA==</data>
-				<key>device_type</key>
-				<string>Airport</string>
+				<key>model</key>
+				<string>Apple WiFi card</string>
 				<key>name</key>
 				<string>AirPort Extreme</string>
+				<key>device_type</key>
+				<string>Airport</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1a,0x0)</key>
+			<dict>
+				<key>AAPL,current-in-sleep</key>
+				<data>6AM=</data>
+				<key>AAPL,current-available</key>
+				<data>sAQ=</data>
+				<key>AAPL,current-extra</key>
+				<data>vAI=</data>
+				<key>AAPL,clock-id</key>
+				<data>AQ==</data>
+				<key>built-in</key>
+				<data>AA==</data>
+				<key>device_type</key>
+				<string>EHCI</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
 			<dict>
@@ -483,33 +498,18 @@
 				<key>built-in</key>
 				<data>AQ==</data>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1a,0x0)</key>
-			<dict>
-				<key>AAPL,current-in-sleep</key>
-				<data>6AM=</data>
-				<key>AAPL,current-extra</key>
-				<data>vAI=</data>
-				<key>built-in</key>
-				<data>AA==</data>
-				<key>AAPL,clock-id</key>
-				<data>AQ==</data>
-				<key>device_type</key>
-				<string>EHCI</string>
-				<key>AAPL,current-available</key>
-				<data>sAQ=</data>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x1c,0x5)/Pci(0x0,0x0)</key>
 			<dict>
-				<key>compatible</key>
-				<string>pci14e4,16bc</string>
-				<key>model</key>
-				<string>O2 Micro SD card reader</string>
 				<key>subsystem-vendor-id</key>
 				<data>axAAAA==</data>
-				<key>device_type</key>
-				<string>Media controller</string>
+				<key>model</key>
+				<string>O2 Micro SD card reader</string>
 				<key>name</key>
 				<string>AirPort Extreme</string>
+				<key>compatible</key>
+				<string>pci14e4,16bc</string>
+				<key>device_type</key>
+				<string>Media controller</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1b,0x0)</key>
 			<dict>
@@ -538,10 +538,10 @@
 				<data>AwBmAQ==</data>
 				<key>graphic-options</key>
 				<data>DAAAAA==</data>
-				<key>AAPL,HasLid</key>
-				<data>AQAAAA==</data>
 				<key>model</key>
 				<string>Intel HD Graphics 4000</string>
+				<key>AAPL,HasLid</key>
+				<data>AQAAAA==</data>
 			</dict>
 			<key>SecondaryGPU</key>
 			<dict>
@@ -552,16 +552,16 @@
 			<dict>
 				<key>AAPL,current-in-sleep</key>
 				<data>6AM=</data>
-				<key>AAPL,current-extra</key>
-				<data>vAI=</data>
-				<key>built-in</key>
-				<data>AA==</data>
-				<key>AAPL,clock-id</key>
-				<data>Ag==</data>
-				<key>device_type</key>
-				<string>EHCI</string>
 				<key>AAPL,current-available</key>
 				<data>sAQ=</data>
+				<key>AAPL,current-extra</key>
+				<data>vAI=</data>
+				<key>AAPL,clock-id</key>
+				<data>Ag==</data>
+				<key>built-in</key>
+				<data>AA==</data>
+				<key>device_type</key>
+				<string>EHCI</string>
 			</dict>
 		</dict>
 		<key>#SetIntelMaxBacklight</key>
@@ -672,9 +672,9 @@
 		<dict>
 			<key>ATI</key>
 			<true/>
-			<key>NVidia</key>
-			<false/>
 			<key>Intel</key>
+			<false/>
+			<key>NVidia</key>
 			<false/>
 		</dict>
 		<key>#NvidiaNoEFI</key>
@@ -694,26 +694,26 @@
 		<key>#PatchVBiosBytes</key>
 		<array>
 			<dict>
-				<key>Find</key>
-				<data>gAeoAqAF</data>
 				<key>Replace</key>
 				<data>gAeoAjgE</data>
+				<key>Find</key>
+				<data>gAeoAqAF</data>
 			</dict>
 		</array>
 		<key>#display-cfg</key>
 		<string>03010300FFFF0001</string>
 		<key>EDID</key>
 		<dict>
-			<key>#Inject</key>
-			<true/>
+			<key>#Custom</key>
+			<data>AP///////wAGECGSAAAAAAASAQOAIRV4CunVmVlTjigmUFQAAAABAQEBAQEBAQEBAQEBAQEB3iGgcFCEHzAgIFYAS88QAAAY3iGgcFCEHzAgIFYAS88QAAAAAAAA/gBXNjU3RwAxNTRXUDEKAAAA/gAjMz1IZYSq/wIBCiAgAJo=</data>
 			<key>#ProductID</key>
 			<string>0x9221</string>
 			<key>#VideoInputSignal</key>
 			<string>0xA1</string>
 			<key>#VendorID</key>
 			<string>0x1006</string>
-			<key>#Custom</key>
-			<data>AP///////wAGECGSAAAAAAASAQOAIRV4CunVmVlTjigmUFQAAAABAQEBAQEBAQEBAQEBAQEB3iGgcFCEHzAgIFYAS88QAAAY3iGgcFCEHzAgIFYAS88QAAAAAAAA/gBXNjU3RwAxNTRXUDEKAAAA/gAjMz1IZYSq/wIBCiAgAJo=</data>
+			<key>#Inject</key>
+			<true/>
 			<key>#HorizontalSyncPulseWidth</key>
 			<string>0x11</string>
 		</dict>
@@ -848,72 +848,72 @@
 				<data>/////wAAAAAAAAA=</data>
 				<key>Find</key>
 				<data>SGVhZHBob25lcwA=</data>
-				<key>Disabled</key>
-				<true/>
 				<key>Name</key>
 				<string>VoodooHDA</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Replace</key>
 				<data>VGVsZXBob25lcwA=</data>
 			</dict>
 			<dict>
 				<key>Find</key>
 				<string>0x04020000</string>
-				<key>Comment</key>
-				<string>Patch_to_not_load_this_driver</string>
-				<key>InfoPlistPatch</key>
-				<true/>
 				<key>Name</key>
 				<string>AppleHDAController</string>
 				<key>Replace</key>
 				<string>0x44220000</string>
+				<key>Comment</key>
+				<string>Patch_to_not_load_this_driver</string>
+				<key>InfoPlistPatch</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>Find</key>
 				<data>RXh0ZXJuYWw=</data>
-				<key>Comment</key>
-				<string>Make all drives to be internal</string>
 				<key>Name</key>
 				<string>AppleAHCIPort</string>
 				<key>Replace</key>
 				<data>SW50ZXJuYWw=</data>
+				<key>Comment</key>
+				<string>Make all drives to be internal</string>
 			</dict>
 			<dict>
 				<key>Find</key>
 				<data>QVBQTEUgU1NEAA==</data>
-				<key>Comment</key>
-				<string>TRIM function for non-Apple SSDs</string>
 				<key>Name</key>
 				<string>IOAHCIBlockStorage</string>
 				<key>Replace</key>
 				<data>AAAAAAAAAAAAAA==</data>
+				<key>Comment</key>
+				<string>TRIM function for non-Apple SSDs</string>
 			</dict>
 			<dict>
 				<key>Find</key>
 				<data>AAQAAAQDAAAAAQAAIQMCBAQAAAAUAgAAAAEAAAAABAMQAAAAEAAAAAABAAAAAAAB</data>
-				<key>Comment</key>
-				<string>ATI Connector patch new way</string>
-				<key>Disabled</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.9,10.10,10.11</string>
 				<key>Name</key>
 				<string>AMD6000Controller</string>
+				<key>Disabled</key>
+				<false/>
 				<key>Replace</key>
 				<data>BAAAABQCAAAAAQAAAAAEBAAEAAAEAwAAAAEAABECAQUAAAAAAAAAAAAAAAAAAAAA</data>
+				<key>Comment</key>
+				<string>ATI Connector patch new way</string>
+				<key>MatchOS</key>
+				<string>10.9,10.10,10.11</string>
 			</dict>
 			<dict>
 				<key>Find</key>
 				<data>SEQgNnh4eA==</data>
-				<key>Comment</key>
-				<string>ATI name HD xxxx -&gt; HD6450</string>
-				<key>Disabled</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.12,10.13</string>
 				<key>Name</key>
 				<string>AMD6000Controller</string>
+				<key>Disabled</key>
+				<false/>
 				<key>Replace</key>
 				<data>SEQgNjQ1MA==</data>
+				<key>Comment</key>
+				<string>ATI name HD xxxx -&gt; HD6450</string>
+				<key>MatchOS</key>
+				<string>10.12,10.13</string>
 			</dict>
 			<dict>
 				<key>Find</key>
@@ -945,14 +945,14 @@
 			<dict>
 				<key>Find</key>
 				<data>RXh0ZXJuYWw=</data>
-				<key>Comment</key>
-				<string>Example</string>
 				<key>Disabled</key>
 				<true/>
-				<key>MatchOS</key>
-				<string>All</string>
 				<key>Replace</key>
 				<data>SW50ZXJuYWw=</data>
+				<key>Comment</key>
+				<string>Example</string>
+				<key>MatchOS</key>
+				<string>All</string>
 			</dict>
 		</array>
 		<key>#FakeCPUID</key>
@@ -1066,10 +1066,10 @@
 					<string>DDR3</string>
 				</dict>
 			</array>
-			<key>SlotCount</key>
-			<integer>4</integer>
 			<key>Channels</key>
 			<integer>2</integer>
+			<key>SlotCount</key>
+			<integer>4</integer>
 		</dict>
 		<key>#BoardSerialNumber</key>
 		<string>C0225060SAMF651AX</string>
@@ -1094,24 +1094,24 @@
 		<key>#Slots</key>
 		<array>
 			<dict>
-				<key>Device</key>
-				<string>ATI</string>
-				<key>Type</key>
-				<integer>16</integer>
+				<key>ID</key>
+				<integer>1</integer>
 				<key>Name</key>
 				<string>PCIe Slot 0</string>
-				<key>ID</key>
-				<integer>1</integer>
+				<key>Type</key>
+				<integer>16</integer>
+				<key>Device</key>
+				<string>ATI</string>
 			</dict>
 			<dict>
-				<key>Device</key>
-				<string>WIFI</string>
-				<key>Type</key>
-				<integer>1</integer>
-				<key>Name</key>
-				<string>Airport</string>
 				<key>ID</key>
 				<integer>0</integer>
+				<key>Name</key>
+				<string>Airport</string>
+				<key>Type</key>
+				<integer>1</integer>
+				<key>Device</key>
+				<string>WIFI</string>
 			</dict>
 		</array>
 		<key>BiosVendor</key>
@@ -1141,10 +1141,10 @@
 		<false/>
 		<key>#BacklightLevel</key>
 		<string>0x0501</string>
-		<key>#CustomUUID</key>
-		<string>511CE201-1000-4000-9999-010203040506</string>
 		<key>InjectSystemID</key>
 		<true/>
+		<key>#CustomUUID</key>
+		<string>511CE201-1000-4000-9999-010203040506</string>
 		<key>#NoCaches</key>
 		<false/>
 		<key>InjectKexts</key>
