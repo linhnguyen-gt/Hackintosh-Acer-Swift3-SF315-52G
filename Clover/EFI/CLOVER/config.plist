@@ -10,7 +10,7 @@
 		<dict>
 			<key>#EnableC4</key>
 			<false/>
-			<key>#UseSystemIO</key>
+			<key>#NoOemTableId</key>
 			<false/>
 			<key>#PluginType</key>
 			<integer>0</integer>
@@ -32,9 +32,9 @@
 			<true/>
 			<key>#PLimitDict</key>
 			<integer>1</integer>
-			<key>#NoOemTableId</key>
-			<false/>
 			<key>#NoDynamicExtract</key>
+			<false/>
+			<key>#UseSystemIO</key>
 			<false/>
 			<key>#EnableC7</key>
 			<false/>
@@ -214,17 +214,15 @@
 		<false/>
 		<key>Arguments</key>
 		<string>gfxrst=1 dart=0 -wegnoegpu igfxonln=1 -igfxmlr</string>
-		<key>Timeout</key>
-		<integer>5</integer>
 		<key>DisableCloverHotkeys</key>
 		<false/>
 		<key>NeverDoRecovery</key>
 		<false/>
+		<key>CustomLogo</key>
+		<false/>
 		<key>NoEarlyProgress</key>
 		<true/>
 		<key>StrictHibernate</key>
-		<false/>
-		<key>CustomLogo</key>
 		<false/>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
@@ -233,6 +231,8 @@
 		<key>#Arguments</key>
 		<string>slide=0 darkwake=0</string>
 		<key>HibernationFixup</key>
+		<true/>
+		<key>Fast</key>
 		<true/>
 		<key>#DefaultLoader</key>
 		<string>boot.efi</string>
@@ -300,18 +300,18 @@
 			<key>Entries</key>
 			<array>
 				<dict>
-					<key>Image</key>
-					<string>os_mageia</string>
+					<key>Path</key>
+					<string>\EFI\MAGEIA\GRUBX64.efi</string>
 					<key>Type</key>
 					<string>Linux</string>
 					<key>Hidden</key>
 					<false/>
-					<key>Disabled</key>
-					<false/>
-					<key>Path</key>
-					<string>\EFI\MAGEIA\GRUBX64.efi</string>
 					<key>Title</key>
 					<string>Mageia Linux</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Image</key>
+					<string>os_mageia</string>
 				</dict>
 				<dict>
 					<key>Hidden</key>
@@ -320,10 +320,10 @@
 					<string>M</string>
 					<key>Volume</key>
 					<string>D68F1885-571C-4441-8DD5-F14803EFEF54</string>
-					<key>Disabled</key>
-					<true/>
 					<key>Arguments</key>
 					<string>Kernel=mach_kernel</string>
+					<key>Disabled</key>
+					<true/>
 					<key>AddArguments</key>
 					<string>-v</string>
 					<key>Path</key>
@@ -364,18 +364,18 @@
 			<key>Legacy</key>
 			<array>
 				<dict>
-					<key>Title</key>
-					<string>MyLegacyEntry</string>
+					<key>Volume</key>
+					<string>89433CD3-21F2-4D3C-95FC-722C48066D3A</string>
 					<key>Type</key>
 					<string>Windows</string>
 					<key>Hidden</key>
 					<false/>
-					<key>Hotkey</key>
-					<string>L</string>
 					<key>Disabled</key>
 					<true/>
-					<key>Volume</key>
-					<string>89433CD3-21F2-4D3C-95FC-722C48066D3A</string>
+					<key>Title</key>
+					<string>MyLegacyEntry</string>
+					<key>Hotkey</key>
+					<string>L</string>
 				</dict>
 			</array>
 			<key>Tool</key>
@@ -387,10 +387,10 @@
 					<string>S</string>
 					<key>Volume</key>
 					<string>D68F1885-571C-4441-8DD5-F14803EFEF54</string>
-					<key>Disabled</key>
-					<false/>
 					<key>Arguments</key>
 					<string>-b</string>
+					<key>Disabled</key>
+					<false/>
 					<key>Path</key>
 					<string>\EFI\CLOVER\TOOLS\Shell64-v1.efi</string>
 					<key>Title</key>
@@ -416,18 +416,18 @@
 	<dict>
 		<key>#BusSpeedkHz</key>
 		<integer>133330</integer>
-		<key>#HWPEnable</key>
+		<key>#TurboDisable</key>
 		<true/>
 		<key>#TDP</key>
 		<integer>95</integer>
 		<key>#SavingMode</key>
 		<integer>7</integer>
-		<key>#TurboDisable</key>
-		<true/>
-		<key>#HWPValue</key>
-		<string>0x30002a01</string>
 		<key>#FrequencyMHz</key>
 		<integer>3140</integer>
+		<key>#HWPValue</key>
+		<string>0x30002a01</string>
+		<key>#HWPEnable</key>
+		<true/>
 		<key>#Type</key>
 		<string>0x0201</string>
 		<key>#QPI</key>
@@ -461,21 +461,6 @@
 				<key>device_type</key>
 				<string>Airport</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1a,0x0)</key>
-			<dict>
-				<key>AAPL,current-in-sleep</key>
-				<data>6AM=</data>
-				<key>AAPL,current-available</key>
-				<data>sAQ=</data>
-				<key>AAPL,current-extra</key>
-				<data>vAI=</data>
-				<key>AAPL,clock-id</key>
-				<data>AQ==</data>
-				<key>built-in</key>
-				<data>AA==</data>
-				<key>device_type</key>
-				<string>EHCI</string>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
 			<dict>
 				<key>AAPL,current-in-sleep</key>
@@ -497,6 +482,21 @@
 			<dict>
 				<key>built-in</key>
 				<data>AQ==</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1a,0x0)</key>
+			<dict>
+				<key>AAPL,current-available</key>
+				<data>sAQ=</data>
+				<key>AAPL,current-in-sleep</key>
+				<data>6AM=</data>
+				<key>AAPL,current-extra</key>
+				<data>vAI=</data>
+				<key>AAPL,clock-id</key>
+				<data>AQ==</data>
+				<key>built-in</key>
+				<data>AA==</data>
+				<key>device_type</key>
+				<string>EHCI</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1c,0x5)/Pci(0x0,0x0)</key>
 			<dict>
@@ -538,10 +538,10 @@
 				<data>AwBmAQ==</data>
 				<key>graphic-options</key>
 				<data>DAAAAA==</data>
-				<key>model</key>
-				<string>Intel HD Graphics 4000</string>
 				<key>AAPL,HasLid</key>
 				<data>AQAAAA==</data>
+				<key>model</key>
+				<string>Intel HD Graphics 4000</string>
 			</dict>
 			<key>SecondaryGPU</key>
 			<dict>
@@ -550,10 +550,10 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1d,0x0)</key>
 			<dict>
-				<key>AAPL,current-in-sleep</key>
-				<data>6AM=</data>
 				<key>AAPL,current-available</key>
 				<data>sAQ=</data>
+				<key>AAPL,current-in-sleep</key>
+				<data>6AM=</data>
 				<key>AAPL,current-extra</key>
 				<data>vAI=</data>
 				<key>AAPL,clock-id</key>
@@ -704,16 +704,16 @@
 		<string>03010300FFFF0001</string>
 		<key>EDID</key>
 		<dict>
-			<key>#Custom</key>
-			<data>AP///////wAGECGSAAAAAAASAQOAIRV4CunVmVlTjigmUFQAAAABAQEBAQEBAQEBAQEBAQEB3iGgcFCEHzAgIFYAS88QAAAY3iGgcFCEHzAgIFYAS88QAAAAAAAA/gBXNjU3RwAxNTRXUDEKAAAA/gAjMz1IZYSq/wIBCiAgAJo=</data>
+			<key>#Inject</key>
+			<true/>
 			<key>#ProductID</key>
 			<string>0x9221</string>
 			<key>#VideoInputSignal</key>
 			<string>0xA1</string>
 			<key>#VendorID</key>
 			<string>0x1006</string>
-			<key>#Inject</key>
-			<true/>
+			<key>#Custom</key>
+			<data>AP///////wAGECGSAAAAAAASAQOAIRV4CunVmVlTjigmUFQAAAABAQEBAQEBAQEBAQEBAQEB3iGgcFCEHzAgIFYAS88QAAAY3iGgcFCEHzAgIFYAS88QAAAAAAAA/gBXNjU3RwAxNTRXUDEKAAAA/gAjMz1IZYSq/wIBCiAgAJo=</data>
 			<key>#HorizontalSyncPulseWidth</key>
 			<string>0x11</string>
 		</dict>
