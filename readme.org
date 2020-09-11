@@ -1,7 +1,7 @@
 #+STARTUP: indent
-* OpenCore: 
-- I'm having problems with OpenCore: After sleep, macOS will auto restart, but Clover works very good no problems
-- I'll fix it too late
+* OpenCore: =[Solved]=
+=- I'm having problems with OpenCore: After sleep, macOS will auto restart, but Clover works very good no problems=
+=- I'll fix it too late=
 * Overview
 Run macOS Mojave (10.14) or Catalina (10.15) on an Acer Swift3 SF315 52G.
 Most pieces are fully supported, and this setup can be used as your main machine. A few pieces are missing (and some will probably never be supported). Caveats in the Hardware section.
