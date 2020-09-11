@@ -31,7 +31,7 @@ You can use the EFI folder to be to boot into a USB installer, or for regular bo
   - HDMI: Just works after Sleep/Wake, LOL
 * Hardware
 ** Graphics
-Integrated Intel UHD Graphics 620 support is handled by [[https://github.com/acidanthera/WhateverGreen][WhateverGreen]], and configured in the
+Integrated Intel UHD Graphics 620 support is handled by [WhateverGreen](https://github.com/acidanthera/WhateverGreen), and configured in the
 `PciRoot(0x0)/Pci(0x2,0x0)` section of config.plist. The Nvidia GPU MX150 is not supported due to hardware differences and lack of driver support in macOS. It is disabled to save power.
 - Recommend to use `AAPL,ig-platform-id: 0000C087` for UHD620 Kabylake-R
 *** Installtion 
