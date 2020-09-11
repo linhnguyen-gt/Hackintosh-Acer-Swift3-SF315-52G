@@ -1,6 +1,7 @@
-* OpenCore: `[Solved]`
-- ~~I'm having problems with OpenCore: After sleep, macOS will auto restart, but Clover works very good no problems~~
-- ~~I'll fix it too late~~
+#+STARTUP: indent
+* OpenCore: 
+- I'm having problems with OpenCore: After sleep, macOS will auto restart, but Clover works very good no problems
+- I'll fix it too late
 * Overview
 Run macOS Mojave (10.14) or Catalina (10.15) on an Acer Swift3 SF315 52G.
 Most pieces are fully supported, and this setup can be used as your main machine. A few pieces are missing (and some will probably never be supported). Caveats in the Hardware section.
@@ -32,63 +33,63 @@ You can use the EFI folder to be to boot into a USB installer, or for regular bo
 * Hardware
 ** Graphics
 Integrated Intel UHD Graphics 620 support is handled by [[https://github.com/acidanthera/WhateverGreen][WhateverGreen]], and configured in the
-`PciRoot(0x0)/Pci(0x2,0x0)` section of config.plist. The Nvidia GPU MX150 is not supported due to hardware differences and lack of driver support in macOS. It is disabled to save power.
-- Recommend to use `AAPL,ig-platform-id: 0000C087` for UHD620 Kabylake-R
+=PciRoot(0x0)/Pci(0x2,0x0)= section of config.plist. The Nvidia GPU MX150 is not supported due to hardware differences and lack of driver support in macOS. It is disabled to save power.
+- Recommend to use =AAPL,ig-platform-id: 0000C087= for UHD620 Kabylake-R
 *** Installtion 
 - config.plist
-  - `Devices/Properties/PciRoot(0x0)/Pci(0x2,0x0)`
-    - `AAPL,ig-platform-id: 0000C087`
-    - `device-id: 16590000`
-    - `disable-external-gpu: 01000000` (Disable GPU, -wegnoegpu Boot Flags or [[https://github.com/linhnguyengas/Hackintosh-Acer-Swift3-SF315-52G/blob/master/SSDT-dGPU-Off/SSDT-dGPU-Off.dsl][SSDT-dGPU-Off.dsl]] )
-    - `enable-hdmi-dividers-fix: 01000000`
-    - `enable-hdmi20: 01000000`
-    - `framebuffer-con0-enable: 01000000`
-    - `framebuffer-con0-pipe: 12000000`
-    - `framebuffer-con1-enable: 01000000`
-    - `framebuffer-con1-pipe: 12000000`
-    - `framebuffer-con1-type: 00080000`
-    - `framebuffer-con2-enable: 01000000`
-    - `framebuffer-con2-pipe: 12000000`
-    - `framebuffer-con2-type: 00080000`
-    - `framebuffer-fbmem: 00009000`
-    - `framebuffer-stolenmem: 00003001`
-    - `framebuffer-patch-enable: 01000000`
-    - `framebuffer-unifiedmem: 00000080`
-    - `hda-gfx: onboard-1`
-    - `model: Intel UHD Graphics 620`
+  - =Devices/Properties/PciRoot(0x0)/Pci(0x2,0x0)=
+    - =AAPL,ig-platform-id: 0000C087=
+    - =device-id: 16590000=
+    - =disable-external-gpu: 01000000= (Disable GPU, -wegnoegpu Boot Flags or [[https://github.com/linhnguyengas/Hackintosh-Acer-Swift3-SF315-52G/blob/master/SSDT-dGPU-Off/SSDT-dGPU-Off.dsl][SSDT-dGPU-Off.dsl]] )
+    - =enable-hdmi-dividers-fix: 01000000=
+    - =enable-hdmi20: 01000000=
+    - =framebuffer-con0-enable: 01000000=
+    - =framebuffer-con0-pipe: 12000000=
+    - =framebuffer-con1-enable: 01000000=
+    - =framebuffer-con1-pipe: 12000000=
+    - =framebuffer-con1-type: 00080000=
+    - =framebuffer-con2-enable: 01000000=
+    - =framebuffer-con2-pipe: 12000000=
+    - =framebuffer-con2-type: 00080000=
+    - =framebuffer-fbmem: 00009000=
+    - =framebuffer-stolenmem: 00003001=
+    - =framebuffer-patch-enable: 01000000=
+    - =framebuffer-unifiedmem: 00000080=
+    - =hda-gfx: onboard-1=
+    - =model: Intel UHD Graphics 620=
 To determine if Intel GPU (IGPU) acceleration is working, check: About This Mac -> Intel UHD Graphics 620
 1536 MB. A value less than 1536MB indicates a problem (e.g. 7MB or 31MB are common).
 ** Touchpad
 Acer-Swift3-SF315-52G using Touchpad Synaptic. If only using VoodooI2C and VoodooI2CHID it will not work smoothly, you need to patch [[https://github.com/linhnguyengas/Hackintosh-Acer-Swift3-SF315-52G/blob/master/Patch%20I2C%20TouchPad/SSDT-I2C.dsl][SSDT-I2C]] to be able to use as a real Trackpad of Macbook 
 *** Custom setting the delay between Touchpad and keyboard
-- To do that you need to edit Info.plist in VoodooI2CHID.kext: Open the `Info.plist` in the VoodooI2CHID.kext with any Text Editor(I use Visual Code)
-- Finding the `QuietTimeAfterTyping`
+- To do that you need to edit Info.plist in VoodooI2CHID.kext: Open the =Info.plist= in the VoodooI2CHID.kext with any Text Editor(I use Visual Code)
+- Finding the =QuietTimeAfterTyping=
 - Changing the value you prefer
-- I have preset the `value` to `0`
+- I have preset the =value= to =0=
 ** Wi-Fi/Bluetooth
 *** Installation
-- Include (https://github.com/acidanthera/AirportBrcmFixup)[AirportBrcmFixup] for Wi-Fi
-- Include (https://github.com/acidanthera/BrcmPatchRAM/releases)[BrcmPatchRAM]] for Bluetooth (for installation to CLOVER/kexts/Other)
+- Include [[https://github.com/acidanthera/AirportBrcmFixup][AirportBrcmFixup]] for Wi-Fi
+- Include [[https://github.com/acidanthera/BrcmPatchRAM/releases][BrcmPatchRAM]] for Bluetooth (for installation to CLOVER/kexts/Other)
 ** iMessages and FaceTime
 You can try this tips https://hackintosher.com/guides/quick-fixes-facetime-icloud-imessage-hackintosh-not-working/ or https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/
 ** Battery status
-Install `SMCBatteryManager.kext` that comes with [[https://github.com/acidanthera/virtualsmc/releases][VirtualSMC]] to get battery status. Ensure that you have removed ACPIBatteryManager if you’ve installed it previously.
+Install =SMCBatteryManager.kext= that comes with [[https://github.com/acidanthera/virtualsmc/releases][VirtualSMC]] to get battery status. Ensure that you have removed ACPIBatteryManager if you’ve installed it previously.
 ** Audio 
-Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. The ALC256 is not supported on macOS by default, so we use AppleALC to enable it. Audio pipelines on laptops appear to have unique amplifier and gain setups, so we need to pass a layout-id to AppleALC compatible with the Acer Swift3 SF315 52G. The only ID that works well is layout-id`21.
+Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. The ALC256 is not supported on macOS by default, so we use AppleALC to enable it. Audio pipelines on laptops appear to have unique amplifier and gain setups, so we need to pass a layout-id to AppleALC compatible with the Acer Swift3 SF315 52G. The only ID that works well is layout-id=21.
 *** Installtion 
 - config.plist
-  - `Devices/Properties/PciRoot(0x0)/Pci(0x1f,0x3)`
-    - `AAPL,slot-name: Internal`
-    - `hda-gfx: onboard-1`
-    - `hda-idle-support: 1`
-    - `layout-id: 21`
-    - `model: Intel Sunrise Point-LP HD Audio`
+  - =Devices/Properties/PciRoot(0x0)/Pci(0x1f,0x3)=
+    - =AAPL,slot-name: Internal=
+    - =hda-gfx: onboard-1=
+    - =hda-idle-support: 1=
+    - =layout-id: 21=
+    - =model: Intel Sunrise Point-LP HD Audio=
 ** Fix the AirPods choppy/unreliable when connected to macOS play music
-*** Open `System Preferences > Sound > Input`
-- Change Sound Input from Airpods to `Internal Microphone`
+*** Open =System Preferences > Sound > Input=
+- Change Sound Input from Airpods to =Internal Microphone=
 - Possible explanation:
-- Since `Broadcom BCM94352Z` are running with Bluetooth 4.0, which has too low bandwidth to handle both input/output at a high quality.
-- Therefore, changing `Sound` `Input` to `Internal Microphone` to ensure audio output is working as normal.
+- Since =Broadcom BCM94352Z= are running with Bluetooth 4.0, which has too low bandwidth to handle both input/output at a high quality.
+- Therefore, changing =Sound= =Input= to =Internal Microphone= to ensure audio output is working as normal.
 ** Problem Audio after sleep/wake
 - Need install [[https://bitbucket.org/RehabMan/os-x-eapd-codec-commander/downloads/][CodecCommander.kext]]
 - Next, we will modify the CodecCommander.kext before installing it, to make it work with our ALC256
