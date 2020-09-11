@@ -39,7 +39,7 @@ Integrated Intel UHD Graphics 620 support is handled by [WhateverGreen](https://
   - `Devices/Properties/PciRoot(0x0)/Pci(0x2,0x0)`
     - `AAPL,ig-platform-id: 0000C087`
     - `device-id: 16590000`
-    - `disable-external-gpu: 01000000` (Disable GPU, -wegnoegpu Boot Flags or [[https://github.com/linhnguyengas/Hackintosh-Acer-Swift3-SF315-52G/blob/master/SSDT-dGPU-Off/SSDT-dGPU-Off.dsl][SSDT-dGPU-Off.dsl]] )
+    - `disable-external-gpu: 01000000` (Disable GPU, -wegnoegpu Boot Flags or [SSDT-dGPU-Off.dsl](https://github.com/linhnguyengas/Hackintosh-Acer-Swift3-SF315-52G/blob/master/SSDT-dGPU-Off/SSDT-dGPU-Off.dsl) )
     - `enable-hdmi-dividers-fix: 01000000`
     - `enable-hdmi20: 01000000`
     - `framebuffer-con0-enable: 01000000`
@@ -59,7 +59,7 @@ Integrated Intel UHD Graphics 620 support is handled by [WhateverGreen](https://
 To determine if Intel GPU (IGPU) acceleration is working, check: About This Mac -> Intel UHD Graphics 620
 1536 MB. A value less than 1536MB indicates a problem (e.g. 7MB or 31MB are common).
 ** Touchpad
-Acer-Swift3-SF315-52G using Touchpad Synaptic. If only using VoodooI2C and VoodooI2CHID it will not work smoothly, you need to patch [[https://github.com/linhnguyengas/Hackintosh-Acer-Swift3-SF315-52G/blob/master/Patch%20I2C%20TouchPad/SSDT-I2C.dsl][SSDT-I2C]] to be able to use as a real Trackpad of Macbook 
+Acer-Swift3-SF315-52G using Touchpad Synaptic. If only using VoodooI2C and VoodooI2CHID it will not work smoothly, you need to patch [[SSDT-I2C](https://github.com/linhnguyengas/Hackintosh-Acer-Swift3-SF315-52G/blob/master/Patch%20I2C%20TouchPad/SSDT-I2C.dsl) to be able to use as a real Trackpad of Macbook 
 *** Custom setting the delay between Touchpad and keyboard
 - To do that you need to edit Info.plist in VoodooI2CHID.kext: Open the `Info.plist` in the VoodooI2CHID.kext with any Text Editor(I use Visual Code)
 - Finding the `QuietTimeAfterTyping`
@@ -67,12 +67,12 @@ Acer-Swift3-SF315-52G using Touchpad Synaptic. If only using VoodooI2C and Voodo
 - I have preset the `value` to `0`
 ** Wi-Fi/Bluetooth
 *** Installation
-- Include (https://github.com/acidanthera/AirportBrcmFixup)[AirportBrcmFixup] for Wi-Fi
-- Include (https://github.com/acidanthera/BrcmPatchRAM/releases)[BrcmPatchRAM]] for Bluetooth (for installation to CLOVER/kexts/Other)
+- Include [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup) for Wi-Fi
+- Include [BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM/releases) for Bluetooth (for installation to CLOVER/kexts/Other)
 ** iMessages and FaceTime
 You can try this tips https://hackintosher.com/guides/quick-fixes-facetime-icloud-imessage-hackintosh-not-working/ or https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/
 ** Battery status
-Install `SMCBatteryManager.kext` that comes with [[https://github.com/acidanthera/virtualsmc/releases][VirtualSMC]] to get battery status. Ensure that you have removed ACPIBatteryManager if you’ve installed it previously.
+Install `SMCBatteryManager.kext` that comes with [VirtualSMC](https://github.com/acidanthera/virtualsmc/releases) to get battery status. Ensure that you have removed ACPIBatteryManager if you’ve installed it previously.
 ** Audio 
 Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. The ALC256 is not supported on macOS by default, so we use AppleALC to enable it. Audio pipelines on laptops appear to have unique amplifier and gain setups, so we need to pass a layout-id to AppleALC compatible with the Acer Swift3 SF315 52G. The only ID that works well is layout-id`21.
 *** Installtion 
@@ -90,7 +90,7 @@ Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. T
 - Since `Broadcom BCM94352Z` are running with Bluetooth 4.0, which has too low bandwidth to handle both input/output at a high quality.
 - Therefore, changing `Sound` `Input` to `Internal Microphone` to ensure audio output is working as normal.
 ** Problem Audio after sleep/wake
-- Need install [[https://bitbucket.org/RehabMan/os-x-eapd-codec-commander/downloads/][CodecCommander.kext]]
+- Need install [CodecCommander.kext](https://bitbucket.org/RehabMan/os-x-eapd-codec-commander/downloads/)
 - Next, we will modify the CodecCommander.kext before installing it, to make it work with our ALC256
 - Right-click on CodecCommander -> Show Package Contents -> Contents -> Info.plist and open with Xcode
 - Find IOKitPersonalities -> CodecCommander -> Codec Profile 
@@ -100,9 +100,9 @@ Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. T
 - Save!!!
 - Copy CodecCommander.kext under ‘EFI -> Clover -> Kexts -> Other‘ folder and then restart the system
 ** USB
-Has a few incorrect USB properties, but we can inject the correct properties via USBInjectAll with [[https://github.com/RehabMan/OS-X-USB-Inject-All/blob/master/SSDT-UIAC.dsl][SSDT-UIAC.]]
+Has a few incorrect USB properties, but we can inject the correct properties via USBInjectAll with [SSDT-UIAC](https://github.com/RehabMan/OS-X-USB-Inject-All/blob/master/SSDT-UIAC.dsl)
 * Change Key Brightness
-** Very basic or patch [[https://github.com/linhnguyengas/Hackintosh-Acer-Swift3-SF315-52G/blob/master/Key%20Map%20PS2/SSDT-PS2-KEY.dsl][SSDT-PS2-KEY]]
+** Very basic or patch [SSDT-PS2-KEY](https://github.com/linhnguyengas/Hackintosh-Acer-Swift3-SF315-52G/blob/master/Key%20Map%20PS2/SSDT-PS2-KEY.dsl)
 - You just need to connect USB Keyboard or USB Mouse
 - Go to System Preferences > Keyboard > Shortcuts > Display (if don't connect USB Keyboard or USB Mouse , Display won't appear)
 [[https://user-images.githubusercontent.com/43808684/88456714-2c3a4580-ceaa-11ea-954c-ddc3f21970ce.png]]
@@ -110,11 +110,11 @@ Has a few incorrect USB properties, but we can inject the correct properties via
 [[https://user-images.githubusercontent.com/43808684/88456719-36f4da80-ceaa-11ea-8ff6-bc1fd4f55af3.png]]
 - Use FN + F3 to decrease brightness, FN + F4 increase brightness
 ** Enable HiDPI
-[[https://github.com/xzhih/one-key-hidpi][One key HIDPI]]
+[One key HIDPI](https://github.com/xzhih/one-key-hidpi)
 - Support 1424x802 HiDPI resolution
 - The purpose of this script is to enable HiDPI options for low and medium-resolution screens and has native HiDPI settings, which can be set in the system display settings without the need for RDM software
 - The DPI mechanism of macOS is different from that of windows. For example, the 1080p screen has 125% and 150% zoom options under win, while the same screen under macOS, the zoom option is simply to adjust the resolution, which makes The font and UI look small at the default resolution, and the resolution becomes blurred again.
 - At the same time, this script can also repair the splash screen by injecting the patched EDID, or the splash screen problem after sleep wake up, of course, this repair varies from person to person
 - In the second stage of booting, the logo will always be slightly enlarged because the resolution is counterfeit
 * Guide Patch SSDT
-- [[https://ocbook.tlhub.cn/]]
+- [https://ocbook.tlhub.cn/]
