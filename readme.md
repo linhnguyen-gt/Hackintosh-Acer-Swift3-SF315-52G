@@ -1,11 +1,11 @@
-* OpenCore: `[Solved]`
+**OpenCore: `[Solved]`**
 - ~~I'm having problems with OpenCore: After sleep, macOS will auto restart, but Clover works very good no problems~~
 - ~~I'll fix it too late~~
-* Overview
+**Overview**
 Run macOS Mojave (10.14) or Catalina (10.15) on an Acer Swift3 SF315 52G.
 Most pieces are fully supported, and this setup can be used as your main machine. A few pieces are missing (and some will probably never be supported). Caveats in the Hardware section.
 You can use the EFI folder to be to boot into a USB installer, or for regular booting.
-** Hackintosh Mojave + Catalina Acer-Swift3-SF315-52G
+**Hackintosh Mojave + Catalina Acer-Swift3-SF315-52G**
   - CPU : Intel Core i5-8250U (Kabylake-R)
   - Graphics : Intel UHD 620 (+ MX150)
   - RAM : SK Hynix HMA81GS6CJR8N-VK 8 GB DDR4 2666 MHz (2 slot, maximum upgrade 32GB)
@@ -17,7 +17,7 @@ You can use the EFI folder to be to boot into a USB installer, or for regular bo
   - SD Card Reader : Realtek USB2.0-CRW (ven id:0bda, dev id:0129)
   - Back-lit keyboard
   - Controller (Synaptic): VoodooI2CHID, VoodooI2C + PS2Controller
-** What is working
+**What is working**
   - Graphics: Intel UHD Graphics 620 (Disable MX150)
   - Audio: Speakers, headphones (Mic don't work)
   - Keyboard: Backlight is ACPI-managed so it works just fine too
@@ -26,10 +26,10 @@ You can use the EFI folder to be to boot into a USB installer, or for regular bo
   - Webcam: PhotoBooth works fine
   - Sleep/Wake: works very well
   - Wifi/Bluetooth: You need replace Broadcom BCM94352Z
-** What is not working
+**What is not working**
   - Mic: I tried many ways but it not works
   - HDMI: Just works after Sleep/Wake, LOL
-* Hardware
+**Hardware**
 ** Graphics
 Integrated Intel UHD Graphics 620 support is handled by [WhateverGreen](https://github.com/acidanthera/WhateverGreen), and configured in the
 `PciRoot(0x0)/Pci(0x2,0x0)` section of config.plist. The Nvidia GPU MX150 is not supported due to hardware differences and lack of driver support in macOS. It is disabled to save power.
@@ -65,15 +65,15 @@ Acer-Swift3-SF315-52G using Touchpad Synaptic. If only using VoodooI2C and Voodo
 - Finding the `QuietTimeAfterTyping`
 - Changing the value you prefer
 - I have preset the `value` to `0`
-** Wi-Fi/Bluetooth
+**Wi-Fi/Bluetooth**
 *** Installation
 - Include [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup) for Wi-Fi
 - Include [BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM/releases) for Bluetooth (for installation to CLOVER/kexts/Other)
 ** iMessages and FaceTime
 You can try this tips https://hackintosher.com/guides/quick-fixes-facetime-icloud-imessage-hackintosh-not-working/ or https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/
-** Battery status
+**Battery status**
 Install `SMCBatteryManager.kext` that comes with [VirtualSMC](https://github.com/acidanthera/virtualsmc/releases) to get battery status. Ensure that you have removed ACPIBatteryManager if you’ve installed it previously.
-** Audio 
+**Audio** 
 Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. The ALC256 is not supported on macOS by default, so we use AppleALC to enable it. Audio pipelines on laptops appear to have unique amplifier and gain setups, so we need to pass a layout-id to AppleALC compatible with the Acer Swift3 SF315 52G. The only ID that works well is layout-id`21.
 *** Installtion 
 - config.plist
@@ -83,13 +83,13 @@ Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. T
     - `hda-idle-support: 1`
     - `layout-id: 21`
     - `model: Intel Sunrise Point-LP HD Audio`
-** Fix the AirPods choppy/unreliable when connected to macOS play music
+**Fix the AirPods choppy/unreliable when connected to macOS play music**
 *** Open `System Preferences > Sound > Input`
 - Change Sound Input from Airpods to `Internal Microphone`
 - Possible explanation:
 - Since `Broadcom BCM94352Z` are running with Bluetooth 4.0, which has too low bandwidth to handle both input/output at a high quality.
 - Therefore, changing `Sound` `Input` to `Internal Microphone` to ensure audio output is working as normal.
-** Problem Audio after sleep/wake
+**Problem Audio after sleep/wake**
 - Need install [CodecCommander.kext](https://bitbucket.org/RehabMan/os-x-eapd-codec-commander/downloads/)
 - Next, we will modify the CodecCommander.kext before installing it, to make it work with our ALC256
 - Right-click on CodecCommander -> Show Package Contents -> Contents -> Info.plist and open with Xcode
@@ -99,22 +99,22 @@ Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. T
 - ![Alt text](https://user-images.githubusercontent.com/43808684/84402656-ec3b3e00-ac2e-11ea-98d3-bfc17ae53887.png)
 - Save!!!
 - Copy CodecCommander.kext under ‘EFI -> Clover -> Kexts -> Other‘ folder and then restart the system
-** USB
+**USB**
 Has a few incorrect USB properties, but we can inject the correct properties via USBInjectAll with [SSDT-UIAC](https://github.com/RehabMan/OS-X-USB-Inject-All/blob/master/SSDT-UIAC.dsl)
-* Change Key Brightness
+**Change Key Brightness**
 ** Very basic or patch [SSDT-PS2-KEY](https://github.com/linhnguyengas/Hackintosh-Acer-Swift3-SF315-52G/blob/master/Key%20Map%20PS2/SSDT-PS2-KEY.dsl)
 - You just need to connect USB Keyboard or USB Mouse
 - Go to System Preferences > Keyboard > Shortcuts > Display (if don't connect USB Keyboard or USB Mouse , Display won't appear)
-![Alt text](https://user-images.githubusercontent.com/43808684/88456714-2c3a4580-ceaa-11ea-954c-ddc3f21970ce.png)
+![Alt text](https://user-images.githubusercontent.com/43808684/88456714-2c3a4580-ceaa-11ea-954c-ddc3f21970ce.png) 
 - Change key F3, F4
 ![Alt text](https://user-images.githubusercontent.com/43808684/88456719-36f4da80-ceaa-11ea-8ff6-bc1fd4f55af3.png)
 - Use FN + F3 to decrease brightness, FN + F4 increase brightness
-** Enable HiDPI
+**Enable HiDPI**
 [One key HIDPI](https://github.com/xzhih/one-key-hidpi)
 - Support 1424x802 HiDPI resolution
 - The purpose of this script is to enable HiDPI options for low and medium-resolution screens and has native HiDPI settings, which can be set in the system display settings without the need for RDM software
 - The DPI mechanism of macOS is different from that of windows. For example, the 1080p screen has 125% and 150% zoom options under win, while the same screen under macOS, the zoom option is simply to adjust the resolution, which makes The font and UI look small at the default resolution, and the resolution becomes blurred again.
 - At the same time, this script can also repair the splash screen by injecting the patched EDID, or the splash screen problem after sleep wake up, of course, this repair varies from person to person
 - In the second stage of booting, the logo will always be slightly enlarged because the resolution is counterfeit
-* Guide Patch SSDT
-- (https://ocbook.tlhub.cn/)
+**Guide Patch SSDT**
+- https://ocbook.tlhub.cn/
