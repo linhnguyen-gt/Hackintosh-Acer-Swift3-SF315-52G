@@ -94,9 +94,9 @@ Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. T
 - Next, we will modify the CodecCommander.kext before installing it, to make it work with our ALC256
 - Right-click on CodecCommander -> Show Package Contents -> Contents -> Info.plist and open with Xcode
 - Find IOKitPersonalities -> CodecCommander -> Codec Profile 
-- [[https://user-images.githubusercontent.com/43808684/84402641-e5143000-ac2e-11ea-976f-88c87e5736e7.png]]
+- ![Alt text](https://user-images.githubusercontent.com/43808684/84402641-e5143000-ac2e-11ea-976f-88c87e5736e7.png)
 - Go to IOKitPersonalities -> CodecCommander -> Codec Profile Alter the Comment from 0x19 SET_PIN_WIDGET_CONTROL 0x25 or 0x24 to 0x19 SET_PIN_WIDGET_CONTROL 0x20 (see screenshot)
-- [[https://user-images.githubusercontent.com/43808684/84402656-ec3b3e00-ac2e-11ea-98d3-bfc17ae53887.png]]
+- ![Alt text](https://user-images.githubusercontent.com/43808684/84402656-ec3b3e00-ac2e-11ea-98d3-bfc17ae53887.png)
 - Save!!!
 - Copy CodecCommander.kext under ‘EFI -> Clover -> Kexts -> Other‘ folder and then restart the system
 ** USB
@@ -105,9 +105,9 @@ Has a few incorrect USB properties, but we can inject the correct properties via
 ** Very basic or patch [SSDT-PS2-KEY](https://github.com/linhnguyengas/Hackintosh-Acer-Swift3-SF315-52G/blob/master/Key%20Map%20PS2/SSDT-PS2-KEY.dsl)
 - You just need to connect USB Keyboard or USB Mouse
 - Go to System Preferences > Keyboard > Shortcuts > Display (if don't connect USB Keyboard or USB Mouse , Display won't appear)
-[[https://user-images.githubusercontent.com/43808684/88456714-2c3a4580-ceaa-11ea-954c-ddc3f21970ce.png]]
+![Alt text](https://user-images.githubusercontent.com/43808684/88456714-2c3a4580-ceaa-11ea-954c-ddc3f21970ce.png)
 - Change key F3, F4
-[[https://user-images.githubusercontent.com/43808684/88456719-36f4da80-ceaa-11ea-8ff6-bc1fd4f55af3.png]]
+![Alt text](https://user-images.githubusercontent.com/43808684/88456719-36f4da80-ceaa-11ea-8ff6-bc1fd4f55af3.png)
 - Use FN + F3 to decrease brightness, FN + F4 increase brightness
 ** Enable HiDPI
 [One key HIDPI](https://github.com/xzhih/one-key-hidpi)
@@ -117,4 +117,4 @@ Has a few incorrect USB properties, but we can inject the correct properties via
 - At the same time, this script can also repair the splash screen by injecting the patched EDID, or the splash screen problem after sleep wake up, of course, this repair varies from person to person
 - In the second stage of booting, the logo will always be slightly enlarged because the resolution is counterfeit
 * Guide Patch SSDT
-- [https://ocbook.tlhub.cn/]
+- (https://ocbook.tlhub.cn/)
