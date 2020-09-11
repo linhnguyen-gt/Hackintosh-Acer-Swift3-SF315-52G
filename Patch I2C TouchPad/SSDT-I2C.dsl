@@ -20,6 +20,8 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_TPL1", 0x00000000)
     External (SDS1, FieldUnitObj)
     External (TCTP, FieldUnitObj)
 
+
+
     Scope (\)
     {
         If (_OSI ("Darwin"))
@@ -114,5 +116,6 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_TPL1", 0x00000000)
             }
         }
     }
+
 }
 

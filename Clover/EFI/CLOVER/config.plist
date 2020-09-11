@@ -10,7 +10,7 @@
 		<dict>
 			<key>#EnableC4</key>
 			<false/>
-			<key>#UseSystemIO</key>
+			<key>#NoOemTableId</key>
 			<false/>
 			<key>#PluginType</key>
 			<integer>0</integer>
@@ -32,9 +32,9 @@
 			<true/>
 			<key>#PLimitDict</key>
 			<integer>1</integer>
-			<key>#NoOemTableId</key>
-			<false/>
 			<key>#NoDynamicExtract</key>
+			<false/>
+			<key>#UseSystemIO</key>
 			<false/>
 			<key>#EnableC7</key>
 			<false/>
@@ -121,6 +121,46 @@
 					<false/>
 					<key>Comment</key>
 					<string>change oem _DSM to ZDSM</string>
+				</dict>
+				<dict>
+					<key>Find</key>
+					<data>X1BUUwE=</data>
+					<key>Replace</key>
+					<data>WlBUUwE=</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>rename Method(_PTS,1,N) to ZPTS, pair with SSDT-PTSWAK.aml</string>
+				</dict>
+				<dict>
+					<key>Find</key>
+					<data>X1BUUwk=</data>
+					<key>Replace</key>
+					<data>WlBUUwk=</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>rename Method(_PTS,1,S) to ZPTS, pair with SSDT-PTSWAK.aml</string>
+				</dict>
+				<dict>
+					<key>Find</key>
+					<data>X1dBSwE=</data>
+					<key>Replace</key>
+					<data>WldBSwE=</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>rename Method(_WAK,1,N) to ZWAK, pair with SSDT-PTSWAK.aml</string>
+				</dict>
+				<dict>
+					<key>Find</key>
+					<data>X1dBSwk=</data>
+					<key>Replace</key>
+					<data>WldBSwk=</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>rename Method(_WAK,1,S) to ZWAK, pair with SSDT-PTSWAK.aml</string>
 				</dict>
 			</array>
 			<key>Fixes</key>
