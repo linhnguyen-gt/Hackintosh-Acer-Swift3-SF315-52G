@@ -1,7 +1,7 @@
 #+STARTUP: indent
 * OpenCore: =[Solved]=
-- ~I'm having problems with OpenCore: After sleep, macOS will auto restart, but Clover works very good no problems~
-- I'll fix it too late
+- ~~I'm having problems with OpenCore: After sleep, macOS will auto restart, but Clover works very good no problems~~
+- ~~I'll fix it too late~~
 * Overview
 Run macOS Mojave (10.14) or Catalina (10.15) on an Acer Swift3 SF315 52G.
 Most pieces are fully supported, and this setup can be used as your main machine. A few pieces are missing (and some will probably never be supported). Caveats in the Hardware section.
@@ -34,7 +34,7 @@ You can use the EFI folder to be to boot into a USB installer, or for regular bo
 ** Graphics
 Integrated Intel UHD Graphics 620 support is handled by [[https://github.com/acidanthera/WhateverGreen][WhateverGreen]], and configured in the
 =PciRoot(0x0)/Pci(0x2,0x0)= section of config.plist. The Nvidia GPU MX150 is not supported due to hardware differences and lack of driver support in macOS. It is disabled to save power.
-- Recommend to use =AAPL,ig-platform-id: 0000C087= for UHD620 Kabylake-R
+- Recommend to use `AAPL,ig-platform-id: 0000C087` for UHD620 Kabylake-R
 *** Installtion 
 - config.plist
   - =Devices/Properties/PciRoot(0x0)/Pci(0x2,0x0)=
