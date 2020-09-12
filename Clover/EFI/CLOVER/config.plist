@@ -10,7 +10,7 @@
 		<dict>
 			<key>#EnableC4</key>
 			<false/>
-			<key>#NoOemTableId</key>
+			<key>#EnableC7</key>
 			<false/>
 			<key>#PluginType</key>
 			<integer>0</integer>
@@ -32,11 +32,11 @@
 			<true/>
 			<key>#PLimitDict</key>
 			<integer>1</integer>
+			<key>#NoOemTableId</key>
+			<false/>
 			<key>#NoDynamicExtract</key>
 			<false/>
 			<key>#UseSystemIO</key>
-			<false/>
-			<key>#EnableC7</key>
 			<false/>
 			<key>Generate</key>
 			<dict>
@@ -253,7 +253,7 @@
 		<key>NeverHibernate</key>
 		<false/>
 		<key>Arguments</key>
-		<string>gfxrst=1 dart=0 igfxonln=1 -igfxmlr -wegnoegpu</string>
+		<string>gfxrst=1 dart=0 igfxonln=1 -wegnoegpu</string>
 		<key>DisableCloverHotkeys</key>
 		<false/>
 		<key>NeverDoRecovery</key>
@@ -456,18 +456,18 @@
 	<dict>
 		<key>#BusSpeedkHz</key>
 		<integer>133330</integer>
-		<key>#HWPEnable</key>
+		<key>#TurboDisable</key>
 		<true/>
 		<key>#TDP</key>
 		<integer>95</integer>
 		<key>#SavingMode</key>
 		<integer>7</integer>
-		<key>#FrequencyMHz</key>
-		<integer>3140</integer>
+		<key>#HWPEnable</key>
+		<true/>
 		<key>#HWPValue</key>
 		<string>0x30002a01</string>
-		<key>#TurboDisable</key>
-		<true/>
+		<key>#FrequencyMHz</key>
+		<integer>3140</integer>
 		<key>#Type</key>
 		<string>0x0201</string>
 		<key>#QPI</key>
