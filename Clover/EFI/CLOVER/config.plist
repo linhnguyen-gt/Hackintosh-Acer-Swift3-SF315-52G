@@ -10,7 +10,7 @@
 		<dict>
 			<key>#EnableC4</key>
 			<false/>
-			<key>#EnableC7</key>
+			<key>#UseSystemIO</key>
 			<false/>
 			<key>#PluginType</key>
 			<integer>0</integer>
@@ -36,7 +36,7 @@
 			<false/>
 			<key>#NoDynamicExtract</key>
 			<false/>
-			<key>#UseSystemIO</key>
+			<key>#EnableC7</key>
 			<false/>
 			<key>Generate</key>
 			<dict>
@@ -78,8 +78,8 @@
 		<false/>
 		<key>DSDT</key>
 		<dict>
-			<key>PNLF_UID</key>
-			<string>0x0A</string>
+			<key>SlpSmiAtWake</key>
+			<true/>
 			<key>Patches</key>
 			<array>
 				<dict>
@@ -163,6 +163,12 @@
 					<string>rename Method(_WAK,1,S) to ZWAK, pair with SSDT-PTSWAK.aml</string>
 				</dict>
 			</array>
+			<key>PNLF_UID</key>
+			<string>0x0A</string>
+			<key>SuspendOverride</key>
+			<true/>
+			<key>Debug</key>
+			<false/>
 			<key>Fixes</key>
 			<dict>
 				<key>FixIDE</key>
@@ -227,8 +233,6 @@
 				<true/>
 			</dict>
 			<key>#Rtc8Allowed</key>
-			<false/>
-			<key>Debug</key>
 			<false/>
 			<key>Name</key>
 			<string>DSDT.aml</string>
@@ -462,12 +466,12 @@
 		<integer>95</integer>
 		<key>#SavingMode</key>
 		<integer>7</integer>
-		<key>#HWPEnable</key>
-		<true/>
-		<key>#HWPValue</key>
-		<string>0x30002a01</string>
 		<key>#FrequencyMHz</key>
 		<integer>3140</integer>
+		<key>#HWPValue</key>
+		<string>0x30002a01</string>
+		<key>#HWPEnable</key>
+		<true/>
 		<key>#Type</key>
 		<string>0x0201</string>
 		<key>#QPI</key>
