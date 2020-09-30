@@ -10,7 +10,7 @@
 		<dict>
 			<key>#EnableC4</key>
 			<false/>
-			<key>#NoDynamicExtract</key>
+			<key>#EnableC7</key>
 			<false/>
 			<key>#PluginType</key>
 			<integer>0</integer>
@@ -22,21 +22,21 @@
 			<integer>12</integer>
 			<key>#C3Latency</key>
 			<string>0x03E7</string>
-			<key>#EnableC6</key>
-			<true/>
-			<key>#MinMultiplier</key>
-			<integer>8</integer>
 			<key>#UnderVoltStep</key>
 			<integer>1</integer>
+			<key>#MinMultiplier</key>
+			<integer>8</integer>
+			<key>#EnableC6</key>
+			<true/>
 			<key>#DropOem</key>
 			<true/>
 			<key>#PLimitDict</key>
 			<integer>1</integer>
+			<key>#NoDynamicExtract</key>
+			<false/>
 			<key>#UseSystemIO</key>
 			<false/>
 			<key>#NoOemTableId</key>
-			<false/>
-			<key>#EnableC7</key>
 			<false/>
 			<key>Generate</key>
 			<dict>
@@ -79,7 +79,7 @@
 		<key>DSDT</key>
 		<dict>
 			<key>SlpSmiAtWake</key>
-			<true/>
+			<false/>
 			<key>Patches</key>
 			<array>
 				<dict>
@@ -124,49 +124,19 @@
 				</dict>
 				<dict>
 					<key>Find</key>
-					<data>X1BUUwE=</data>
+					<data>X1NUQQCgDZNQ</data>
 					<key>Replace</key>
-					<data>WlBUUwE=</data>
+					<data>WFNUQQCgDZNQ</data>
 					<key>Disabled</key>
 					<false/>
 					<key>Comment</key>
-					<string>rename Method(_PTS,1,N) to ZPTS, pair with SSDT-PTSWAK.aml</string>
-				</dict>
-				<dict>
-					<key>Find</key>
-					<data>X1BUUwk=</data>
-					<key>Replace</key>
-					<data>WlBUUwk=</data>
-					<key>Disabled</key>
-					<false/>
-					<key>Comment</key>
-					<string>rename Method(_PTS,1,S) to ZPTS, pair with SSDT-PTSWAK.aml</string>
-				</dict>
-				<dict>
-					<key>Find</key>
-					<data>X1dBSwE=</data>
-					<key>Replace</key>
-					<data>WldBSwE=</data>
-					<key>Disabled</key>
-					<false/>
-					<key>Comment</key>
-					<string>rename Method(_WAK,1,N) to ZWAK, pair with SSDT-PTSWAK.aml</string>
-				</dict>
-				<dict>
-					<key>Find</key>
-					<data>X1dBSwk=</data>
-					<key>Replace</key>
-					<data>WldBSwk=</data>
-					<key>Disabled</key>
-					<false/>
-					<key>Comment</key>
-					<string>rename Method(_WAK,1,S) to ZWAK, pair with SSDT-PTSWAK.aml</string>
+					<string>Rename MATH._STA and LDR2._STA to XSTA</string>
 				</dict>
 			</array>
 			<key>PNLF_UID</key>
 			<string>0x0A</string>
 			<key>SuspendOverride</key>
-			<true/>
+			<false/>
 			<key>Debug</key>
 			<false/>
 			<key>Fixes</key>
@@ -242,7 +212,7 @@
 			<false/>
 		</dict>
 		<key>FixMCFG</key>
-		<true/>
+		<false/>
 		<key>#SortedOrder</key>
 		<array>
 			<string>SSDT-3.aml</string>
@@ -250,14 +220,14 @@
 			<string>SSDT-2.aml</string>
 		</array>
 		<key>HaltEnabler</key>
-		<true/>
+		<false/>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Arguments</key>
-		<string>gfxrst=1 -wegnoegpu</string>
+		<string>gfxrst=1 -wegnoegpu darkwake=0</string>
 		<key>DisableCloverHotkeys</key>
 		<false/>
 		<key>NeverDoRecovery</key>
@@ -265,7 +235,7 @@
 		<key>CustomLogo</key>
 		<false/>
 		<key>NoEarlyProgress</key>
-		<true/>
+		<false/>
 		<key>StrictHibernate</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -344,18 +314,18 @@
 			<key>Entries</key>
 			<array>
 				<dict>
-					<key>Title</key>
-					<string>Mageia Linux</string>
+					<key>Image</key>
+					<string>os_mageia</string>
 					<key>Type</key>
 					<string>Linux</string>
 					<key>Hidden</key>
 					<false/>
+					<key>Title</key>
+					<string>Mageia Linux</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Path</key>
 					<string>\EFI\MAGEIA\GRUBX64.efi</string>
-					<key>Image</key>
-					<string>os_mageia</string>
 				</dict>
 				<dict>
 					<key>Hidden</key>
@@ -364,10 +334,10 @@
 					<string>M</string>
 					<key>Volume</key>
 					<string>D68F1885-571C-4441-8DD5-F14803EFEF54</string>
-					<key>Arguments</key>
-					<string>Kernel=mach_kernel</string>
 					<key>Disabled</key>
 					<true/>
+					<key>Arguments</key>
+					<string>Kernel=mach_kernel</string>
 					<key>AddArguments</key>
 					<string>-v</string>
 					<key>Path</key>
@@ -408,8 +378,8 @@
 			<key>Legacy</key>
 			<array>
 				<dict>
-					<key>Volume</key>
-					<string>89433CD3-21F2-4D3C-95FC-722C48066D3A</string>
+					<key>Disabled</key>
+					<true/>
 					<key>Type</key>
 					<string>Windows</string>
 					<key>Hidden</key>
@@ -418,8 +388,8 @@
 					<string>MyLegacyEntry</string>
 					<key>Hotkey</key>
 					<string>L</string>
-					<key>Disabled</key>
-					<true/>
+					<key>Volume</key>
+					<string>89433CD3-21F2-4D3C-95FC-722C48066D3A</string>
 				</dict>
 			</array>
 			<key>Tool</key>
@@ -431,10 +401,10 @@
 					<string>S</string>
 					<key>Volume</key>
 					<string>D68F1885-571C-4441-8DD5-F14803EFEF54</string>
-					<key>Arguments</key>
-					<string>-b</string>
 					<key>Disabled</key>
 					<false/>
+					<key>Arguments</key>
+					<string>-b</string>
 					<key>Path</key>
 					<string>\EFI\CLOVER\TOOLS\Shell64-v1.efi</string>
 					<key>Title</key>
@@ -460,7 +430,7 @@
 	<dict>
 		<key>#BusSpeedkHz</key>
 		<integer>133330</integer>
-		<key>#TurboDisable</key>
+		<key>#HWPEnable</key>
 		<true/>
 		<key>#TDP</key>
 		<integer>95</integer>
@@ -470,7 +440,7 @@
 		<integer>3140</integer>
 		<key>#HWPValue</key>
 		<string>0x30002a01</string>
-		<key>#HWPEnable</key>
+		<key>#TurboDisable</key>
 		<true/>
 		<key>#Type</key>
 		<string>0x0201</string>
@@ -505,6 +475,21 @@
 				<key>device_type</key>
 				<string>Airport</string>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x1a,0x0)</key>
+			<dict>
+				<key>AAPL,current-in-sleep</key>
+				<data>6AM=</data>
+				<key>AAPL,current-available</key>
+				<data>sAQ=</data>
+				<key>AAPL,current-extra</key>
+				<data>vAI=</data>
+				<key>AAPL,clock-id</key>
+				<data>AQ==</data>
+				<key>built-in</key>
+				<data>AA==</data>
+				<key>device_type</key>
+				<string>EHCI</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
 			<dict>
 				<key>AAPL,current-in-sleep</key>
@@ -526,21 +511,6 @@
 			<dict>
 				<key>built-in</key>
 				<data>AQ==</data>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1a,0x0)</key>
-			<dict>
-				<key>AAPL,current-available</key>
-				<data>sAQ=</data>
-				<key>AAPL,current-in-sleep</key>
-				<data>6AM=</data>
-				<key>AAPL,current-extra</key>
-				<data>vAI=</data>
-				<key>AAPL,clock-id</key>
-				<data>AQ==</data>
-				<key>built-in</key>
-				<data>AA==</data>
-				<key>device_type</key>
-				<string>EHCI</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1c,0x5)/Pci(0x0,0x0)</key>
 			<dict>
@@ -582,10 +552,10 @@
 				<data>AwBmAQ==</data>
 				<key>graphic-options</key>
 				<data>DAAAAA==</data>
-				<key>AAPL,HasLid</key>
-				<data>AQAAAA==</data>
 				<key>model</key>
 				<string>Intel HD Graphics 4000</string>
+				<key>AAPL,HasLid</key>
+				<data>AQAAAA==</data>
 			</dict>
 			<key>SecondaryGPU</key>
 			<dict>
@@ -594,10 +564,10 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1d,0x0)</key>
 			<dict>
-				<key>AAPL,current-available</key>
-				<data>sAQ=</data>
 				<key>AAPL,current-in-sleep</key>
 				<data>6AM=</data>
+				<key>AAPL,current-available</key>
+				<data>sAQ=</data>
 				<key>AAPL,current-extra</key>
 				<data>vAI=</data>
 				<key>AAPL,clock-id</key>
@@ -748,16 +718,16 @@
 		<string>03010300FFFF0001</string>
 		<key>EDID</key>
 		<dict>
-			<key>#Inject</key>
-			<true/>
+			<key>#VendorID</key>
+			<string>0x1006</string>
 			<key>#ProductID</key>
 			<string>0x9221</string>
 			<key>#VideoInputSignal</key>
 			<string>0xA1</string>
 			<key>#Custom</key>
 			<data>AP///////wAGECGSAAAAAAASAQOAIRV4CunVmVlTjigmUFQAAAABAQEBAQEBAQEBAQEBAQEB3iGgcFCEHzAgIFYAS88QAAAY3iGgcFCEHzAgIFYAS88QAAAAAAAA/gBXNjU3RwAxNTRXUDEKAAAA/gAjMz1IZYSq/wIBCiAgAJo=</data>
-			<key>#VendorID</key>
-			<string>0x1006</string>
+			<key>#Inject</key>
+			<true/>
 			<key>#HorizontalSyncPulseWidth</key>
 			<string>0x11</string>
 		</dict>
