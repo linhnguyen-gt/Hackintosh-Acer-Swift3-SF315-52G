@@ -27,9 +27,9 @@ You can use the EFI folder to be to boot into a USB installer, or for regular bo
   - Webcam: PhotoBooth works fine
   - Sleep/Wake: works very well
   - Wifi/Bluetooth: You need replace Broadcom BCM94352Z
+  - HDMI: Just good works after Sleep/Wake, LOL
 ** What is not working
   - Mic: I tried many ways but it not works
-  - HDMI: Just works after Sleep/Wake, LOL
 * Hardware
 ** Graphics
 Integrated Intel UHD Graphics 620 support is handled by [[https://github.com/acidanthera/WhateverGreen][WhateverGreen]], and configured in the
