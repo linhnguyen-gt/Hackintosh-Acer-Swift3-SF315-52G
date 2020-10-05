@@ -20,10 +20,10 @@
 			<false/>
 			<key>#MaxMultiplier</key>
 			<integer>12</integer>
-			<key>#C3Latency</key>
-			<string>0x03E7</string>
 			<key>#UnderVoltStep</key>
 			<integer>1</integer>
+			<key>#C3Latency</key>
+			<string>0x03E7</string>
 			<key>#MinMultiplier</key>
 			<integer>8</integer>
 			<key>#EnableC6</key>
@@ -32,11 +32,11 @@
 			<true/>
 			<key>#PLimitDict</key>
 			<integer>1</integer>
+			<key>#NoOemTableId</key>
+			<false/>
 			<key>#NoDynamicExtract</key>
 			<false/>
 			<key>#UseSystemIO</key>
-			<false/>
-			<key>#NoOemTableId</key>
 			<false/>
 			<key>Generate</key>
 			<dict>
@@ -322,10 +322,10 @@
 					<false/>
 					<key>Title</key>
 					<string>Mageia Linux</string>
-					<key>Disabled</key>
-					<false/>
 					<key>Path</key>
 					<string>\EFI\MAGEIA\GRUBX64.efi</string>
+					<key>Disabled</key>
+					<false/>
 				</dict>
 				<dict>
 					<key>Hidden</key>
@@ -378,16 +378,16 @@
 			<key>Legacy</key>
 			<array>
 				<dict>
-					<key>Disabled</key>
-					<true/>
+					<key>Hotkey</key>
+					<string>L</string>
 					<key>Type</key>
 					<string>Windows</string>
 					<key>Hidden</key>
 					<false/>
+					<key>Disabled</key>
+					<true/>
 					<key>Title</key>
 					<string>MyLegacyEntry</string>
-					<key>Hotkey</key>
-					<string>L</string>
 					<key>Volume</key>
 					<string>89433CD3-21F2-4D3C-95FC-722C48066D3A</string>
 				</dict>
@@ -718,14 +718,14 @@
 		<string>03010300FFFF0001</string>
 		<key>EDID</key>
 		<dict>
-			<key>#VendorID</key>
-			<string>0x1006</string>
+			<key>#Custom</key>
+			<data>AP///////wAGECGSAAAAAAASAQOAIRV4CunVmVlTjigmUFQAAAABAQEBAQEBAQEBAQEBAQEB3iGgcFCEHzAgIFYAS88QAAAY3iGgcFCEHzAgIFYAS88QAAAAAAAA/gBXNjU3RwAxNTRXUDEKAAAA/gAjMz1IZYSq/wIBCiAgAJo=</data>
 			<key>#ProductID</key>
 			<string>0x9221</string>
 			<key>#VideoInputSignal</key>
 			<string>0xA1</string>
-			<key>#Custom</key>
-			<data>AP///////wAGECGSAAAAAAASAQOAIRV4CunVmVlTjigmUFQAAAABAQEBAQEBAQEBAQEBAQEB3iGgcFCEHzAgIFYAS88QAAAY3iGgcFCEHzAgIFYAS88QAAAAAAAA/gBXNjU3RwAxNTRXUDEKAAAA/gAjMz1IZYSq/wIBCiAgAJo=</data>
+			<key>#VendorID</key>
+			<string>0x1006</string>
 			<key>#Inject</key>
 			<true/>
 			<key>#HorizontalSyncPulseWidth</key>
