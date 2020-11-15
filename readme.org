@@ -123,3 +123,5 @@ Has a few incorrect USB properties, but we can inject the correct properties via
 - In the second stage of booting, the logo will always be slightly enlarged because the resolution is counterfeit
 * Guide Patch SSDT
 - [[https://ocbook.tlhub.cn/]]
+* Captin
+- [[http://captin.mystrikingly.com/][A tool to show Mac caps lock status]]
