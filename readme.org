@@ -1,6 +1,11 @@
 #+STARTUP: indent
+* Problem wifi BCM94352Z on Big Sur
+** Guide OpenCore
+- AirportBrcmFixup: 
+- You need brcmfx-driver=2 in boot-args
+- You have to block (or remove) AirPortBrcm4360_Injector.kext in BigSur
 * Overview
-Run macOS High Sierra(10.13), Mojave(10.14), Catalina(10.15) on an Acer Swift3 SF315 52G.
+Run macOS High Sierra(10.13), Mojave(10.14), Catalina(10.15), Big Sur(11.0) on an Acer Swift3 SF315 52G.
 Most pieces are fully supported, and this setup can be used as your main machine. A few pieces are missing (and some will probably never be supported). Caveats in the Hardware section.
 You can use the EFI folder to be to boot into a USB installer, or for regular booting.
 ** Hackintosh Acer-Swift3-SF315-52G
@@ -116,5 +121,7 @@ Has a few incorrect USB properties, but we can inject the correct properties via
 - The DPI mechanism of macOS is different from that of windows. For example, the 1080p screen has 125% and 150% zoom options under win, while the same screen under macOS, the zoom option is simply to adjust the resolution, which makes The font and UI look small at the default resolution, and the resolution becomes blurred again.
 - At the same time, this script can also repair the splash screen by injecting the patched EDID, or the splash screen problem after sleep wake up, of course, this repair varies from person to person
 - In the second stage of booting, the logo will always be slightly enlarged because the resolution is counterfeit
+* Captin
+- [[http://captin.mystrikingly.com/][A tool to show Mac caps lock status]]
 * Guide Patch SSDT
 - [[https://ocbook.tlhub.cn/]]
