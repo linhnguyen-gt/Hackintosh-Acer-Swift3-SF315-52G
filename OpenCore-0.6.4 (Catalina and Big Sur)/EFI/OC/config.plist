@@ -96,6 +96,22 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>SSDT-OC-XOSI.aml</string>
+				<key>Path</key>
+				<string>SSDT-OC-XOSI.aml</string>
+				<key>Enabled</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-PLUG.aml</string>
+				<key>Path</key>
+				<string>SSDT-PLUG.aml</string>
+				<key>Enabled</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>SSDT-PMCR.aml</string>
 				<key>Path</key>
 				<string>SSDT-PMCR.aml</string>
@@ -120,6 +136,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>SSDT-SBUS.aml</string>
+				<key>Path</key>
+				<string>SSDT-SBUS.aml</string>
+				<key>Enabled</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>SSDT-UIAC.aml</string>
 				<key>Path</key>
 				<string>SSDT-UIAC.aml</string>
@@ -131,14 +155,6 @@
 				<string>SSDT-USBX.aml</string>
 				<key>Path</key>
 				<string>SSDT-USBX.aml</string>
-				<key>Enabled</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-XCPM.aml</string>
-				<key>Path</key>
-				<string>SSDT-XCPM.aml</string>
 				<key>Enabled</key>
 				<true/>
 			</dict>
@@ -1415,7 +1431,7 @@
 			<key>TakeoffDelay</key>
 			<integer>0</integer>
 			<key>Timeout</key>
-			<integer>5</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Debug</key>
 		<dict>
