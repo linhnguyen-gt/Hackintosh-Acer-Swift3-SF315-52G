@@ -136,17 +136,9 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT-SBUS.aml</string>
+				<string>SSDT-USB.aml</string>
 				<key>Path</key>
-				<string>SSDT-SBUS.aml</string>
-				<key>Enabled</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-UIAC.aml</string>
-				<key>Path</key>
-				<string>SSDT-UIAC.aml</string>
+				<string>SSDT-USB.aml</string>
 				<key>Enabled</key>
 				<true/>
 			</dict>
@@ -381,10 +373,8 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
 			<dict>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP USB 3.0 xHCI Controller</string>
-				<key>name</key>
-				<string>pci8086,9d2f</string>
+				<key>acpi-wake-type</key>
+				<data>AQ==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x14,0x2)</key>
 			<dict>
@@ -468,7 +458,7 @@
 				<key>hda-idle-support</key>
 				<string>1</string>
 				<key>layout-id</key>
-				<integer>21</integer>
+				<integer>69</integer>
 				<key>model</key>
 				<string>Intel Sunrise Point-LP HD Audio</string>
 			</dict>
@@ -1351,7 +1341,7 @@
 			<key>PollAppleHotKeys</key>
 			<true/>
 			<key>ShowPicker</key>
-			<true/>
+			<false/>
 			<key>TakeoffDelay</key>
 			<integer>0</integer>
 			<key>Timeout</key>
