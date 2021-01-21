@@ -15,10 +15,10 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "RMCF", 0x00000000)
                     Package (){}, 
                     "3d=65", // FN + F3 => F14 Decrease brightness
                     "3e=66", // FN + F4 => F15 Increase brightness
-                    "e037=64", // PrtSc => F13 
-                    "e045=58", 
-                    "46=58",
-                    "41=0"
+//                    "e037=64", // PrtSc => F13 
+//                    "e045=58", 
+//                    "46=58",
+//                    "41=0"
                 }, 
 //
 //                "Custom ADB Map", 
