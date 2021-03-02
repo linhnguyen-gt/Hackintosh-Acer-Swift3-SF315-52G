@@ -30,6 +30,7 @@ You can use the EFI folder to be to boot into a USB installer, or for regular bo
   - Sleep/Wake: works very well
   - Wifi/Bluetooth: You need replace Broadcom BCM94352Z
   - HDMI: Just good works after Sleep/Wake, LOL
+  - SD Card Reader
 ** What is not working
   - Mic: I tried many ways but it not works
   - GPU: MX150
@@ -79,14 +80,14 @@ You can try this tips https://hackintosher.com/guides/quick-fixes-facetime-iclou
 ** Battery status
 Install =SMCBatteryManager.kext= that comes with [[https://github.com/acidanthera/virtualsmc/releases][VirtualSMC]] to get battery status. Ensure that you have removed ACPIBatteryManager if you’ve installed it previously.
 ** Audio 
-Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. The ALC256 is not supported on macOS by default, so we use AppleALC to enable it. Audio pipelines on laptops appear to have unique amplifier and gain setups, so we need to pass a layout-id to AppleALC compatible with the Acer Swift3 SF315 52G. The only ID that works well is layout-id=21.
+Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. The ALC256 is not supported on macOS by default, so we use AppleALC to enable it. Audio pipelines on laptops appear to have unique amplifier and gain setups, so we need to pass a layout-id to AppleALC compatible with the Acer Swift3 SF315 52G. The only ID that works well is layout-id=66.
 *** Installtion 
 - config.plist
   - =Devices/Properties/PciRoot(0x0)/Pci(0x1f,0x3)=
     - =AAPL,slot-name: Internal=
     - =hda-gfx: onboard-1=
     - =hda-idle-support: 1=
-    - =layout-id: 21=
+    - =layout-id: 66=
     - =model: Intel Sunrise Point-LP HD Audio=
 ** Fix the AirPods choppy/unreliable when connected to macOS play music
 *** Open =System Preferences > Sound > Input=
