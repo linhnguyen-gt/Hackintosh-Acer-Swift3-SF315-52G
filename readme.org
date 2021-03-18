@@ -1,4 +1,6 @@
 #+STARTUP: indent
+*** Donate Me 🥰
+#+html:<a href="https://www.paypal.com/paypalme/nguyenlinhgt"><img src="https://user-images.githubusercontent.com/43808684/111565733-72903c00-87ce-11eb-8363-abb89c42902d.png" height="50" width="50" ></a>
 * Problem wifi BCM94352Z on Big Sur
 ** Guide OpenCore
 - AirportBrcmFixup: 
@@ -9,7 +11,7 @@ Run macOS High Sierra(10.13), Mojave(10.14), Catalina(10.15), Big Sur(11.0) on a
 Most pieces are fully supported, and this setup can be used as your main machine. A few pieces are missing (and some will probably never be supported). Caveats in the Hardware section.
 You can use the EFI folder to be to boot into a USB installer, or for regular booting.
 ** Hackintosh Acer-Swift3-SF315-52G
-  - CPU : Intel Core i5-8250U (Kabylake-R)
+  * CPU : Intel Core i5-8250U (Kabylake-R)
   - Graphics : Intel UHD 620 (+ MX150)
   - RAM : SK Hynix HMA81GS6CJR8N-VK 8 GB DDR4 2666 MHz (2 slot, maximum upgrade 32GB)
   - SSD : Hynix 256GB M.2 SOLID STATE DRIVE 80MM L (HFS256G39TND-N210A) Read : Up to 530MB/s(128/256/512GB)\ Write : Up to 190MB/s(128GB)
