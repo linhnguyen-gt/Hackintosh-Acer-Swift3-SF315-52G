@@ -74,9 +74,14 @@ Acer-Swift3-SF315-52G using Touchpad Synaptic. If only using VoodooI2C and Voodo
 - Changing the value you prefer
 - I have preset the =value= to =0=
 ** Wi-Fi/Bluetooth
+** For Broadcom
 *** Installation
 - Include [[https://github.com/acidanthera/AirportBrcmFixup][AirportBrcmFixup]] for Wi-Fi
 - Include [[https://github.com/acidanthera/BrcmPatchRAM/releases][BrcmPatchRAM]] for Bluetooth (for installation to CLOVER/kexts/Other)
+** For Intel 
+*** Installation
+- Include [[https://github.com/OpenIntelWireless/itlwm/releases/][AirportItlwm]] for Wi-Fi
+- Include [[https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases][IntelBluetoothFirmware]] for Bluetooth (for installation to CLOVER/kexts/Other)
 ** iMessages and FaceTime
 You can try this tips https://hackintosher.com/guides/quick-fixes-facetime-icloud-imessage-hackintosh-not-working/ or https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/
 ** Battery status
