@@ -31,7 +31,7 @@ You can use the EFI folder to be to boot into a USB installer, or for regular bo
   - Webcam: PhotoBooth works fine
   - Sleep/Wake: works very well
   - Wifi/Bluetooth: You need replace Broadcom BCM94352Z
-  - HDMI: Just good works
+  - HDMI: Good works
   - SD Card Reader
 ** What is not working
   - Mic: I tried many ways but it not works
@@ -74,9 +74,14 @@ Acer-Swift3-SF315-52G using Touchpad Synaptic. If only using VoodooI2C and Voodo
 - Changing the value you prefer
 - I have preset the =value= to =0=
 ** Wi-Fi/Bluetooth
+** For Broadcom
 *** Installation
 - Include [[https://github.com/acidanthera/AirportBrcmFixup][AirportBrcmFixup]] for Wi-Fi
-- Include [[https://github.com/acidanthera/BrcmPatchRAM/releases][BrcmPatchRAM]] for Bluetooth (for installation to CLOVER/kexts/Other)
+- Include [[https://github.com/acidanthera/BrcmPatchRAM/releases][BrcmPatchRAM]] for Bluetooth (for installation to OC/kexts/)
+** For Intel 
+*** Installation
+- Include [[https://github.com/OpenIntelWireless/itlwm/releases/][AirportItlwm]] for Wi-Fi
+- Include [[https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases][IntelBluetoothFirmware]] for Bluetooth (for installation to  OC/kexts/)
 ** iMessages and FaceTime
 You can try this tips https://hackintosher.com/guides/quick-fixes-facetime-icloud-imessage-hackintosh-not-working/ or https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/
 ** Battery status
