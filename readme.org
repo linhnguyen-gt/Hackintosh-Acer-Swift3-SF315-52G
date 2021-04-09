@@ -4,7 +4,6 @@
 * Problem wifi BCM94352Z on Big Sur
 ** Guide OpenCore
 - AirportBrcmFixup: 
-- You need brcmfx-driver=2 in boot-args
 - You have to block (or remove) AirPortBrcm4360_Injector.kext in BigSur
 * Overview
 Run macOS High Sierra(10.13), Mojave(10.14), Catalina(10.15), Big Sur(11.0) on an Acer Swift3 SF315 52G.
