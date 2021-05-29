@@ -89,7 +89,7 @@ Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. T
 - Go to IOKitPersonalities -> CodecCommander -> Codec Profile Alter the Comment from 0x19 SET_PIN_WIDGET_CONTROL 0x25 or 0x24 to 0x19 SET_PIN_WIDGET_CONTROL 0x20 (see screenshot)
 - [[https://user-images.githubusercontent.com/43808684/84402656-ec3b3e00-ac2e-11ea-98d3-bfc17ae53887.png]]
 - Save!!!
-- Copy CodecCommander.kext under ‘EFI -> Clover -> Kexts -> Other‘ folder and then restart the system
+- Copy CodecCommander.kext under ‘EFI -> OC -> Kexts‘ folder and then restart the system
 ** USB
 Has a few incorrect USB properties, but we can inject the correct properties via USBInjectAll with [[https://github.com/RehabMan/OS-X-USB-Inject-All/blob/master/SSDT-UIAC.dsl][SSDT-UIAC.]]
 * Change Key Brightness
