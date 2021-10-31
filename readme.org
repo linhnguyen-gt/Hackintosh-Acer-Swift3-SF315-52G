@@ -1,10 +1,12 @@
 #+STARTUP: indent
 *** Donate Me 🥰
 #+html:<a href="https://www.paypal.com/paypalme/nguyenlinhgt"><img src="https://user-images.githubusercontent.com/43808684/111565733-72903c00-87ce-11eb-8363-abb89c42902d.png" height="50" width="50" ></a>
-* Problem wifi BCM94352Z on Big Sur
+* Problem wifi BCM94352Z on Big Sur, Monterey
 ** Guide OpenCore
 - AirportBrcmFixup: 
 - You have to block (or remove) AirPortBrcm4360_Injector.kext or add boot-args: brcmfx-driver=2 in BigSur, Monterey
+* Problem bluetooth BCM94352Z on Monterey
+- Do not use it with BrcmBluetoothInjector for macOS 12 or newer
 * Overview
 Run macOS High Sierra(10.13), Mojave(10.14), Catalina(10.15), Big Sur(11.0), Monterey(12.0) on an Acer Swift3 SF315 52G.
 Most pieces are fully supported, and this setup can be used as your main machine. A few pieces are missing (and some will probably never be supported). Caveats in the Hardware section.
