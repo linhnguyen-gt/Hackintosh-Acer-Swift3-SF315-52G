@@ -34,6 +34,7 @@ You can use the EFI folder to be to boot into a USB installer, or for regular bo
   - Wifi/Bluetooth: You need replace Broadcom BCM94352Z
   - HDMI: Good works
   - SD Card Reader
+  - iMessages: works very well
 ** What is not working
   - Mic: I tried many ways but it not works
   - GPU: MX150
