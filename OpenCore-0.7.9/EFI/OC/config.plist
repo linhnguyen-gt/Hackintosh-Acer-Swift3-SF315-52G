@@ -158,6 +158,14 @@
 				<key>Path</key>
 				<string>SSDT-XCPM.aml</string>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-ZWAK.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-ZWAK.aml</string>
+			</dict>
 		</array>
 		<key>Delete</key>
 		<array/>
@@ -1065,7 +1073,7 @@
 			<key>PollAppleHotKeys</key>
 			<false/>
 			<key>ShowPicker</key>
-			<true/>
+			<false/>
 			<key>TakeoffDelay</key>
 			<integer>0</integer>
 			<key>Timeout</key>
@@ -1158,7 +1166,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>darkwake=0 brcmfx-driver=2 -v</string>
+				<string>darkwake=0 brcmfx-driver=2</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>run-efi-updater</key>
