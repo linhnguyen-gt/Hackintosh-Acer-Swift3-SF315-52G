@@ -75,7 +75,7 @@ Audio on the Acer Swift3 SF315 52G is based on the Realtek ALC256 audio codec. T
     - =AAPL,slot-name: Internal=
     - =hda-gfx: onboard-1=
     - =hda-idle-support: 1=
-    - =layout-id: 66=
+    - =layout-id: 69=
     - =model: Intel Sunrise Point-LP HD Audio=
 ** Fix the AirPods choppy/unreliable when connected to macOS play music
 *** Open =System Preferences > Sound > Input=
