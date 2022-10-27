@@ -4,8 +4,8 @@
 * Problem wifi BCM94352Z on Big Sur, Monterey, Ventura
 ** Guide OpenCore
 - AirportBrcmFixup: 
-- You have to block (or remove) AirPortBrcm4360_Injector.kext or add boot-args: brcmfx-driver=2 in BigSur, Monterey
-* Problem bluetooth BCM94352Z on Monterey
+- You have to block (or remove) AirPortBrcm4360_Injector.kext or add boot-args: brcmfx-driver=2 in BigSur, Monterey, Ventura
+* Problem bluetooth BCM94352Z on Monterey, Ventura
 - Do not use it with BrcmBluetoothInjector for macOS 12 or newer
 * Overview
 Run macOS High Sierra(10.13), Mojave(10.14), Catalina(10.15), Big Sur(11.0), Monterey(12.0), Ventura(13.0) on an Acer Swift3 SF315 52G.
