@@ -331,8 +331,6 @@
 	</dict>
 	<key>DeviceProperties</key>
 	<dict>
-		<key>Delete</key>
-		<dict/>
 		<key>Add</key>
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x8,0x0)</key>
@@ -499,6 +497,8 @@
 				<data>AQAAAA==</data>
 			</dict>
 		</dict>
+		<key>Delete</key>
+		<dict/>
 	</dict>
 	<key>Kernel</key>
 	<dict>
@@ -1098,7 +1098,7 @@
 			<key>HibernateSkipsPicker</key>
 			<false/>
 			<key>HideAuxiliary</key>
-			<false/>
+			<true/>
 			<key>LauncherOption</key>
 			<string>Full</string>
 			<key>LauncherPath</key>
@@ -1210,7 +1210,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>darkwake=0 ps2kbdonly=1 brcmfx-driver=2 gfxrst=1</string>
+				<string>darkwake=0 ps2kbdonly=1 gfxrst=1</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>run-efi-updater</key>
