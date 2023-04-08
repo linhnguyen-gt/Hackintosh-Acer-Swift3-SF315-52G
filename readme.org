@@ -1,7 +1,5 @@
 #+STARTUP: indent
 * This project will come to a halt April 8th, because I have bought a Macbook!
-*** Donate Me 🥰
-#+html:<a href="https://www.paypal.com/paypalme/nguyenlinhgt"><img src="https://user-images.githubusercontent.com/43808684/111565733-72903c00-87ce-11eb-8363-abb89c42902d.png" height="50" width="50" ></a>
 * Problem wifi BCM94352Z on Big Sur, Monterey, Ventura
 ** Guide OpenCore
 - AirportBrcmFixup: 
